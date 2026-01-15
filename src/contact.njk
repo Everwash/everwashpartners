@@ -29,7 +29,7 @@ title: Contact Sales - EverWash
             <div class="col-md-5 contact-info-sidebar">
               <h1 class="sidebar-title">GET IN TOUCH<br>WITH SALES</h1>
               <p>Fill out the form or contact us directly and our team will get back to you within 24 hours.</p>
-              
+
               <div class="info-item">
                 <i class="fas fa-envelope"></i>
                 <span><a href="mailto:sales@everwash.com" class="text-white">sales@everwash.com</a></span>
@@ -39,239 +39,254 @@ title: Contact Sales - EverWash
                 <span><a href="tel:+18554927477" class="text-white">(855) 492-7477</a></span>
               </div>
             </div>
-            
+
             <div class="col-md-7">
               <div class="contact-form">
                 <div class="text-center mb-4">
                   <img src="/assets/images/everwash-logo-horizontal.png" alt="EverWash" class="form-logo mb-3">
-                  <p class="form-subtext">Talk to a membership professional about how the EverWash platform can increase the overall profitability of your wash</p>
+                  <p class="form-subtext">Talk to a membership professional about how the EverWash platform can increase
+                    the overall profitability of your wash</p>
                 </div>
-                <form action="#" method="POST">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label">First Name</label>
-                    <input type="text" class="form-control" name="firstName" required>
+                <form 
+                  id="everWashForm" 
+                  name="EverWash Form" 
+                  method="POST"
+                  action="/thank-you.html" 
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
+                  >
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">First Name</label>
+                      <input type="text" class="form-control" name="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control" name="lastName" required>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label">Email Address</label>
+                      <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" name="phone" required>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label">Car Wash Name</label>
+                      <input type="text" class="form-control" name="carWashName" required>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label">Wash Type</label>
+                      <select class="form-select" name="washType" required>
+                        <option value="" selected disabled>Choose Wash Type</option>
+                        <option value="conveyor">In-Bay Automatic / Conveyor</option>
+                        <option value="self-serve">Self-Serve</option>
+                        <option value="full-service">Full Service</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-label">State</label>
+                      <select class="form-select" name="state" required>
+                        <option value="" selected disabled>Choose State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">Zip Code</label>
+                      <input type="text" class="form-control" name="zipCode" required>
+                    </div>
+                    <div class="col-12 mt-4">
+                      <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                      <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is specifically
+                        for Car Wash Owners who wish to contact EverWash about setting up a membership program at their
+                        location. If you are a current EverWash member looking for customer support, please contact our
+                        Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or call <a
+                          href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="form-control" name="lastName" required>
-                  </div>
-                  <div class="col-md-12">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-control" name="email" required>
-                  </div>
-                  <div class="col-md-12">
-                    <label class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" name="phone" required>
-                  </div>
-                  <div class="col-md-12">
-                    <label class="form-label">Car Wash Name</label>
-                    <input type="text" class="form-control" name="carWashName" required>
-                  </div>
-                  <div class="col-md-12">
-                    <label class="form-label">Wash Type</label>
-                    <select class="form-select" name="washType" required>
-                      <option value="" selected disabled>Choose Wash Type</option>
-                      <option value="conveyor">In-Bay Automatic / Conveyor</option>
-                      <option value="self-serve">Self-Serve</option>
-                      <option value="full-service">Full Service</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div class="col-md-8">
-                    <label class="form-label">State</label>
-                    <select class="form-select" name="state" required>
-                      <option value="" selected disabled>Choose State</option>
-                      <option value="AL">Alabama</option>
-                      <option value="AK">Alaska</option>
-                      <option value="AZ">Arizona</option>
-                      <option value="AR">Arkansas</option>
-                      <option value="CA">California</option>
-                      <option value="CO">Colorado</option>
-                      <option value="CT">Connecticut</option>
-                      <option value="DE">Delaware</option>
-                      <option value="FL">Florida</option>
-                      <option value="GA">Georgia</option>
-                      <option value="HI">Hawaii</option>
-                      <option value="ID">Idaho</option>
-                      <option value="IL">Illinois</option>
-                      <option value="IN">Indiana</option>
-                      <option value="IA">Iowa</option>
-                      <option value="KS">Kansas</option>
-                      <option value="KY">Kentucky</option>
-                      <option value="LA">Louisiana</option>
-                      <option value="ME">Maine</option>
-                      <option value="MD">Maryland</option>
-                      <option value="MA">Massachusetts</option>
-                      <option value="MI">Michigan</option>
-                      <option value="MN">Minnesota</option>
-                      <option value="MS">Mississippi</option>
-                      <option value="MO">Missouri</option>
-                      <option value="MT">Montana</option>
-                      <option value="NE">Nebraska</option>
-                      <option value="NV">Nevada</option>
-                      <option value="NH">New Hampshire</option>
-                      <option value="NJ">New Jersey</option>
-                      <option value="NM">New Mexico</option>
-                      <option value="NY">New York</option>
-                      <option value="NC">North Carolina</option>
-                      <option value="ND">North Dakota</option>
-                      <option value="OH">Ohio</option>
-                      <option value="OK">Oklahoma</option>
-                      <option value="OR">Oregon</option>
-                      <option value="PA">Pennsylvania</option>
-                      <option value="RI">Rhode Island</option>
-                      <option value="SC">South Carolina</option>
-                      <option value="SD">South Dakota</option>
-                      <option value="TN">Tennessee</option>
-                      <option value="TX">Texas</option>
-                      <option value="UT">Utah</option>
-                      <option value="VT">Vermont</option>
-                      <option value="VA">Virginia</option>
-                      <option value="WA">Washington</option>
-                      <option value="WV">West Virginia</option>
-                      <option value="WI">Wisconsin</option>
-                      <option value="WY">Wyoming</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label class="form-label">Zip Code</label>
-                    <input type="text" class="form-control" name="zipCode" required>
-                  </div>
-                  <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
-                    <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is specifically for Car Wash Owners who wish to contact EverWash about setting up a membership program at their location. If you are a current EverWash member looking for customer support, please contact our Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or call <a href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <style>
-.contact-hero {
-  position: relative;
-  background: linear-gradient(rgba(1, 30, 80, 0.8), rgba(1, 30, 80, 0.8)), url('/assets/images/contact-hero-bg.png');
-  background-size: cover;
-  background-position: center;
-  color: var(--color-white);
-  padding: 12rem 0 6rem;
-  text-align: center;
-}
-
-.contact-hero .hero-title {
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.contact-hero .hero-text {
-  font-size: 18px;
-  color: rgba(255,255,255,0.9);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-hero .curve {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  line-height: 0;
-}
-
-.contact-hero .curve svg {
-  display: block;
-  width: 100%;
-  height: 60px;
-}
-
-.contact-section {
-  padding: 60px 0 100px;
-  background: #f8f8ff;
-}
-
-.contact-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-}
-
-.contact-info-sidebar {
-  background: var(--color-primary);
-  color: white;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-info-sidebar h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.sidebar-title {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.1;
-  color: white;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-
-.form-logo {
-  max-width: 300px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.form-subtext {
-  font-size: 16px;
-  color: var(--color-primary);
-  max-width: 450px;
-  margin: 0 auto;
-}
-
-.contact-form {
-  padding: 40px 50px;
-}
-
-.form-label {
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 8px;
-}
-
-.form-control, .form-select {
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.form-control:focus, .form-select:focus {
-  border-color: var(--color-secondary);
-  box-shadow: 0 0 0 0.2rem rgba(253, 196, 45, 0.25);
-}
-
-@media (max-width: 768px) {
   .contact-hero {
-    padding: 10rem 0 4rem;
+    position: relative;
+    background: linear-gradient(rgba(1, 30, 80, 0.8), rgba(1, 30, 80, 0.8)), url('/assets/images/contact-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    padding: 12rem 0 6rem;
+    text-align: center;
   }
-  
+
   .contact-hero .hero-title {
-    font-size: 36px;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 16px;
   }
-  
-  .contact-info-sidebar, .contact-form {
-    padding: 30px;
+
+  .contact-hero .hero-text {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
   }
-}
+
+  .contact-hero .curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+  }
+
+  .contact-hero .curve svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  .contact-section {
+    padding: 60px 0 100px;
+    background: #f8f8ff;
+  }
+
+  .contact-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-info-sidebar {
+    background: var(--color-primary);
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-info-sidebar h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  .form-logo {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .form-subtext {
+    font-size: 16px;
+    color: var(--color-primary);
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    padding: 40px 50px;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(253, 196, 45, 0.25);
+  }
+
+  @media (max-width: 768px) {
+    .contact-hero {
+      padding: 10rem 0 4rem;
+    }
+
+    .contact-hero .hero-title {
+      font-size: 36px;
+    }
+
+    .contact-info-sidebar,
+    .contact-form {
+      padding: 30px;
+    }
+  }
 </style>
