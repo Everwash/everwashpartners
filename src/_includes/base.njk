@@ -51,5 +51,10 @@
     
     <!-- Custom JavaScript -->
     <script src="/assets/js/main.js"></script>
+    
+    <!-- Page-specific JavaScript based on pageStyle variable -->
+    {% if pageStyle %}
+      <script src="/assets/js/{{ pageStyle }}.js"></script>
+    {% endif %}
 </body>
 </html>
