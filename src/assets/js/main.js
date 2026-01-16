@@ -247,12 +247,17 @@ $(document).ready(function () {
   // Partnership Carousel Swiper
   if (document.querySelector('.partnership-carousel-swiper')) {
     var partnershipCarouselSwiper = new Swiper(".partnership-carousel-swiper", {
-      slidesPerView: 1.4,
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: 15,
       centeredSlides: true,
       loop: true,
       grabCursor: true,
       initialSlide: 1,
+      touchRatio: 1,
+      touchAngle: 45,
+      simulateTouch: true,
+      allowTouchMove: true,
+      touchEventsTarget: 'container',
       navigation: {
         nextEl: '.partnership-nav-next',
         prevEl: '.partnership-nav-prev',
@@ -262,9 +267,19 @@ $(document).ready(function () {
         clickable: true,
       },
       breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
         768: {
-          slidesPerView: 1.5,
-          spaceBetween: 30,
+          slidesPerView: 1.3,
+          spaceBetween: 25,
         },
         1024: {
           slidesPerView: 1.4,
