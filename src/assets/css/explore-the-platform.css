@@ -954,16 +954,20 @@ table {
 
 @media (max-width: 768px) {
   .platform-features-header {
-    padding: 40px 0 20px;
+    padding: 60px 0 40px;
+    position: relative;
+    z-index: 10;
+    background: white;
   }
 
   .platform-features-header .platform-title {
     font-size: 32px;
+    color: var(--color-primary);
   }
 
   .features.style-one,
   .features.style-two {
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
   }
 
@@ -990,6 +994,42 @@ table {
     overflow: visible;
   }
 
+  /* Make section headings display block and center on mobile */
+  .features .section-title {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .features .heading {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .features .col-lg-6:first-child {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  /* Force all feature section headers to display block and center */
+  .features.style-one .section-title,
+  .features.style-two .section-title,
+  .features .col-lg-6 .section-title {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Fix slider spacing and navigation */
+  .features-carousel {
+    margin-bottom: 60px;
+  }
+
   .features-one-navigation,
   .features-two-navigation,
   .features-sales-navigation,
@@ -1000,8 +1040,10 @@ table {
     left: auto;
     transform: none;
     justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 
-}
   .features .card-title {
     font-size: 20px;
     text-align: left;

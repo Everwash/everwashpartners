@@ -405,6 +405,27 @@ table {
     width: fit-content;
     min-width: 248px;
   }
+
+  /* Center all Book a Call buttons on mobile */
+  .btn__primary,
+  .btn__secondary {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 .curve {
@@ -628,7 +649,9 @@ table {
   }
 
   .testimonial-video-slider {
-    padding: 0 50px;
+    padding: 0 60px;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
   .video-wrapper .video-thumbnail {
@@ -639,18 +662,23 @@ table {
     height: 300px;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 50px;
-    height: 50px;
+  /* Fix navigation arrows for YouTube embed sliders */
+  .testimonial-video-navigation .swiper-button-prev,
+  .testimonial-video-navigation .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
   }
 
-  .swiper-button-prev {
-    left: -10px;
+  .testimonial-video-navigation .swiper-button-prev {
+    left: 10px;
   }
 
-  .swiper-button-next {
-    right: -10px;
+  .testimonial-video-navigation .swiper-button-next {
+    right: 10px;
   }
 
   .testimonials-video .cta-buttons {
