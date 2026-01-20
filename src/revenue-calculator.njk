@@ -1,0 +1,147 @@
+---
+layout: base.njk
+title: EverWash Revenue Calculator | Excel at Membership | Increase Car Wash Revenue
+pageStyle: revenue-calculator
+---
+
+<!-- Hero Section -->
+<section class="hero hero-calculator">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h1>How much money are you leaving on the table?</h1>
+        <h3>Revenue Calculator</h3>
+      </div>
+    </div>
+  </div>
+  <!-- Curve Divider -->
+  <div class="curve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="white" d="M0,0 C720,40 720,40 1440,0 L1440,80 L0,80 Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Calculator Section -->
+<section class="calculator-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="calculator-card">
+          <form action="" id="frmCalculator" class="calculator-form">
+            <div class="form-group mb-4">
+              <label class="form-label">Annual Car Count:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="txtCount"
+                required="required"
+                pattern="[0-9]*"
+                placeholder="Number of Cars"
+              />
+            </div>
+            
+            <div class="form-group mb-4">
+              <label class="form-label">Annual Car Wash Revenue:</label>
+              <div class="input-container">
+                <span class="currency-symbol">$</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="txtRevenue"
+                  required="required"
+                  pattern="[0-9,.]*"
+                  placeholder="Annual Revenue"
+                />
+              </div>
+            </div>
+            
+            <button type="button" class="btn__primary btn-large" id="btnSubmit">
+              Estimate Earnings
+            </button>
+          </form>
+          
+          <!-- Hidden button for modal trigger -->
+          <button style="display: none;" id="excelFormview" data-toggle="modal" data-target="#excelmembershipModal">
+            Form View
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-lg-1"></div>
+      
+      <div class="col-lg-6" id="partnerCalcResultsContainer">
+        <div class="results-card">
+          <h4>Additional Annual Revenue</h4>
+          <div id="results" class="calculator-results">
+            <div id="breakdownSm">
+              <span class="calc_annual_ew_membership_conversion_revenue">$0</span>
+            </div>
+            <p class="disclaimer">
+              Based on a 15% Customer-To-Member Conversion Rate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for form -->
+<div class="modal fade" id="excelmembershipModal" tabindex="-1" aria-label="Excel Membership With EverWash Form" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fa fa-times"></i>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-container text-center">
+          <img src="/img/illustrations/car-wash-scene-2.png" alt="Activating unlimited car washes with an app" class="img-fluid mb-4"/>
+          <h4>Sound too good to be true? It's really not!</h4>
+          <p class="mb-4">
+            Complete the form below and we'll send over a full report to show your revenue potential. Don't sell yourself short.<br>
+            <strong>Excel at Membership with EverWash!</strong>
+          </p>
+          
+          <!-- Contact Form -->
+          <form id="calculatorContactForm" name="Calculator Contact Form" method="POST" action="/thank-you/" data-netlify="true">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+              </div>
+              <div class="col-12">
+                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+              </div>
+              <div class="col-12">
+                <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control" name="carWashName" placeholder="Car Wash Name" required>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn__primary w-100">Get My Full Report</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Initialize the calculator when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof calculator !== 'undefined') {
+    calculator.init();
+    console.log('Revenue calculator initialized');
+  }
+});
+</script>
