@@ -25,7 +25,7 @@
 .hero.hero-blog h3 {
   font-family: var(--font-family-body);
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.3;
   margin: 0 0 32px 0;
   color: #ffffff;
@@ -90,7 +90,7 @@
 
 .latest-article-content .article-date {
   color: var(--color-primary);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -113,7 +113,9 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   height: 100%;
   cursor: pointer;
 }
@@ -177,7 +179,9 @@
 .article-container {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .article-container.fade-in {
@@ -191,12 +195,24 @@
 }
 
 /* Stagger animation for multiple articles */
-.article-container.fade-in:nth-child(1) { transition-delay: 0.1s; }
-.article-container.fade-in:nth-child(2) { transition-delay: 0.2s; }
-.article-container.fade-in:nth-child(3) { transition-delay: 0.3s; }
-.article-container.fade-in:nth-child(4) { transition-delay: 0.4s; }
-.article-container.fade-in:nth-child(5) { transition-delay: 0.5s; }
-.article-container.fade-in:nth-child(6) { transition-delay: 0.6s; }
+.article-container.fade-in:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.article-container.fade-in:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.article-container.fade-in:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.article-container.fade-in:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.article-container.fade-in:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.article-container.fade-in:nth-child(6) {
+  transition-delay: 0.6s;
+}
 
 /* Algolia Search Styling */
 #search .ais-SearchBox {
@@ -233,7 +249,7 @@
 
 /* Search Icon */
 #search .ais-SearchBox-form::before {
-  content: "🔍";
+  content: '🔍';
   position: absolute;
   left: 18px;
   top: 50%;
@@ -410,6 +426,45 @@
   margin-bottom: 24px;
 }
 
+/* Markdown bullet points styling */
+.article-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 24px 0;
+}
+
+.article-content li {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.article-content li::before {
+  content: "•";
+  color: var(--color-primary);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Markdown links styling */
+.article-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.article-content a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
 .article-featured-image img {
   border-radius: 12px;
   width: 100%;
@@ -421,37 +476,37 @@
   .article-title {
     font-size: 32px;
   }
-  
+
   .article-header {
     padding-top: 40px;
   }
-  
+
   .article-content-section {
     padding: 60px 0;
   }
-  
+
   .author-avatar {
     width: 56px;
     height: 56px;
   }
-  
+
   .author-name {
     font-size: 18px;
   }
-  
+
   .article-author-info .article-date {
     font-size: 16px;
   }
-  
+
   .author-bio-section h2 {
     font-size: 28px;
   }
-  
+
   .author-bio-container {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .bio-avatar {
     width: 80px;
     height: 80px;
@@ -577,7 +632,7 @@
 }
 
 .everwash-benefits li::before {
-  content: "•";
+  content: '•';
   color: var(--color-primary);
   font-weight: 700;
   position: absolute;
@@ -612,27 +667,27 @@
     margin: 40px 0;
     padding: 40px 20px;
   }
-  
+
   .author-everwash-section h2 {
     font-size: 28px;
   }
-  
+
   .author-bio-container {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .bio-avatar {
     width: 80px;
     height: 80px;
     margin: 0 auto 16px;
   }
-  
+
   .app-store-links {
     flex-direction: column;
     gap: 12px;
   }
-  
+
   .app-store-link img {
     height: 50px;
   }
@@ -682,7 +737,9 @@
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: block;
   margin-bottom: 20px;
 }
@@ -724,16 +781,16 @@
   .latest-stories-section {
     padding: 60px 0;
   }
-  
+
   .related-articles-section h2,
   .latest-stories-section h2 {
     font-size: 32px;
   }
-  
+
   .latest-story-image {
     height: 60px;
   }
-  
+
   .latest-story-content h4 {
     font-size: 16px;
   }
