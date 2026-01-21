@@ -184,25 +184,14 @@ $(document).ready(function () {
   // Only initialize if .proofSwiper element exists
   if (document.querySelector('.proofSwiper')) {
     try {
-      // Tinder-like creative effect with proper centering
+      // Mobile proof section swiper
       proofMobileSwiper = new Swiper(".proofSwiper", {
-        effect: 'creative',
+        slidesPerView: 1,
+        spaceBetween: 20,
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 1,
+        loop: true,
         speed: 500,
-        creativeEffect: {
-          prev: {
-            translate: ['-100%', 0, 0],
-            rotate: [0, 0, -15],
-            opacity: 0,
-          },
-          next: {
-            translate: ['100%', 0, 0],
-            rotate: [0, 0, 15],
-            opacity: 0,
-          },
-        },
         navigation: {
           nextEl: '.proof-mobile-navigation .swiper-button-next',
           prevEl: '.proof-mobile-navigation .swiper-button-prev',
