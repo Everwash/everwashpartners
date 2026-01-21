@@ -301,17 +301,17 @@ var singleTestimonialSwiper = new Swiper(".single-testimonial-slider", {
 $(document).ready(function() {
   const testimonialData = {
     tunnel: [
-      { name: "Lauren and Greg Hough", company: "Swell Wash", subtitle: "Tunnel Car Wash / New Jersey", text: "\"Ultimately, partnering with EverWash came down to their ingrained focus on membership and customer engagement. EverWash brought us proven tools, technology, and best practices to actually grow a successful membership base, not just manage it. We are thrilled to be an EverWash partner!\"", avatar: "/assets/images/lauren-greg-hough.png" },
-      { name: "Daniel Lee", company: "Whittier Express Car Wash", subtitle: "Tunnel Car Wash / Whittier, CA", text: "\"EverWash made our transition as new owners seamless. With their help, we easily communicated updates to our customers, putting everyone at ease. The transition team was incredibly helpful, communicative, and cooperative—it truly felt like a team effort.\"", avatar: "/assets/images/daniel-lee.jpg" },
-      { name: "Rico Danesi", company: "Exclusive Car Wash", subtitle: "Tunnel Car Wash / Danbury CT", text: "\"EverWash helped us stabilize revenue by growing a membership program that's not weather-dependent. Starting with zero members, we've grown exponentially every year.\"", avatar: "/assets/images/rico-danesi.png" },
-      { name: "Tim Terrizzi", company: "Pit Stop Car Wash", subtitle: "Tunnel Car Wash / Philadelphia PA", text: "\"If I've struggled, I could reach out to anyone for advice, resources, whatever, and there's a dialogue…I appreciate that aspect of EverWash probably above anything else.\"", avatar: "/assets/images/tim-terrizzi.png" }
+      { name: "Lauren and Greg Hough", company: "Swell Wash", subtitle: "Tunnel Car Wash / New Jersey", text: "\"Ultimately, partnering with EverWash came down to their ingrained focus on membership and customer engagement. EverWash brought us proven tools, technology, and best practices to actually grow a successful membership base, not just manage it. We are thrilled to be an EverWash partner!\"", avatar: "/assets/images/lauren-greg-hough.png", readMore: "/blog/2025-03-31-wash-partner-story-swell-wash/" },
+      { name: "Daniel Lee", company: "Whittier Express Car Wash", subtitle: "Tunnel Car Wash / Whittier, CA", text: "\"EverWash made our transition as new owners seamless. With their help, we easily communicated updates to our customers, putting everyone at ease. The transition team was incredibly helpful, communicative, and cooperative—it truly felt like a team effort.\"", avatar: "/assets/images/daniel-lee.jpg", readMore: "/blog/2025-02-04-wash-partner-story-whittier-express-car-wash/" },
+      { name: "Rico Danesi", company: "Exclusive Car Wash", subtitle: "Tunnel Car Wash / Danbury CT", text: "\"EverWash helped us stabilize revenue by growing a membership program that's not weather-dependent. Starting with zero members, we've grown exponentially every year.\"", avatar: "/assets/images/rico-danesi.png", readMore: "/blog/2024-10-14-wash-partner-story-exclusive-car-wash/" },
+      { name: "Tim Terrizzi", company: "Pit Stop Car Wash", subtitle: "Tunnel Car Wash / Philadelphia PA", text: "\"If I've struggled, I could reach out to anyone for advice, resources, whatever, and there's a dialogue…I appreciate that aspect of EverWash probably above anything else.\"", avatar: "/assets/images/tim-terrizzi.png", readMore: "/blog/2024-10-11-wash-partner-story-pit-stop-car-wash/" }
     ],
     iba: [
-      { name: "Allan Yates", company: "Mountain City Suds", subtitle: "In-Bay Automatic / Mountain City TN", text: "\"The community is going crazy for EverWash. Even in winter, we see around 200 cars daily. People are coming from miles away just for the membership.\"", avatar: "/assets/images/allan-yates.png" },
-      { name: "Kim Allen", company: "ProClean AutoSpa", subtitle: "In-Bay Automatic / Colorado", text: "\"EverWash made it easy for us to offer memberships and compete with tunnel washes. The membership program has created consistent, predictable revenue, and the loyalty of our customers is unmatched.\"", avatar: "/assets/images/kim-allen.png" },
-      { name: "Doyle Zimbleman", company: "Super Spray Car Wash", subtitle: "In-Bay Automatic / Tahlequah OK", text: "\"From day one, their team has been amazing. They've made running a membership program easy, and the customer service is top-notch.\"", avatar: "/assets/images/doyle-zimbleman.png" },
-      { name: "Craig Gilham", company: "Sudz Car Wash", subtitle: "In-Bay Automatic / Gonzalez TX", text: "\"EverWash helped me grow my memberships by 60% in just 12 months. Their support with marketing, technology integration, and member management has been invaluable.\"", avatar: "/assets/images/daniel-lee.jpg" },
-      { name: "Taylor Irwin", company: "Rocky Mountain Car Wash", subtitle: "In-Bay Automatic / Rocky Mountains", text: "\"EverWash is the type of partner that listens to their customers, implements change to stay competitive, and truly cares about the operator's success and growth.\"", avatar: "/assets/images/taylor-irwin.png" }
+      { name: "Allan Yates", company: "Mountain City Suds", subtitle: "In-Bay Automatic / Mountain City TN", text: "\"The community is going crazy for EverWash. Even in winter, we see around 200 cars daily. People are coming from miles away just for the membership.\"", avatar: "/assets/images/allan-yates.png", readMore: "/blog/2024-10-14-wash-partner-story-mountain-city-suds/" },
+      { name: "Kim Allen", company: "ProClean AutoSpa", subtitle: "In-Bay Automatic / Colorado", text: "\"EverWash made it easy for us to offer memberships and compete with tunnel washes. The membership program has created consistent, predictable revenue, and the loyalty of our customers is unmatched.\"", avatar: "/assets/images/kim-allen.png", readMore: "/blog/2024-10-14-wash-partner-story-proclean-autospa/" },
+      { name: "Doyle Zimbleman", company: "Super Spray Car Wash", subtitle: "In-Bay Automatic / Tahlequah OK", text: "\"From day one, their team has been amazing. They've made running a membership program easy, and the customer service is top-notch.\"", avatar: "/assets/images/doyle-zimbleman.png", readMore: "/blog/2024-10-14-wash-partner-story-super-spray-car-wash/" },
+      { name: "Craig Gilham", company: "Sudz Car Wash", subtitle: "In-Bay Automatic / Gonzalez TX", text: "\"EverWash helped me grow my memberships by 60% in just 12 months. Their support with marketing, technology integration, and member management has been invaluable.\"", avatar: "/assets/images/daniel-lee.jpg", readMore: "/blog/2024-10-14-wash-partner-story-sudz-car-wash/" },
+      { name: "Taylor Irwin", company: "Rocky Mountain Car Wash", subtitle: "In-Bay Automatic / Rocky Mountains", text: "\"EverWash is the type of partner that listens to their customers, implements change to stay competitive, and truly cares about the operator's success and growth.\"", avatar: "/assets/images/taylor-irwin.png", readMore: "/blog/2024-10-14-wash-partner-story-rocky-mountain-car-wash/" }
     ],
     general: [
     ]
@@ -332,6 +332,7 @@ $(document).ready(function() {
     testimonials.forEach(function(testimonial) {
       const companyHtml = testimonial.company ? `<p class="testimonial-company">${testimonial.company}</p>` : '';
       const subtitleHtml = testimonial.subtitle ? `<p class="author-subtitle">${testimonial.subtitle}</p>` : '';
+      const readMoreHtml = testimonial.readMore ? `<div class="testimonial-read-more"><a href="${testimonial.readMore}" class="btn__secondary btn-sm">Read More</a></div>` : '';
       const slide = `
         <div class="swiper-slide">
           <div class="testimonial-card">
@@ -347,6 +348,7 @@ $(document).ready(function() {
                 ${subtitleHtml}
               </div>
             </div>
+            ${readMoreHtml}
           </div>
         </div>
       `;

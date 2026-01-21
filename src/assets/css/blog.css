@@ -16,7 +16,7 @@
 .hero.hero-blog h1 {
   font-family: var(--font-family-heading);
   font-weight: 700;
-  font-size: 56px;
+  font-size: 68px;
   line-height: 1.1;
   margin: 0 0 16px 0;
   color: #ffffff;
@@ -159,7 +159,7 @@
   border: 2px solid var(--color-primary);
   border-radius: 50px;
   padding: 14px 40px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   font-family: var(--font-family-body);
   transition: all 0.3s ease;
@@ -287,7 +287,7 @@
   }
 
   .hero.hero-blog h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .hero.hero-blog h3 {
@@ -383,7 +383,7 @@
 
 .hero.hero-blog .article-date {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   font-family: var(--font-family-body);
 }
@@ -436,11 +436,11 @@
   }
   
   .author-name {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .article-author-info .article-date {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .author-bio-section h2 {
@@ -502,7 +502,7 @@
 
 .author-bio-content {
   color: var(--color-black);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
   font-family: var(--font-family-body);
@@ -515,7 +515,7 @@
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease;
   font-family: var(--font-family-body);
 }
@@ -554,7 +554,7 @@
 
 .author-everwash-section p {
   color: var(--color-black);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
   font-family: var(--font-family-body);
@@ -568,7 +568,7 @@
 
 .everwash-benefits li {
   color: var(--color-black);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 12px;
   font-family: var(--font-family-body);
@@ -655,7 +655,7 @@
 
 .article-excerpt {
   color: var(--color-black);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   margin: 0;
   font-family: var(--font-family-body);
@@ -711,7 +711,7 @@
 
 .latest-story-content h4 {
   color: var(--color-primary);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
   margin: 0;
@@ -735,7 +735,7 @@
   }
   
   .latest-story-content h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 

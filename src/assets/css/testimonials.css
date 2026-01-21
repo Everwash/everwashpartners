@@ -1001,6 +1001,23 @@ table {
   .single-testimonial-card {
     padding: 30px 20px;
   }
+
+  .testimonial-read-more .btn__secondary.btn-sm {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Testimonial Read More Button */
+.testimonial-read-more {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.testimonial-read-more .btn__secondary.btn-sm {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
 }
 /* Features Section */
 .features.style-one {

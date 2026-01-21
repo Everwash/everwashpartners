@@ -113,7 +113,7 @@
 
 .distributor-card p {
   color: var(--color-black);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin: 0;
   font-family: var(--font-family-body);
@@ -160,7 +160,7 @@
   }
 
   .hero.hero-distributors h1 {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   .hero.hero-distributors h3 {
@@ -195,11 +195,11 @@
   }
 
   .distributor-card p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .distributors-cta-section h2 {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   .distributors-cta-section .lead {

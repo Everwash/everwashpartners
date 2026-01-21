@@ -17,7 +17,7 @@
 .hero.hero-legal h1 {
   font-family: var(--font-family-heading);
   font-weight: 700;
-  font-size: 56px;
+  font-size: 68px;
   line-height: 1.1;
   margin: 0 0 16px 0;
   color: #ffffff;
@@ -60,7 +60,7 @@
 
 .legal-document p {
   color: var(--color-black);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   margin-bottom: 24px;
   font-family: var(--font-family-body);
@@ -137,7 +137,7 @@
   }
 
   .hero.hero-legal h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .hero.hero-legal h3 {
@@ -158,7 +158,7 @@
   }
 
   .legal-document p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
   }
 

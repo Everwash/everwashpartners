@@ -16,7 +16,7 @@
 .hero.hero-about h1 {
   font-family: var(--font-family-heading);
   font-weight: 700;
-  font-size: 56px;
+  font-size: 68px;
   line-height: 1.1;
   margin: 0 0 16px 0;
   color: #ffffff;
@@ -50,7 +50,7 @@
 
 #aboutMission p {
   font-family: var(--font-family-body);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--color-black);
   margin-bottom: 20px;
@@ -102,7 +102,7 @@
 
 .timeline-event p {
   font-family: var(--font-family-body);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   color: white;
   text-align: center;
@@ -346,7 +346,7 @@
 
 .news-excerpt {
   color: var(--color-black);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   margin: 0;
   font-family: var(--font-family-body);
@@ -360,7 +360,7 @@
   }
 
   .hero.hero-about h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .hero.hero-about h3 {
@@ -391,7 +391,7 @@
   }
   
   .visit-newsroom-link {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .news-image-container {
