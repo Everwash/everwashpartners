@@ -1,0 +1,303 @@
+              <h3 class="display-3">Privacy Policy</h3>
+              <h4>1. Introduction</h4>
+              <p>
+                This Privacy Policy explains to Users of the Everwash Car Club
+                website (<a href="https://www.everwashpartners.com/"
+                  >https://www.everwashpartners.com/</a
+                >), mobile applications offered by or powered by Everwash Car
+                Club, microsites, software and service (collectively, the
+                "Service"), how EverWash Car Club, LLC, doing business as
+                EverWash Car Club ("EverWash", "we" or "us"), gathers and uses
+                information collected in connection with use of the Service and
+                the EverWash platform. Everwash takes reasonable steps to
+                protect User privacy consistent with the guidelines set forth in
+                this Privacy Policy and with all applicable laws. In this
+                Privacy Policy, "User" or "you" means any person using the
+                Service, whether by browsing the EverWash website or using
+                EverWash mobile apps, paying for items and/or transactions using
+                the EverWash application, engaging in loyalty and rewards
+                programs ("Programs") offered by EverWash merchants (each a
+                "Merchant"), or participating in any other activities available
+                through the Service. <br /><br />BY ACCESSING OR USING THE
+                SERVICE AND/OR THE EVERWASH PLATFORM, YOU ACKNOWLEDGE THAT YOU
+                HAVE READ, UNDERSTAND, AND AGREE TO BE BOUND BY THIS PRIVACY
+                POLICY AND OUR USER TERMS OF SERVICE (<a
+                  href="https://www.everwashpartners.com/terms-and-conditions"
+                  >https://www.everwashpartners.com/terms-and-conditions</a
+                >). IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THE SERVICE.
+              </p>
+              <h4>2. First Up, We Want You to Know This:</h4>
+              <p>
+                You control your personal information on the EverWash platform.
+                We will never disclose your email address, transaction history,
+                or other information to any Merchant or any other third party
+                for their marketing purposes without you first authorizing that
+                Merchant or third party to access such information. This allows
+                you to use the EverWash Service and EverWash platform without
+                receiving a whole lot of direct marketing you don't want.
+              </p>
+              <h4>3. Why Do We Have This Privacy Policy?</h4>
+              <p>
+                All companies that you do business with choose whether and how
+                they want share your personal information. Federal law gives you
+                the right to limit some, but not all, of that sharing. Federal
+                law also requires companies to tell you how they collect, share,
+                and protect your personal information. Please read this notice
+                carefully to understand what we do.
+              </p>
+              <h4>4. What Information Do We Collect?</h4>
+              <p>
+                Personal Information: EverWash collects some of your identifying
+                information in connection with the Service, depending on how you
+                use the Service. When you create a EverWash User Account
+                (whether through a EverWash App or EverWash website), pay with
+                EverWash, engage in a Program, submit content to EverWash,
+                complete a survey, send us feedback, request information about
+                the Service, apply for a job, or sign up for special offers from
+                third parties, EverWash may collect information from you, which
+                could include the following (collectively, "Personal
+                Information"):
+              </p>
+              <ul>
+                <li>Email address</li>
+                <li>Telephone number</li>
+                <li>Location</li>
+                <li>
+                  Merchant transaction data (including the amount, date, and
+                  location of the transaction, the amount of credit earned and
+                  redeemed, and the identity and amount of items purchased)
+                </li>
+                <li>
+                  Information related to your payment instruments, such as
+                  expiration date and authentication codes or related
+                  information.
+                </li>
+              </ul>
+              <p>
+                You do not have to provide Personal Information to EverWash, but
+                you may not be able to take advantage of all features of the
+                Service if you do not. <br /><br />Financial Information: In
+                order to use the Service and the EverWash platform in connection
+                with payments to merchants, you will need to link a payment
+                instrument, such as a debit or credit card account number, to
+                your EverWash User Account ("Financial Information"). EverWash
+                and its providers maintain compliance with all laws and rules
+                protecting the privacy of your financial information, including
+                the Payment Card Industry Data Security Standard (PCI-DSS).
+                <br /><br />Web Tracking Information: EverWash and its
+                third-party service providers may use web tracking technologies,
+                such as cookies, web beacons, pixel tags and clear GIFs, to
+                collect data related to usage of the Service, the Programs, and
+                web and email marketing conducted by or on behalf of EverWash.
+                Such data may include:
+              </p>
+              <ul>
+                <li>
+                  the address of the websites you visited before and after you
+                  visited the Service,
+                </li>
+                <li>the type of browser you are using,</li>
+                <li>your Internet Protocol (IP) address, and</li>
+                <li>
+                  what pages in the Service you visit and what links you clicked
+                  on.
+                </li>
+              </ul>
+              <p>
+                In order to collect Web Tracking Information and to make your
+                use of the Service more efficient, we may store cookies on your
+                computer. EverWash and third party contractors engaged to
+                provide services on behalf of EverWash ("Contractors") may also
+                use web tracking technologies that are placed in web pages on
+                the Service or in email communications to collect information
+                about actions that users take when they interact with the
+                Service or such email communications. Web Tracking Information
+                is not correlated by EverWash to individual users. Some Web
+                Tracking Information may include data, such as IP address data,
+                that is unique to you. You may be able to modify your browser
+                settings to alter which web tracking technologies are permitted
+                when you use the Service, but this may affect the performance of
+                the Service.
+              </p>
+              <h4>5. How Does EverWash Use and Share Your Information?</h4>
+              <p>
+                All companies need to share customers' personal information to
+                run their everyday business. In this section, we explain the
+                reasons that companies can share their customers' personal
+                information; the reasons EverWash chooses to share information;
+                and whether you can limit this sharing. <br /><br />Personal
+                Information: EverWash will use and store your Personal
+                Information to deliver the EverWash Service to you (including
+                charges, receipts, rewards tracking, and system notifications);
+                to market customer rewards to you; to improve our products and
+                services; to investigate (and remedy) fraudulent or allegedly
+                fraudulent activity; and to perform aggregated data analysis.
+                Additionally, any Personal Information that we collect via
+                Facebook will be used for registration and open graph posts.
+                <br /><br />EverWash does not sell or rent its mailing list, and
+                we will not disclose your email address to any third party for
+                marketing purposes, unless you specifically authorize a third
+                party (such as an EverWash Merchant) to access your information.
+                EverWash will disclose your Personal Information to third
+                parties only in the following limited circumstances:
+              </p>
+              <ul>
+                <li>
+                  When you use the EverWash Service at a Merchant, EverWash may
+                  disclose your name (but not your email address) to the
+                  associated Merchant to aid in the utilization process and
+                  loyalty program tracking;
+                </li>
+                <li>
+                  EverWash may allow our Contractors, who are performing
+                  marketing services, delivering goods, administering
+                  promotions, analyzing data and usage of the Service,
+                  processing credit card payments, operating the Service or
+                  providing support and maintenance services for the Service, or
+                  providing customer service, to access Personal Information. We
+                  require Contractors to use the Personal Information they
+                  access only in connection with the services they perform for
+                  us, and never for any marketing or other purposes.
+                </li>
+                <li>
+                  If you are a winner of a Merchant or EverWash sponsored
+                  competition (as detailed in the Applicable Contest Terms), we
+                  will share your contact information for purposes of prize
+                  fulfillment only.
+                </li>
+              </ul>
+              <p>
+                Financial Information: EverWash will only ever use your
+                Financial Information for the purpose of submitting an
+                authorized charge to your payment instrument. Financial
+                Information is never provided to EverWash in unencrypted form.
+                Your Financial Information is never disclosed to third parties,
+                including EverWash Merchants, other than EverWash's data vault
+                and payment gateway provider. <br /><br />Aggregate Information:
+                EverWash may also use Personal Information to create aggregated
+                data for analytical purposes. This statistical information does
+                not contain any individual identifying information or contact
+                information and is used to understand our customer base as a
+                whole and to better serve our market. EverWash reserves the
+                right to share such aggregated, non-identifiable data with 3rd
+                parties. <br /><br />Web Tracking Information: EverWash uses Web
+                Tracking Information to administer the Service and to understand
+                how well our Service is working, and to develop aggregate,
+                statistical information on usage of the Services. EverWash may
+                disclose Web Tracking Information, without individual
+                identifying information, to third party advertisers and
+                advertising agencies, Merchants, and Contractors, in order for
+                EverWash and such third parties to analyze the performance of
+                the Services and the behavior of users, to operate and improve
+                the Service. <br /><br />Email Communications: If you create a
+                EverWash User Account and provide your email address, we will
+                send you administrative and promotional emails concerning the
+                EverWash Service and EverWash platform, including new features,
+                promotions, Programs, and rewards. If you wish to opt out of
+                promotional emails, you may do so by following the "unsubscribe"
+                instructions in the email, by contacting EverWash Support, or by
+                editing your EverWash User Account settings as described below.
+                All EverWash Users receive administrative emails. If you wish to
+                opt out of administrative emails, you must delete your account
+                entirely and cease use of the Service. <br /><br />Network
+                Operators: Use of the Service may involve use of the services of
+                third party telecommunications carriers and service providers
+                (such as the services of the carrier that provides cellphone
+                service to you). Such carriers and service providers are not
+                EverWash's Contractors, and any information that a carrier
+                collects in connection with your use of the Service is not
+                Personal Information and is not subject to this Privacy Policy.
+                EverWash is not responsible for the acts or omissions of
+                telecommunications carriers or service providers.
+                <br /><br />Additional Disclosures: Notwithstanding anything to
+                the contrary in this Privacy Policy, EverWash reserves the right
+                to use or disclose Personal Information and any other
+                information EverWash collects in connection with the Service:
+                (a) to any successor to EverWash's business, including as a
+                result of any merger, acquisition, asset sale or similar
+                transaction; (b) to any law enforcement, judicial authority, or
+                governmental or regulatory authority, to the extent required by
+                law or legal process; or (c) if in EverWash's reasonable
+                discretion, such use or disclosure is necessary to enforce or
+                protect EverWash's legal rights or to protect third parties.
+              </p>
+              <h4>6. Privacy Settings/Opt Out</h4>
+              <p>
+                If you would like your Personal Information and Financial
+                Information permanently removed from our database please contact
+                us at
+                <a href="mailto:support@everwash.com">support@everwash.com</a>
+                or 1-408-686-9274 (1-408-686-WASH). We will promptly disable
+                your EverWash User Account and you will no longer receive email
+                from EverWash. Your removal from the mailing list or database
+                will not remove records of past transactions or delete
+                information stored in our data backups and archives, as required
+                by law. Data on past transactions and data stored in backups and
+                archives will be deleted in the normal course of EverWash's
+                business. You may elect to opt-out at any time after registering
+                for the EverWash service.
+              </p>
+              <h4>7. Access and Updating of Information</h4>
+              <p>
+                EverWash encourages you to view your transaction history, and
+                review and amend your email address or contact details, in the
+                EverWash platform at any time. Please contact us by sending an
+                email to:
+                <a href="mailto:support@everwash.com">support@everwash.com</a>
+                or by using your settings window in the EverWash app.
+              </p>
+              <h4>8. General</h4>
+              <p>
+                Facebook Connect: If you connect to the EverWash Service using
+                Facebook Connect, you agree that any identifying information
+                obtained by us by reason of your connection using Facebook
+                Connect will constitute Personal Information for the purposes of
+                this Privacy Policy, and you consent to our use and disclosure
+                of such information in accordance with this Policy. If we stop
+                using Facebook Connect as an access mechanism, you agree that we
+                will nevertheless retain any Personal Information in accordance
+                with this Policy. <br /><br />Security: We use reasonable
+                security precautions to protect the security and integrity of
+                your Personal Information in accordance with this Policy and all
+                applicable laws. However, no Internet transmission is completely
+                secure, and we cannot guarantee that security breaches will not
+                occur. Without limitation of the foregoing, we are not
+                responsible for the actions of hackers and other unauthorized
+                third parties. <br /><br />Electronic Notice; Amendments:
+                Pursuant to Section 5 of EverWash's User Terms, you agree to
+                receive initial notice of this Privacy Policy, and all annual
+                notices of the Privacy Policy, as amended from time to time,
+                electronically. EverWash may modify or amend this policy from
+                time to time. We will notify you of these changes by posting the
+                modified Privacy Policy, which will be available for review by
+                you, on our website at
+                <a href="https://www.everwashpartners.com/privacy-policy"
+                  >https://www.everwashpartners.com/privacy-policy</a
+                >. <br /><br />Children: EverWash does not knowingly collect or
+                maintain personally identifiable information from persons under
+                13 years of age, and no part of the Service is directed at
+                persons under 13. If you are under 13 years of age, then please
+                do not use the Service. If EverWash learns that personally
+                identifiable information of persons less than 13 years of age
+                has been collected without verifiable parental consent, then
+                EverWash will take the appropriate steps to delete this
+                information. To make such a request, please contact us at
+                <a href="mailto:support@everwash.com">support@everwash.com</a>.
+                <br /><br />Service Visitors from outside the United States:
+                EverWash and its servers are located in the United States and
+                are subject to the applicable state and federal laws of the
+                United States. If you choose to access or use the Service, you
+                consent to the use and disclosure of information in accordance
+                with this Privacy Policy and subject to such laws.
+              </p>
+              <h4>9. USA Patriot Act Notice to Merchants</h4>
+              <p>
+                To help the government fight the funding of terrorism and money
+                laundering activities, federal law requires financial
+                institutions to obtain, verify, and record information that
+                identifies each person who registers for a Merchant Account with
+                LevelUp. Merchants will be required to provide such information
+                to the satisfaction of LevelUp prior to establishing a Merchant
+                Account. <br /><br />Effective Date of this policy: 2021-10-14
+              </p>
+            </div>

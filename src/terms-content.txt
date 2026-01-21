@@ -1,0 +1,370 @@
+              <h3 class="display-3">
+                EverWash Car Club Terms and Conditions of Service
+              </h3>
+              <h4>1. User's Acknowledgment and Acceptance of Terms</h4>
+              <p>
+                EverWash Car Club, LLC (“Us” or “We”) provides the EverWash site
+                and mobile application and various related services
+                (collectively, the “site”) to you, the user, subject to your
+                compliance with all the terms, conditions, and notices contained
+                or referenced herein (the “Terms of Use”), as well as any other
+                written agreement between us and you. By accessing, downloading,
+                and/or using the Site, including the mobile application, and/or
+                the Services, you signify your acceptance of all provisions of
+                the EverWash Terms of Use as set forth herein and all features
+                and functionalities, website, and user interfaces, as well as
+                all content and software associated with our service. THESE USER
+                TERMS CREATE A BINDING LEGAL AGREEMENT BETWEEN YOU AND EVERWASH.
+                If you do not agree to the Terms of Use, please exit the
+                EverWash Site and if purchased, do not continue your Membership
+                by cancelling. EverWash expressly reserves the right to make
+                changes to our terms at any time without notice to you. Your
+                continued use of our site and your Membership following any
+                changes to these terms will mean that you accept such changes.
+                If you have questions or concerns regarding the Terms of Use,
+                please contact EverWash as directed below.
+              </p>
+              <h4>2. EverWash Subscriptions</h4>
+              <p>
+                EverWash Car Club is a subscription based car wash membership
+                and service plan. This Agreement is for the individual user and
+                vehicle (“User” or “You”) that is registered with EverWash Car
+                Club. This Agreement commences on the date of registration and
+                if a membership is purchased continues from month to month until
+                the Agreement is cancelled or terminated in accordance with the
+                terms and conditions set forth herin
+              </p>
+              <h4>3. Description of Services Offered</h4>
+              <ul>
+                <li>
+                  <strong>General Membership Program.</strong> Through the
+                  EverWash mobile application and/or website a consumer will
+                  choose a specified car wash location (“Home Base”) in which
+                  they wish to become a member (the “Member”) and selects an
+                  unlimited monthly car wash plan from the options provided. In
+                  addition to unlimited monthly car washes, membership entitles
+                  the Member to upgrades and other car wash related services at
+                  an EverWash Car Club Member discounted price. In exchange,
+                  Members will remit to EverWash their designated payment
+                  information and will be charged on a recurring billing cycle
+                  for monthly car wash plans and for the one time fees
+                  associated with upgrades and additional services. All
+                  membership plans and information required to use the services
+                  selected is transmitted using a QR Code on your smartphone
+                  device. You must have your smartphone device with you at the
+                  time the services are rendered.
+                </li>
+                <li>
+                  <strong>Promotional Wash/Free Trial Program.</strong> Once you
+                  registered with EverWash through its mobile application, you
+                  may be eligible to receive one Free Car Wash. The free car
+                  wash may be used within one month from your date of
+                  registration at a Registered Merchant’s location. Free Car
+                  Washes are for individuals who have not previously registered
+                  with EverWash through its mobile application and EverWash
+                  reserves the right to determine such eligibility.
+                </li>
+              </ul>
+              <h4>4. Member Eligibility</h4>
+              <p>
+                If you Register for a Membership, you represent and warrant that
+                you (a) are not under the age of 18; (b) are not registering
+                under a false name or with false information; (c) you are
+                authorized to use the form of payment submitted for membership;
+                (d) will not use other Members’ accounts and will not let others
+                use your account; (e) will not attempt to or actually override
+                any security component included in the Member Web Site or Mobile
+                Application; and (f) will comply with the Member Terms of Use at
+                all times.
+              </p>
+              <h4>5. Passwords & Account Access</h4>
+              <p>
+                The Member who created an EverWash membership account is
+                referred to as the Account Owner. The Account Owner has access
+                and control over his/her EverWash account through the use of an
+                identification name and password. The Account Owner has
+                exclusive control over such information. Because your account
+                may contain credit card information, you should not reveal such
+                information to anyone. By sharing such information, the Account
+                Owner agrees to be responsible for the misuse of such
+                information.
+              </p>
+              <h4>6. General Membership Policies</h4>
+              <ul>
+                <li>
+                  The EverWash Membership is valid only at participating
+                  EverWash locations.
+                </li>
+                <li>
+                  The EverWash Membership is valid for the specified services
+                  only.
+                </li>
+                <li>
+                  The EverWash Membership is valid for up to one car wash per
+                  day for the designated vehicle only.
+                </li>
+                <li>
+                  To use your EverWash Membership, You must have your smartphone
+                  device with the downloaded EverWash mobile application with
+                  you at the time the services are to be rendered.
+                </li>
+                <li>
+                  A valid credit or debit payment card is required to
+                  participate in the EverWash membership program.
+                </li>
+                <li>
+                  All vehicles must conform to EverWash and your Home Base’s
+                  standards. Modifications outside of such standards to existing
+                  customer’s vehicle may require program termination. Please see
+                  your Home Base manager for confirmation that vehicle meets
+                  standards.Additional charges for oversized and professional
+                  vehicles may apply.The Everwash Membership is not for
+                  Commercial and/or Professional use vehicles. For Commercial
+                  and/or Professional use vehicles call (408) 686-9274
+                  (408-686-WASH) or email us at
+                  <a href="mailto:support@everwash.com">support@everwash.com</a>
+                </li>
+              </ul>
+              <h4>7. Payment and Billing</h4>
+              <ul>
+                <li>
+                  <strong>Payments.</strong> All payments, including monthly
+                  membership amount, upgrades and additional services are
+                  payable by electronic funds transfer from the Member’s credit
+                  or debit card account. Members must authorize payments to be
+                  made through a third party administered electronic funds
+                  transfer system. Credit card information must be received and
+                  processed in order for memberships to become effective. You
+                  may edit your Payment Method information by clicking on the
+                  "Payment Method" link on our mobile application and change the
+                  payment method thereon. If a payment is not successfully
+                  settled, due to expiration, insufficient funds, or otherwise,
+                  and you do not edit your Payment Method information or cancel
+                  your account, you will be charged a fee and remain responsible
+                  for any uncollected amounts and authorize us to continue
+                  billing the Payment Method, as it may be updated. This may
+                  result in a change to your payment billing dates and may
+                  require you to pay an initiation fee to reactivate your
+                  account. It is the Member’s full and sole responsibility to
+                  make and update any changes of contact or billing information
+                  including address, email or credit/debit card information
+                  through its mobile application.
+                </li>
+                <li>
+                  <strong>Recurring Billing.</strong> By starting your EverWash
+                  membership, you authorize us to charge you a monthly
+                  membership fee at the then current rate, and any other charges
+                  you may incur in connection with your use of the EverWash
+                  service to your Payment Method. You acknowledge that the
+                  amount billed each month may vary from month to month for
+                  reasons that may include differing amounts due to initiation
+                  and service fees, promotional offers and/or changing or adding
+                  a plan, and/or requesting additional car wash related services
+                  and/or goods and you authorize us to charge your Payment
+                  Method for such varying amounts, which may be billed monthly
+                  in one or more charges.
+                </li>
+                <li>
+                  <strong>Billing Cycle.</strong> The membership fee for our
+                  service will be billed on the first day that you join EverWash
+                  Car Club and select a membership plan and shall be billed on
+                  the corresponding day each subsequent month thereafter unless
+                  and until your membership is terminated or cancelled. We
+                  automatically bill your chosen payment method each month on
+                  the calendar day corresponding to the commencement of your
+                  paying membership. We reserve the right to change the timing
+                  of our billing, in particular, as indicated below, if your
+                  Payment Method has not successfully settled. In the event your
+                  paying membership began on a day not contained in a given
+                  month, we may bill your Payment Method on a day in the
+                  applicable month or such other day as we deem appropriate.
+                </li>
+                <li>
+                  <strong>One-time Charges.</strong> From time to time EverWash
+                  may charge an initiation fee as detailed on the payment
+                  section of your membership application. In addition, from time
+                  to time you may choose to add additional car wash related
+                  services or goods over and above your membership plan. Any
+                  initiation charges and/or additional services charges are
+                  one-time charges and will be electronically charged to the
+                  credit or debit card provided at the time of initiation or the
+                  service is provided.
+                </li>
+                <li>
+                  <strong>Price Changes.</strong> We reserve the right to adjust
+                  pricing for our service or any components thereof in any
+                  manner and at any time as we may determine in our sole and
+                  absolute discretion. Except as otherwise expressly provided
+                  for in these Terms of Use, any price changes to your service
+                  will take effect following email notice to you.
+                </li>
+              </ul>
+              <h4>8. Termination by EverWash.</h4>
+              <p>
+                EverWash may terminate your membership at any time for your
+                failure to comply with its policies and procedures. EVERWASH
+                reserves the right, at its sole discretion, to refuse to honor
+                any request for Membership.
+              </p>
+              <h4>
+                9. Effective December 1st 2015, Member Cancellation Policy
+              </h4>
+              <p>
+                You may cancel your EverWash membership at any time by
+                contacting EverWash at
+                <a href="mailto:support@everwash.com">support@everwash.com</a>.
+                Your membership will be cancelled effective 1 day from your NEXT
+                bill date. You will continue to have access to the service
+                through the end of your next billing period.
+              </p>
+              <h4>10. Changes to Membership Plans</h4>
+              <ul>
+                <li>
+                  <strong>Freeze policy.</strong> If a member is unable to use
+                  EverWash program, the Member may freeze their account for up
+                  to Four (4) months for a one-time fee of $10. At the end of
+                  your freeze period, your automatic billing cycle will commence
+                  with or without additional notice.
+                </li>
+                <li>
+                  <strong>Changes to Home Base Location.</strong> An EverWash
+                  member may decide to change locations of where they receive
+                  their car wash and car wash related services. A member may
+                  change the Home Base by contacting EverWash at
+                  <a href="mailto:support@everwash.com">support@everwash.com</a
+                  >.
+                </li>
+                <li>
+                  <strong>Changes to Desired Membership Plan.</strong> An
+                  EverWash Member may decide to change the level of membership
+                  and specific monthly services at any time for no additional
+                  cost.
+                </li>
+              </ul>
+              <h4>11. Compliance with the Law</h4>
+              <p>
+                You must comply with all applicable governing laws at all times
+                regarding your Membership.
+              </p>
+              <h4>12. Marketing</h4>
+              <p>
+                By signing this Agreement you agree to allow EverWash, its
+                affiliates and your home base location to market products and
+                services to you in any form including, direct mail, email,
+                telephone, texting or other means available. EverWash agrees not
+                to sell member’s information to any third parties for the
+                purpose of marketing.
+              </p>
+              <h4>13. Privacy Policy</h4>
+              <p>
+                The EVERWASH Member Privacy Policy applies to you and other
+                users use of the EverWash Member Web Site and EverWash Mobile
+                Application. The Privacy Policy is available for review at
+                <a href="https://www.everwashpartners.com/privacy-policy"
+                  >www.everwashpartners.com/privacy-policy</a
+                >. Personally identifying information is subject to our Privacy
+                Policy the terms of which are incorporated herein. Please review
+                our Privacy Policy to understand our practices.
+              </p>
+              <h4>
+                14. Changes in Operating Hours/Temporary Closing of the Car Wash
+              </h4>
+              <p>
+                As a result of repair, maintenance, weather or act of God; your
+                Home Base may restrict its use or temporarily close its
+                facilities from time to time. There will be no reduction or
+                suspension of membership fees during such time when the
+                above-mentioned occurs and EverWash shall not be responsible for
+                any such event.
+              </p>
+              <h4>15. Copyright Provisions</h4>
+              <p>
+                You agree at all times to honor all applicable copyright law
+                with respect to Member Web Sites, application, emails and
+                e-Newsletters. As such, you may not duplicate, license,
+                sublicense, publish, broadcast, transmit, distribute, perform,
+                display, sell, rebrand, otherwise transfer or commercially
+                exploit EverWash information except as specifically authorized
+                in writing by EverWash. In addition, you may not remove any
+                copyright, trademark or other proprietary rights notices
+                contained anywhere on EverWash material, whether electronic or
+                in writing and may not infringe or use the EVERWASH brand, logos
+                and/or trademarks without authorization.
+              </p>
+              <h4>16. Indemnification</h4>
+              <p>
+                You agree to indemnify EVERWASH and hold EVERWASH harmless from
+                any damages, losses and costs (including, but not limited to,
+                reasonable attorneys’ fees) related to third party claims,
+                charges or investigations, caused by your failure to comply with
+                the Member Terms of Use, including, without limitation, your
+                violation of copyright law that violates third party rights or
+                applicable laws.
+              </p>
+              <h4>17. Limited Liability</h4>
+              <p>
+                To the extent permissible under applicable laws and
+                jurisdictions, in no event shall EverWash, or its subsidiaries
+                or any of their shareholders, directors, officers, employees or
+                licensors be liable (jointly or severally) to you for personal
+                injury, property damages or any special, incidental, indirect or
+                consequential damages of any kind, or any damages whatsoever as
+                a result of your use of the services offered by EverWash.
+              </p>
+              <h4>18. Disclaimers</h4>
+              <p>
+                EVERWASH does not guarantee that the Membership services which
+                it provides will function without interruption or errors in
+                functioning. EVERWASH may modify, replace, refuse access to,
+                suspend or discontinue the Member Web Site or Member
+                e-Newsletters, partially or entirely. EVERWASH will issue pro
+                rata refunds for Paid Memberships in the event of full
+                cancellation of all Membership services. EVERWASH reserves all
+                rights not expressly granted herein, including, without
+                limitation, title, ownership, intellectual property rights, and
+                all other rights and interest in EVERWASH's Member Web Site and
+                Member e-Newsletters and all related items. EVERWASH neither
+                warrants nor represents that your use of the Member Web Site or
+                e-Newsletters will not infringe the rights of third parties.
+              </p>
+              <h4>19. Waiver</h4>
+              <p>
+                The failure of any party at any time to require performance of
+                any provision or to resort to any remedy provided under this
+                Agreement shall in no way affect the right of that party to
+                require performance or to resort to a remedy at any time
+                thereafter, nor shall the waiver by any party of a breach be
+                deemed to be a waiver of any subsequent breach. A waiver shall
+                not be effective unless it is in writing and signed by the party
+                against whom the waiver is being enforced.
+              </p>
+              <h4>20. Severability</h4>
+              <p>
+                The invalidity or unenforceability of any provisions of this
+                Agreement shall not affect the validity or enforceability of any
+                other provision of this Agreement, which shall remain in full
+                force and effect.
+              </p>
+              <h4>21. Complete Agreement</h4>
+              <p>
+                This Agreement constitutes and embodies the full and complete
+                understanding of the parties hereto, and supersedes all prior
+                understandings whether oral or written.
+              </p>
+              <h4>22. Governing Law</h4>
+              <p>
+                The law of the Commonwealth of Pennsylvania shall govern the
+                validity, interpretation and enforcement of this Agreement. Any
+                action brought with respect to this Agreement shall be brought
+                in appropriate tribunal in Philadelphia and the Merchant agrees
+                to waive personal jurisdiction in the event of such a dispute.
+              </p>
+              <h4>23. Contacting Us</h4>
+              <p>
+                If you have any questions about the EVERWASH Member Terms of Use
+                and technical support, the practices of the EVERWASH
+                Memberships, you can contact us at
+                <a href="mailto:support@everwash.com">support@everwash.com</a>
+                or by any other means available on our Site.
+              </p>
+            </div>

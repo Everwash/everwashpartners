@@ -1,0 +1,207 @@
+/* ====================================
+   PARTNERS PAGE - MODERN DESIGN
+   ==================================== */
+
+/* Partners Hero Section */
+.hero.hero-partners {
+  position: relative;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 8rem 0 6rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero.hero-partners h1 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+  color: #ffffff;
+}
+
+.hero.hero-partners h3 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+/* Accordion Styling */
+.partners-accordion {
+  margin-bottom: 40px;
+}
+
+.partners-accordion .accordion-item {
+  border: none;
+  border-radius: 12px !important;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.partners-accordion .accordion-button {
+  background: var(--color-gray);
+  border: none;
+  border-radius: 12px !important;
+  padding: 24px 32px;
+  font-family: var(--font-family-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.partners-accordion .accordion-button:not(.collapsed) {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.partners-accordion .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.partners-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.partners-accordion .accordion-body {
+  padding: 40px 32px;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-gray);
+}
+
+/* Partner Cards */
+.partner-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+}
+
+.partner-logo {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.partner-card h4 {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: var(--font-family-heading);
+}
+
+.partner-card p {
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  font-family: var(--font-family-body);
+}
+
+/* CTA Section */
+.partners-cta-section {
+  padding: 100px 0;
+  background: var(--color-gray);
+  text-align: center;
+}
+
+.partners-cta-section .btn__primary {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.partners-cta-section h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.partners-cta-section .lead {
+  color: var(--color-black);
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: var(--font-family-body);
+}
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero.hero-partners {
+    padding: 6rem 0 4rem;
+    min-height: 50vh;
+  }
+
+  .hero.hero-partners h1 {
+    font-size: 32px;
+  }
+
+  .hero.hero-partners h3 {
+    font-size: 18px;
+  }
+
+  .partners-section,
+  .partners-cta-section {
+    padding: 80px 0;
+  }
+
+  .partners-accordion .accordion-button {
+    font-size: 20px;
+    padding: 20px 24px;
+  }
+
+  .partners-accordion .accordion-body {
+    padding: 24px 20px;
+  }
+
+  .partner-card {
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+
+  .partner-logo {
+    height: 100px;
+  }
+
+  .partner-card h4 {
+    font-size: 20px;
+  }
+
+  .partner-card p {
+    font-size: 14px;
+  }
+
+  .partners-cta-section h2 {
+    font-size: 32px;
+  }
+
+  .partners-cta-section .lead {
+    font-size: 18px;
+  }
+}

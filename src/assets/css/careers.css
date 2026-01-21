@@ -1,0 +1,349 @@
+/* ====================================
+   CAREERS PAGE - MODERN DESIGN
+   ==================================== */
+
+/* Careers Hero Section */
+.hero.hero-careers {
+  position: relative;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 8rem 0 6rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero.hero-careers h1 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+
+.hero.hero-careers h3 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.3;
+  margin: 0 0 32px 0;
+  color: #ffffff;
+}
+
+/* Section Labels */
+.section-label {
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: block;
+  font-family: var(--font-family-body);
+}
+
+/* Highlight Text */
+.highlight-text {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* Blue Highlight Text */
+.highlight-text-blue {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Blue Section Labels */
+.section-label-blue {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: block;
+  font-family: var(--font-family-body);
+}
+
+/* White Highlight Text */
+
+
+/* Blue Value Cards */
+.value-card-blue {
+  text-align: center;
+  border: 1px solid var(--color-primary);
+  padding: 40px 20px;
+  /* background: var(--color-primary); */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.value-card-blue:hover {
+  transform: translateY(-4px);
+}
+
+.value-card-blue h4 {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  font-family: var(--font-family-heading);
+}
+
+/* About Section */
+.careers-about {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.careers-about h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.careers-about p {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+}
+
+/* Values Section */
+.careers-values {
+  padding: 100px 0;
+  background: var(--color-gray);
+}
+
+.careers-values h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.careers-values p {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+}
+
+.value-card {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+}
+
+.value-card h4 {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  font-family: var(--font-family-heading);
+}
+
+/* Work-Life Balance Section */
+.careers-balance {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.careers-balance h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.careers-balance p {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+}
+
+/* Community Section */
+.careers-community {
+  padding: 100px 0;
+  background: var(--color-gray);
+}
+
+.careers-community h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.careers-community p {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+}
+
+/* Hybrid Work Section */
+.careers-hybrid {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.careers-hybrid h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.careers-hybrid p {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+}
+
+/* Job Positions Section */
+.careers-positions {
+  padding: 100px 0;
+  background: var(--color-gray);
+}
+
+.careers-positions h2 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: var(--font-family-heading);
+}
+
+.careers-positions .lead {
+  color: var(--color-black);
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: var(--font-family-body);
+}
+
+.job-listings p {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: var(--font-family-body);
+}
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Center all buttons */
+.btn__primary,
+.btn__secondary {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Center button containers */
+.mt-4 {
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero.hero-careers {
+    padding: 6rem 0 4rem;
+    min-height: 50vh;
+  }
+
+  .hero.hero-careers h1 {
+    font-size: 36px;
+  }
+
+  .hero.hero-careers h3 {
+    font-size: 20px;
+  }
+
+  .careers-about,
+  .careers-values,
+  .careers-balance,
+  .careers-community,
+  .careers-hybrid,
+  .careers-positions {
+    padding: 80px 0;
+  }
+
+  .careers-about h2,
+  .careers-values h2,
+  .careers-balance h2,
+  .careers-community h2,
+  .careers-hybrid h2,
+  .careers-positions h2 {
+    font-size: 32px;
+  }
+
+  .careers-about p,
+  .careers-values p,
+  .careers-balance p,
+  .careers-community p,
+  .careers-hybrid p {
+    font-size: 16px;
+  }
+
+  .careers-positions .lead {
+    font-size: 18px;
+  }
+
+  .value-card {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+
+  .value-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .value-card h4 {
+    font-size: 20px;
+  }
+
+  /* Stack images and text on mobile */
+  .careers-about .col-lg-7,
+  .careers-balance .col-lg-7,
+  .careers-community .col-lg-7 {
+    order: 2;
+  }
+
+  .careers-about .col-lg-5,
+  .careers-balance .col-lg-5,
+  .careers-community .col-lg-5 {
+    order: 1;
+    margin-bottom: 40px;
+  }
+}
