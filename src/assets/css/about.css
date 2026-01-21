@@ -25,7 +25,7 @@
 .hero.hero-about h3 {
   font-family: var(--font-family-body);
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 32px;
   margin: 0;
   color: #ffffff;
@@ -36,14 +36,55 @@
   padding: 100px 0;
 }
 
-#aboutMission .col-lg-7 {
-  padding: 0 4%;
+/* Mission content styling - matching fleet-membership page */
+.partner-content {
+  padding-right: 40px;
+}
+
+.partner-description {
+  color: var(--color-black);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-family: var(--font-family-body);
+}
+
+.partner-tagline {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 24px;
+  font-family: var(--font-family-body);
+}
+
+.mission-statement {
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  font-family: var(--font-family-body);
+}
+
+.cta-buttons {
+  justify-content: start;
+}
+
+.phone-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-image-container .phone-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
 }
 
 #aboutMission h3 {
   font-family: var(--font-family-heading);
-  font-weight: 400;
-  font-size: 4.3rem;
+  font-weight: 700;
+  font-size: 48px;
   line-height: 1.1;
   color: var(--color-primary);
 }
@@ -66,20 +107,27 @@
 #ourHistory h3 {
   text-align: center;
   font-family: var(--font-family-heading);
-  font-weight: 400;
-  font-size: 4.3rem;
+  font-weight: 700;
+  font-size: 48px;
   line-height: 1.1;
   color: white;
+  margin-bottom: 60px;
 }
 
 #ourHistory .row {
   display: flex;
-  align-items: start;
+  align-items: flex-end;
   justify-content: center;
+  min-height: 200px;
 }
 
 #ourHistory .row:first-of-type {
   align-items: flex-end;
+}
+
+#ourHistory .row:last-of-type {
+  align-items: flex-start;
+  min-height: 200px;
 }
 
 .timeline-event {
@@ -88,21 +136,23 @@
 }
 
 .timeline-event-bottom h5 {
-  margin-top: 1rem;
+  margin-top: 0;
+  order: -1;
 }
 
 .timeline-event h5 {
   text-align: center;
   font-family: var(--font-family-heading);
-  font-size: 2rem;
+  font-size: 44px;
   font-weight: 700;
   color: var(--color-secondary);
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .timeline-event p {
   font-family: var(--font-family-body);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: white;
   text-align: center;
@@ -123,7 +173,7 @@
 
 /* Timeline Circles */
 .timeline-event:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 20px;
   height: 20px;
@@ -146,7 +196,7 @@
 
 /* Dotted connectors */
 .timeline-event:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 2px;
   border-left: 2px dotted rgba(255, 255, 255, 0.6);
@@ -180,15 +230,15 @@
   #aboutHero {
     padding: 15% 0 10% 0;
   }
-  
+
   #aboutMission h3 {
     font-size: 2.5rem;
   }
-  
+
   #ourHistory h3 {
     font-size: 2.5rem;
   }
-  
+
   #ourHistory .timeline-event h5 {
     text-align: left;
     margin-top: 0;
@@ -240,7 +290,7 @@
   .hide-on-mobile {
     display: none;
   }
-  
+
   .hide-on-desktop {
     display: block;
   }
@@ -258,6 +308,23 @@
 :root {
   --white: #ffffff;
   --gray-400: #ced4da;
+}
+
+/* Button with arrow styling */
+.btn-with-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.btn-with-arrow span {
+  flex: 1;
+}
+
+.btn-with-arrow svg {
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* Top News from EverWash Section */
@@ -295,7 +362,9 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   height: 100%;
   display: block;
 }
@@ -327,7 +396,7 @@
 
 .news-date {
   color: var(--color-primary);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -337,7 +406,7 @@
 
 .news-card h4 {
   color: var(--color-primary);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 12px;
@@ -346,7 +415,7 @@
 
 .news-excerpt {
   color: var(--color-black);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin: 0;
   font-family: var(--font-family-body);
@@ -380,29 +449,91 @@
     font-size: 2.5rem;
   }
 
-/* Mobile responsive for news section */
+  /* Mobile responsive for news section */
   .top-news-section {
     padding: 80px 0;
   }
-  
+
   .top-news-section h2 {
     font-size: 32px;
     margin-bottom: 16px;
   }
-  
+
   .visit-newsroom-link {
     font-size: 18px;
   }
-  
+
   .news-image-container {
     height: 160px;
   }
-  
+
   .news-content {
     padding: 20px;
   }
-  
+
   .news-card h4 {
     font-size: 18px;
   }
+}
+
+.btn__primary {
+  width: fit-content;
+  height: fit-content;
+  background: var(--color-secondary);
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.btn__primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(243, 241, 131, 0.3);
+}
+
+.btn__secondary {
+  width: fit-content;
+  height: fit-content;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.btn__secondary.outline {
+  width: fit-content;
+  height: fit-content;
+  background: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  white-space: nowrap;
 }
