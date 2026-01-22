@@ -71,7 +71,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default("EverWash New Landing Page") }}</title>
+    <title>{{ title | default("EverWash Partners - Excel at Membership") }}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ description | default('EverWash partners with local car washes to offer unlimited car wash memberships. Excel at membership with our proven tools, technology, and support for car wash operators nationwide.') }}">
+    <meta name="keywords" content="car wash membership, unlimited car wash, car wash partnership, membership management, car wash operators, EverWash">
+    <meta name="author" content="{{ author | default('EverWash Team') }}">
+    <link rel="canonical" href="https://everwashpartners.com{{ page.url }}">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="{% if tags %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ title | default('EverWash Partners - Excel at Membership') }}">
+    <meta property="og:description" content="{{ description | default('EverWash partners with local car washes to offer unlimited car wash memberships. Excel at membership with our proven tools, technology, and support for car wash operators nationwide.') }}">
+    <meta property="og:url" content="https://everwashpartners.com{{ page.url }}">
+    <meta property="og:site_name" content="EverWash Partners">
+    <meta property="og:image" content="{{ image | default('https://everwashpartners.com/assets/images/og-image.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ title | default('EverWash Partners') }}">
+    {% if date %}<meta property="article:published_time" content="{{ date | date('Y-m-d') }}">{% endif %}
+    {% if author %}<meta property="article:author" content="{{ author }}">{% endif %}
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@everwash">
+    <meta name="twitter:creator" content="@everwash">
+    <meta name="twitter:title" content="{{ title | default('EverWash Partners - Excel at Membership') }}">
+    <meta name="twitter:description" content="{{ description | default('EverWash partners with local car washes to offer unlimited car wash memberships. Excel at membership with our proven tools, technology, and support for car wash operators nationwide.') }}">
+    <meta name="twitter:image" content="{{ image | default('https://everwashpartners.com/assets/images/twitter-card.png') }}">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

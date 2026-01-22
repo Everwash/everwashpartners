@@ -32,6 +32,16 @@ module.exports = function(eleventyConfig) {
         const text = content.replace(/<[^>]*>/g, ''); // Strip HTML tags
         return text.length > 150 ? text.substring(0, 150) + '...' : text;
     });
+    
+    // Add date filter for meta tags
+    eleventyConfig.addFilter("date", function(dateObj, format) {
+        if (!dateObj) return '';
+        const date = new Date(dateObj);
+        if (format === 'Y-m-d') {
+            return date.toISOString().split('T')[0];
+        }
+        return date.toISOString();
+    });
 
     // Set input and output directories
     return {

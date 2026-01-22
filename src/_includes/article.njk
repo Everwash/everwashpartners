@@ -4,7 +4,7 @@ pageStyle: blog
 ---
 
 <!-- Article Hero Section -->
-<section class="hero hero-blog">
+<section class="hero hero-blog article-hero" {% if image %}style="background-image: linear-gradient(rgba(20, 28, 82, 0.7), rgba(20, 28, 82, 0.7)), url('{{ image }}')"{% endif %}>
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-lg-8">
@@ -45,6 +45,29 @@ pageStyle: blog
         
         <div class="article-content">
           {{ content | safe }}
+        </div>
+        
+        <!-- Share This Article Section -->
+        <div class="article-social-container">
+          <h2>Share This Article</h2>
+          <div class="article-social-media">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://everwashpartners.com{{ page.url }}" target="_blank">
+              <i class="fab fa-facebook-f" aria-hidden="true" title="Share on Facebook"></i>
+              <span class="sr-only">Share on Facebook</span>
+            </a>
+            <a href="#" target="_blank" class="twitter-share" data-url="{{ page.url }}" data-title="{{ title }}">
+              <i class="fab fa-twitter" aria-hidden="true" title="Share on Twitter"></i>
+              <span class="sr-only">Share on Twitter</span>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://everwashpartners.com{{ page.url }}" target="_blank">
+              <i class="fab fa-linkedin" aria-hidden="true" title="Share on LinkedIn"></i>
+              <span class="sr-only">Share on LinkedIn</span>
+            </a>
+            <a href="mailto:?&subject={{ title }}&body=https://everwashpartners.com{{ page.url }}%0A">
+              <i class="fas fa-envelope" aria-hidden="true" title="Share via email"></i>
+              <span class="sr-only">Share via email</span>
+            </a>
+          </div>
         </div>
         
         <!-- Combined Author & EverWash Section -->
@@ -107,12 +130,7 @@ pageStyle: blog
           </div>
         </div>
         
-        <!-- Back to Blog -->
-        <div class="text-center mt-5">
-          <a href="/blog/" class="btn__secondary">
-            <span>← Back to Blog</span>
-          </a>
-        </div>
+        
       </div>
     </div>
   </div>

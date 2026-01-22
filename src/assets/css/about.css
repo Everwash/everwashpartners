@@ -494,6 +494,10 @@
   transition: all 0.3s ease;
   opacity: 1;
 }
+.newsroom_btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
 .btn__primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(243, 241, 131, 0.3);

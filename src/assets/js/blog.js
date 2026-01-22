@@ -106,4 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (authorSocialMedia[i]) authorSocialMedia[i].href = "https://www.linkedin.com/company/everwash";
         }
     }
+    
+    // Twitter Share Functionality
+    document.querySelectorAll('.twitter-share').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = encodeURIComponent('https://everwashpartners.com' + this.dataset.url);
+            const text = encodeURIComponent(this.dataset.title);
+            const twitterUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&via=everwash`;
+            window.open(twitterUrl, '_blank', 'width=550,height=420');
+        });
+    });
 });
