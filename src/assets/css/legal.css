@@ -5,8 +5,7 @@
 /* Legal Hero Section */
 .hero.hero-legal {
   position: relative;
-  background:
-    url('/assets/images/hero-bg-casestudy.png') center/cover no-repeat;
+  background: url('/assets/images/hero-bg-casestudy.png') center/cover no-repeat;
   color: #ffffff;
   padding: 8rem 0 6rem;
   min-height: 60vh;
@@ -17,7 +16,7 @@
 .hero.hero-legal h1 {
   font-family: var(--font-family-heading);
   font-weight: 700;
-  font-size: 68px;
+  font-size: 56px;
   line-height: 1.1;
   margin: 0 0 16px 0;
   color: #ffffff;
@@ -73,13 +72,40 @@
 }
 
 .legal-document a:hover {
-  color: var(--color-secondary);
-  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .legal-document strong {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+/* Bullet styling for legal documents */
+.legal-document ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 24px 0;
+}
+
+.legal-document li {
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-family: var(--font-family-body);
+  position: relative;
+  padding-left: 24px;
+}
+
+.legal-document li::before {
+  content: "•";
+  color: var(--color-primary);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .last-updated {
