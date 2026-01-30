@@ -1,0 +1,106 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "/public/img/blog"
+public_folder: "/img/blog"
+publish_mode: editorial_workflow
+logo_url: https://everwashpartners.com/img/EverWash_Logo_Blue.png
+collections: 
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: blog/{{slug}}
+    fields: 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Author", name: "author", widget: "select", options: ["Harriet Ayoade", "Max Pulcini", "Nash Goudie", "Matthew Dimbat", "Yamilette Roman", "Ryan Caldwell", "Mike Christie", "Rachel Fry", "EverWash Newsroom"]}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Tags", name: "tags", widget: "list", default: ["post", "blog"]}
+      - {label: "Feature Image", name: "image", widget: "image", required: false}
+      - {label: "Image Caption", name: "imageAlt", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "newsroom"
+    label: "Newsroom"
+    folder: "src/newsroom"
+    create: true
+    slug: "{{date}}-{{slug}}"
+    preview_path: newsroom/{{slug}}
+    fields: 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Author", name: "author", widget: "select", options: ["Harriet Ayoade", "Max Pulcini", "Nash Goudie", "Matthew Dimbat", "Yamilette Roman", "Ryan Caldwell", "Mike Christie", "Rachel Fry", "EverWash Newsroom"]}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Tags", name: "tags", widget: "list", default: ["post", "newsroom"]}
+      - {label: "Feature Image", name: "image", widget: "image", required: false}
+      - {label: "Image Caption", name: "imageAlt", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "landers"
+    label: "Landers"
+    folder: "src/landers"
+    create: true
+    slug: "{{url}}"
+    preview_path: landers/{{slug}}
+    fields: 
+      - {label: "Affiliate Name", name: "affiliateName", widget: "string"}
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Offer Code", name: "offerCode", widget: "string", required: false}
+      - {label: "Logos", name: "logos", widget: "image", required: false}
+      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
+      - {label: "Video Link", name: "video", widget: "list", default: ["https://www.youtube.com/embed/X9fEQSHMPBI"], required: false}
+      - {label: "Offer Statement", name: "offerStatement", widget: "markdown", required: false}
+      - {label: "Offer Disclaimer", name: "offerDisclaimer", widget: "markdown", required: false}
+      - {label: "Template", name: "layout", widget: "select", 
+          options: [" ",'affiliate-page.njk', 'affiliate-page-2.njk', 'tmt.njk', 'mailer-page.njk', 'union.njk']}
+      - {label: "Tags", name: "tags", widget: "list", default: ["landers"]}
+  - name: "distributors"
+    label: "Distributor Landers"
+    folder: "src/distributors"
+    create: true
+    slug: "{{url}}"
+    preview_path: distributors/{{slug}}
+    fields:
+      - {label: "URL", name: "url", widget: "string"} 
+      - label: "Section 1" 
+        name: "section1" 
+        widget: "object"
+        fields:
+          - {label: "Heading", name: "heading", widget: "markdown", required: false}
+          - {label: "Sub-heading", name: "subheading", widget: "markdown", required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+      - label: "Section 2" 
+        name: "section2" 
+        widget: "object"
+        fields:
+          - {label: "Heading", name: "heading", widget: "markdown", required: false}
+          - {label: "Sub-heading", name: "subheading", widget: "markdown", required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Distibutor Logo", name: "logo", widget: "image", required: false}
+      - label: "Section 3" 
+        name: "section3" 
+        widget: "object"
+        fields:
+          - {label: "Heading", name: "heading", widget: "markdown", required: false}
+          - {label: "Sub-heading", name: "subheading", widget: "markdown", required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+      - label: "Section 4" 
+        name: "section4" 
+        widget: "object"
+        fields:
+          - {label: "Heading", name: "heading", widget: "markdown", required: false}
+          - {label: "Sub-heading", name: "subheading", widget: "markdown", required: false}
+          - {label: "Testimonials", name: "testimonials", widget: "markdown", required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Video", name: "video", widget: "string", default: "https://www.youtube.com/embed/X9fEQSHMPBI", required: false}
+      - label: "Section 5" 
+        name: "section5" 
+        widget: "object"
+        fields:
+          - {label: "Heading", name: "heading", widget: "markdown", default: "Let's Get Started!", required: false}
+          - {label: "Sub-heading", name: "subheading", widget: "markdown", required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+ 
+      
+      
