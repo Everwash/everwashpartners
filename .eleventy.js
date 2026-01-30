@@ -7,6 +7,9 @@ module.exports = function(eleventyConfig) {
 
     // Calling toml file
     eleventyConfig.addPassthroughCopy('./src/netlify.toml');
+    
+    // Calling blog
+    eleventyConfig.addPassthroughCopy('./src/admin');
 
     // Blog collections
     eleventyConfig.addCollection("blog", function(collectionApi) {
