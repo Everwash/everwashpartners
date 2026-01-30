@@ -3244,10 +3244,6 @@ table {
 }
 
 
-
-
-
-
 /* Faq section */
 .attendantsFaq h2 {
     color: var(--color-primary);
@@ -3332,4 +3328,12 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #attendantWebinars h2 {
+    margin-bottom: 0.5rem;
+    font-size: 36px;
+    margin-top: 28px;
+  }
 }
