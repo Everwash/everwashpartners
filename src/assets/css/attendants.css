@@ -2956,6 +2956,7 @@ table {
 #attendantWebinars .webinar-class h4 {
   font-size: 24px;
   text-transform: uppercase;
+  color: var(--color-primary);
 }
 #attendantWebinars ol {
   margin-left: 2rem;
@@ -3336,4 +3337,5 @@ table {
     align-items: center;
     justify-content: center;
 }
+
 
