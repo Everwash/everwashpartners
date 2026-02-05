@@ -7,7 +7,7 @@ tags:
   - post
   - blog
   - b2b
-image: /img/blog/adobestock_285940701.jpeg
+image: ""
 ---
 Pollen season frustrates drivers — and that frustration creates opportunity. Cars turn yellow and green overnight, and washing it off once is never isn’t enough.
 
