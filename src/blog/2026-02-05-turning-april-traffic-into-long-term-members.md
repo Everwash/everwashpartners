@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/aprilew26.png
 ---
 April is National Car Care Month, and for car wash operators, it represents one of the most overlooked marketing opportunities of the year. Drivers are emerging from winter with dirty vehicles, pollen buildup, and a renewed interest in maintenance — but most washes treat April like any other spring month.
 
