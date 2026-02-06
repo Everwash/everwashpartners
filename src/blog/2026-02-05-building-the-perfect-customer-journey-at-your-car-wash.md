@@ -7,7 +7,7 @@ tags:
   - post
   - blog
   - b2b
-image: /img/blog/carwashjourney.png
+image: /img/blog/journey_1.jpeg
 ---
 Car wash customers don’t cancel because of one bad wash. More often, they never become members in the first place because nothing along their visit clearly showed them why they should. The most successful operators understand this and design the customer journey as a deliberate, on-site marketing funnel — not a series of disconnected interactions.
 
