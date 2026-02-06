@@ -6,7 +6,7 @@ tags:
   - post
   - blog
   - b2b
-image: /img/blog/churn.png
+image: /img/blog/churn_1.jpeg
 ---
 Membership growth isn’t defined by how many plans you sell — it’s defined by how long members stay and how consistently revenue is collected. That’s why Lifetime Value (LTV) is the metric that actually matters. When LTV is healthy, marketing becomes more efficient, operations stabilize, and revenue becomes predictable.
 
