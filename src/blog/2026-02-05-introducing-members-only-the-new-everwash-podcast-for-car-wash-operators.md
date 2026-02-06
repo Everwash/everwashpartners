@@ -8,7 +8,7 @@ tags:
   - blog
   - b2b
   - featured
-image: /img/blog/134539541_2815204012141975_144373429814840508_o-1-1-.jpeg
+image: /img/blog/account-manager.webp
 ---
 At EverWash, we spend a lot of time talking with car wash operators about memberships, staffing, churn, growth, technology, and what it really takes to run a profitable wash in today’s market.
 
