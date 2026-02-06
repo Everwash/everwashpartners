@@ -6,7 +6,7 @@ tags:
   - post
   - blog
   - b2b
-image: /img/blog/springcleaning.jpeg
+image: /img/blog/springcleaning_1.jpeg
 ---
 Spring is an important time of year for car wash operators. As winter fades and pollen appears, traffic naturally increases — but without a clear plan, that surge turns into short-term volume instead of long-term value.
 
