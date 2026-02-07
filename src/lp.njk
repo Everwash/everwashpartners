@@ -1,683 +1,301 @@
----
-layout: base.njk
-title: Grow Your Car Wash Business
----
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-8">
-        <h2>Grow <span style="color: var(--color-secondary);">Membership</span></h2>
-        <h2>Grow <span style="color: var(--color-cyan);">Revenue</span></h2>
-        <h2>We'll Handle the Rest</h2>
-        <p class="text">You built a great car wash. EverWash will help you turn it into a recurring, revenue engine
-          with
-          powerful tools, real people, and 24/7 support — so you can focus on washing cars, not managing members.
-        </p>
-        <div class="btn-group">
-          <a href="/contact/" class="btn__secondary">
-            <span>Book a Call</span>
-            <img src="/assets/images/telephone-black.svg" alt="">
-          </a>
-          <a href="/the-everwash-difference/" class="btn__secondary outline">The EverWash Difference</a>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-54M2SKTS');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16910227798"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16910227798'); 
+  </script>
+  <!-- Event snippet for Page Views for Pillars Marketing conversion page -->
+  <script>
+    gtag('event', 'conversion', { 'send_to': 'AW-16910227798/SHQUCLLV7rUaENaytv8-' }); 
+  </script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+  <script>
+    function fetchLandingPage() {
+      var url = 'https://connect.blockboardtech.com/track/t?e=Impression&vr=1&d=eJwzNDcxNrcwNTc2MTQ30jEzNjXUMTYzsDDWMTExNTTQMTSyNNMxNjY10THQCc3LzssvzwOyUCEIoQuAKagw2AwDnbTEnOJUHUMARPQX8A--&m=1&op5=[VALUE-1]&op6=[VALUE-2]&op7=[VALUE-3]&op8=[VALUE-4]&op9=[VALUE-5]&op10=[VALUE-6]';
+      var img = new Image();
+      img.src = url;
+    }
+    fetchLandingPage();
+  </script>
+
+  <!-- Hotjar Tracking Code for EverWash Partners -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 5349287, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+
+  <!-- Google tag (gtag.js) event - delayed navigation helper -->
+  <script>
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_submit_lead_form', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+      return false;
+    }
+  </script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1510661690217821');
+    fbq('track', 'PageView');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | default("EverWash Partners - Excel at Membership") }}</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="{{ description | default('EverWash partners with local car washes to offer unlimited car wash memberships. Excel at membership with our proven tools, technology, and support for car wash operators nationwide.') }}">
+  <meta name="keywords"
+    content="car wash membership, unlimited car wash, car wash partnership, membership management, car wash operators, EverWash">
+  <meta name="author" content="{{ author | default('EverWash Team') }}">
+  <link rel="canonical" href="https://everwashpartners.com{{ page.url }}">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="{% if tags %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ title | default('EverWash Partners - Excel at Membership') }}">
+  <meta property="og:description"
+    content="{{ description | default('EverWash partners with local car washes to offer unlimited car wash memberships. Excel at membership with our proven tools, technology, and support for car wash operators nationwide.') }}">
+  <meta property="og:url" content="https://everwashpartners.com{{ page.url }}">
+  <meta property="og:site_name" content="EverWash Partners">
+  <meta property="og:image" content="{{ image | default('https://everwashpartners.com/assets/images/og-image.png') }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ title | default('EverWash Partners') }}">
+  {% if date %}
+  <meta property="article:published_time" content="{{ date | date('Y-m-d') }}">{% endif %}
+  {% if author %}
+  <meta property="article:author" content="{{ author }}">{% endif %}
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@everwash">
+  <meta name="twitter:creator" content="@everwash">
+  <meta name="twitter:title" content="{{ title | default('EverWash Partners - Excel at Membership') }}">
+  <meta name="twitter:description"
+    content="{{ description | default('EverWash partners with local car washes to offer unlimited car wash memberships. Excel at membership with our proven tools, technology, and support for car wash operators nationwide.') }}">
+  <meta name="twitter:image"
+    content="{{ image | default('https://everwashpartners.com/assets/images/twitter-card.png') }}">
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.2 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Swiper.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Page-specific CSS based on pageStyle variable -->
+  {% if pageStyle %}
+  <link rel="stylesheet" href="/assets/css/{{ pageStyle }}.css">
+  {% endif %}
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Logo Image -->
+        <a class="navbar-brand" href="/">
+          <img src="/assets/images/logo-white.png" alt="EverWash" width="216" height="48" class="logo-img">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+          style="color: var(--color-secondary);">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <!-- CTA Button -->
+            <li class="nav-item">
+              <a href="#contact" class="btn__secondary">
+                <span>Book a Call</span>
+                <img src="/assets/images/telephone-black.svg" alt="">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="social-icons d-none d-lg-block">
-        <a href="https://www.facebook.com/everwashforbusiness" class="social-link">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCv3ZMElXRnResR_Dv9dd1GA" class="social-link">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.instagram.com/everwash4biz/" class="social-link">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/everwash/" class="social-link">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- Curve Divider -->
-  <div class="curve">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
-      <path fill="#F8F8FF" d="M0,0 C720,40 720,40 1440,0 L1440,80 L0,80 Z"></path>
-    </svg>
-  </div>
-</section>
+    </nav>
+  </header>
 
-<!-- Testimonials Video Section -->
-<section class="testimonials-video">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="heading text-center mb-5">
-      <img class="testimonial-icon" src="/assets/images/quotation-1.svg" alt="">
-      <p class="section-subtitle">REAL CAR WASH OWNERS. REAL RESULTS.</p>
-      <h2 class="section-title">What Our Partners Are Saying</h2>
-      <p class="section-description">
-        Hear how EverWash helps operators grow revenue, reduce churn, and take the stress out of membership management.
-      </p>
-    </div>
-
-    <!-- Swiper -->
-    <div class="swiper testimonial-video-slider">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="video-testimonial">
-            <iframe src="https://www.youtube.com/embed/nF5W4q4EvPE?enablejsapi=1&rel=0" title="Video Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h2>Grow <span style="color: var(--color-secondary);">Membership</span></h2>
+            <h2>Grow <span style="color: var(--color-cyan);">Revenue</span></h2>
+            <h2>We'll Handle the Rest</h2>
+            <p class="text">You built a great car wash. EverWash will help you turn it into a recurring, revenue engine
+              with
+              powerful tools, real people, and 24/7 support — so you can focus on washing cars, not managing members.
+            </p>
+            <div class="btn-group">
+              <a href="#contact" class="btn__secondary">
+                <span>Book a Call</span>
+                <img src="/assets/images/telephone-black.svg" alt="">
+              </a>
+              <a href="/the-everwash-difference/" class="btn__secondary outline">The EverWash Difference</a>
+            </div>
+          </div>
+          <div class="social-icons d-none d-lg-block">
+            <a href="https://www.facebook.com/everwashforbusiness" class="social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCv3ZMElXRnResR_Dv9dd1GA" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/everwash4biz/" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/everwash/" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
           </div>
         </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="video-testimonial">
-            <iframe src="https://www.youtube.com/embed/NwzO0S27ewY?enablejsapi=1&rel=0" title="Video Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="video-testimonial">
-            <iframe src="https://www.youtube.com/embed/g_0IwQGbzFo?enablejsapi=1&rel=0" title="Video Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div class="video-testimonial">
-            <iframe src="https://www.youtube.com/embed/o2KaFiMM4Rc?enablejsapi=1&rel=0" title="Video Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
       </div>
-
-      <!-- Custom SVG Navigation Arrows -->
-      <div class="testimonial-video-navigation">
-        <div class="swiper-button-prev custom-arrow">
-          <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
-              fill="white" />
-          </svg>
-
-        </div>
-        <div class="swiper-button-next custom-arrow">
-          <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
-              fill="white" />
-          </svg>
-        </div>
+      <!-- Curve Divider -->
+      <div class="curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path fill="#F8F8FF" d="M0,0 C720,40 720,40 1440,0 L1440,80 L0,80 Z"></path>
+        </svg>
       </div>
+    </section>
 
-    </div>
-
-    <div class="testimonial-video-pagination"></div>
-
-    <!-- CTA Buttons -->
-    <div class="text-center mt-5">
-      <div class="cta-buttons">
-        <a href="/contact/" class="btn__primary">
-          <span>Book a Call</span>
-          <img src="/assets/images/telephone-white.svg" alt="">
-        </a>
-        <a href="/testimonials/" class="btn__secondary">
-          <span>View All Testimonials</span>
-          <img src="/assets/images/right-arrow.svg" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Features Style-One Section -->
-<section class="features style-one">
-  <div class="features-wrapper">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="heading mb-5 mt-5">
-          <h2 class="section-title">
-            Not Just a Provider. <br> <span style="color: var(--color-cyan);">A True Partner.</span>
-          </h2>
-          <p class="my-4">Other platforms give you tools.<br> We give you a plan—and a team.</p>
+    <!-- Testimonials Video Section -->
+    <section class="testimonials-video">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="heading text-center mb-5">
+          <img class="testimonial-icon" src="/assets/images/quotation-1.svg" alt="">
+          <p class="section-subtitle">REAL CAR WASH OWNERS. REAL RESULTS.</p>
+          <h2 class="section-title">What Our Partners Are Saying</h2>
           <p class="section-description">
-            EverWash works with you to launch, grow, and
-            fine-tune your membership program. From pricing to promotions to real-time support, we handle the details so
-            you can focus on what you do best.
-          </p>
-          <div class="features-btn-group">
-            <a href="/contact/" class="btn__primary">
-              <span>Book a Call</span>
-              <img src="/assets/images/telephone-white.svg" alt="">
-            </a>
-            <a href="/the-everwash-difference/" class="btn__secondary">
-              <span>Explore What Makes Us Different</span>
-              <img src="/assets/images/right-arrow.svg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="features-carousel position-relative">
-          <div class="swiper features-one-slider">
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide feature-item">
-                <a href="/strategic-guidance/" class="image-card">
-                  <img src="/assets/images/strategic-launch.webp" alt="Strategic Launch Planning" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Strategic Launch Planning</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <a href="/dedicated-account-manager/" class="image-card">
-                  <img src="/assets/images/account-manager.webp" alt="Dedicated Account Manager" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Dedicated Account Manager</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <a href="/247-human-support-and-problem-solving" class="image-card">
-                  <img src="/assets/images/member-support.webp" alt="24/7 Member Support" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">24/7 Member Support</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <a href="/comprehensive-membership-sales-training/" class="image-card">
-                  <img src="/assets/images/sales-training.webp" alt="Sales Training & Incentives" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Sales Training & Incentives</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <a href="/data-driven-retention-strategies/" class="image-card">
-                  <img src="/assets/images/member-retention.png" alt="Member Retention and Promotions" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Member Retention and Promotions</h3>
-                  </div>
-                </a>
-              </div>
-
-
-              <div class="swiper-slide feature-item">
-                <a href="/customized-enhanced-analytics-and-data/" class="image-card">
-                  <img src="/assets/images/analytics-insights.webp" alt="Real-Time Analytics & Insights" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Real-Time Analytics & Insights</h3>
-                  </div>
-                </a>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Custom SVG Navigation Arrows - Moved outside swiper container -->
-          <div class="features-navigation features-one-navigation">
-            <div class="swiper-button-prev custom-arrow">
-              <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
-                  fill="white" />
-              </svg>
-            </div>
-            <div class="swiper-button-next custom-arrow">
-              <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
-                  fill="white" />
-              </svg>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-</section>
-
-<!-- Features Style-Two Section -->
-<section class="features style-two">
-  <div class="features-wrapper">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="heading mb-5 mt-5">
-          <h2 class="section-title">
-            Everything You <br>Need to Succeed <br>with Membership <br>
-            <span style="color: var(--color-cyan);">All in One Place</span>
-          </h2>
-          <p class="my-4">This isn’t just software—it’s a system for growth.</p>
-          <p class="section-description">
-            EverWash gives you everything you need to grow
-            membership: smart tools, real people, and a proven playbook that actually works.
-          </p>
-          <div class="d-flex gap-3 flex-wrap mt-4">
-            <a href="/explore-the-platform/" class="features-btn btn__primary">
-              <span>Explore our Platform</span>
-              <img src="/assets/images/right-arrow-white.svg" alt="">
-            </a>
-            <a href="/contact/" class="btn__secondary">
-              <span>Book a Call</span>
-              <img src="/assets/images/telephone-black.svg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="features-carousel position-relative">
-          <div class="swiper features-two-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide feature-item">
-                <div class="image-card">
-                  <img src="/assets/images/all-in-one-app.webp" alt="All-in-One App for Members" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">All-in-One App for Members</h3>
-                    <div class="card-content">
-                      <p class="card-description">Let customers manage everything from their phone—activating washes,
-                        updating vehicles, pausing memberships, referring friends, redeeming offers, and more.</p>
-                      <a href="/members-app/" class="btn__secondary">
-                        <span>Learn More</span>
-                        <img src="/assets/images/right-arrow.svg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <div class="image-card">
-                  <img src="/assets/images/attendant-app.webp" alt="Attendant App" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Attendant App</h3>
-                    <div class="card-content">
-                      <p class="card-description">Empower your team with tools to sell and manage memberships in real
-                        time. Track performance and reward results directly through the app.</p>
-                      <a href="/attendant-app/" class="btn__secondary">
-                        <span>Learn More</span>
-                        <img src="/assets/images/right-arrow.svg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <div class="image-card">
-                  <img src="/assets/images/call-center-support.webp" alt="24/7 Call Center Support" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">24/7 Call Center Support</h3>
-                    <div class="card-content">
-                      <p class="card-description">We handle all member questions, cancellations, and billing issues—so your staff doesn’t have to. Our live call center agents resolve issues fast and protect your revenue.</p>
-                      <a href="/call-center/" class="btn__secondary">
-                        <span>Learn More</span>
-                        <img src="/assets/images/right-arrow.svg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide feature-item">
-                <div class="image-card">
-                  <img src="/assets/images/fleet-membership.png" alt="Fleet vehicle at car wash" class="card-image">
-                  <div class="card-overlay">
-                    <h3 class="card-title">Fleet Membership Management</h3>
-                    <div class="card-content">
-                      <p class="card-description">Offer discounted plans to businesses, first responders, and other
-                        high-volume groups. We make signup and billing easy.</p>
-                      <a href="/fleet-membership/" class="btn__secondary">
-                        <span>Learn More</span>
-                        <img src="/assets/images/right-arrow.svg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Custom SVG Navigation Arrows - Moved outside swiper container -->
-          <div class="features-navigation features-two-navigation">
-            <div class="swiper-button-prev custom-arrow">
-              <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
-                  fill="white" />
-              </svg>
-            </div>
-            <div class="swiper-button-next custom-arrow">
-              <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
-                  fill="white" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-
-<!-- Proof Section (Desktop) -->
-<section class="proof-section proof-desktop">
-  <div class="container">
-    <div class="row text-center">
-      <div class="section-heading">
-        <h2 class="title">
-          We Don't Just Promise Growth <span style="color: #F2D422;">We Prove It.</span>
-        </h2>
-        <p class="description">
-          Car washes that partner with EverWash don't just see growth—they see measurable, sustained revenue increases
-          powered by our end-to-end membership platform and real-time human support.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="proof-item proof-one">
-        <div class="proof-text">
-          <p class="proof-number">3×</p>
-          <p class="proof-caption">
-            Membership growth that outpaces self-managed programs threefold
+            Hear how EverWash helps operators grow revenue, reduce churn, and take the stress out of membership
+            management.
           </p>
         </div>
-        <div class="proof-image">
-          <img src="/assets/images/proof-3x.png" alt="Busy car wash line" class="img-fluid rounded-3">
-        </div>
-      </div>
 
-      <div class="proof-item proof-two">
-        <div class="proof-image">
-          <img src="/assets/images/proof-6x.webp" alt="Happy car wash customer" class="img-fluid rounded-3">
-        </div>
-        <div class="proof-text">
-          <p class="proof-number">6×</p>
-          <p class="proof-caption">
-            Member lifetime value that multiplies with EverWash retention strategies
-          </p>
-        </div>
-      </div>
-
-      <div class="proof-item proof-three">
-        <div class="proof-text">
-          <p class="proof-number">30%</p>
-          <p class="proof-caption">
-            Stronger retention with automated lifecycle communications and win-back campaigns
-          </p>
-        </div>
-        <div class="proof-image">
-          <img src="/assets/images/proof-30.webp" alt="Phone showing EverWash promo" class="img-fluid rounded-3">
-        </div>
-      </div>
-
-      <div class="proof-item proof-four">
-        <div class="proof-image">
-          <img src="/assets/images/proof-38.webp" alt="Greeter with customer at car wash" class="img-fluid rounded-3">
-        </div>
-        <div class="proof-text">
-          <p class="proof-number">38%</p>
-          <p class="proof-caption">
-            Higher sales conversions through EverWash training and attendant enablement
-          </p>
-        </div>
-      </div>
-
-      <div class="proof-item proof-five">
-        <div class="proof-text">
-          <p class="proof-number">46%</p>
-          <p class="proof-caption">
-            Drop in member churn within 90 days of enabling live phone support
-          </p>
-        </div>
-        <div class="proof-image">
-          <img src="/assets/images/proof-46.jpg" alt="Happy customer with phone" class="img-fluid rounded-3">
-        </div>
-      </div>
-
-      <div class="proof-item proof-six">
-        <div class="proof-image">
-          <img src="/assets/images/proof-100.webp" alt="Happy car wash owner team" class="img-fluid rounded-3">
-        </div>
-        <div class="proof-text">
-          <p class="proof-number">100%</p>
-          <p class="proof-caption">
-            End-to-end platform coverage — from pricing and analytics to marketing and support
-          </p>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-        <a href="/case-study/" class="btn__secondary">
-          <span>Read Our Case Studies and White Papers</span>
-          <img src="/assets/images/right-arrow.svg" alt="">
-        </a>
-        <a href="/contact/" class="btn__primary" style="background: var(--color-primary); border: 2px solid white;">
-          <span>Book a Call</span>
-          <img src="/assets/images/telephone-white.svg" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Proof Section (Mobile) -->
-<section class="proof-section proof-mobile">
-  <div class="container">
-    <div class="section-heading text-center">
-      <h2 class="title">
-        We Don't Just Promise Growth <span style="color: #F2D422;">We Prove It.</span>
-      </h2>
-      <p class="description">
-        Car washes that partner with EverWash don't just see growth—they see measurable, sustained revenue increases
-        powered by our end-to-end membership platform and real-time human support.
-      </p>
-    </div>
-
-    <!-- Swiper -->
-    <div class="swiper proofSwiper">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="proof-item" style="background-image: url('/assets/images/proof-3x.png')">
-            <div class="proof-overlay">
-              <div class="proof-content">
-                <p class="proof-number">3×</p>
-                <p class="proof-caption">
-                  Membership growth that outpaces self-managed programs threefold
-                </p>
+        <!-- Swiper -->
+        <div class="swiper testimonial-video-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="video-testimonial">
+                <iframe src="https://www.youtube.com/embed/nF5W4q4EvPE?enablejsapi=1&rel=0" title="Video Testimonial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="proof-item" style="background-image: url('/assets/images/proof-6x.webp')">
-            <div class="proof-overlay">
-              <div class="proof-content">
-                <p class="proof-number">6×</p>
-                <p class="proof-caption">
-                  Member lifetime value that multiplies with EverWash retention strategies
-                </p>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="video-testimonial">
+                <iframe src="https://www.youtube.com/embed/NwzO0S27ewY?enablejsapi=1&rel=0" title="Video Testimonial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="proof-item" style="background-image: url('/assets/images/proof-30.webp')">
-            <div class="proof-overlay">
-              <div class="proof-content">
-                <p class="proof-number">30%</p>
-                <p class="proof-caption">
-                  Stronger retention with automated lifecycle communications and win-back campaigns
-                </p>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="video-testimonial">
+                <iframe src="https://www.youtube.com/embed/g_0IwQGbzFo?enablejsapi=1&rel=0" title="Video Testimonial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div class="proof-item" style="background-image: url('/assets/images/proof-38.webp')">
-            <div class="proof-overlay">
-              <div class="proof-content">
-                <p class="proof-number">38%</p>
-                <p class="proof-caption">
-                  Higher sales conversions through EverWash training and attendant enablement
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 5 -->
-        <div class="swiper-slide">
-          <div class="proof-item" style="background-image: url('/assets/images/proof-46.jpg')">
-            <div class="proof-overlay">
-              <div class="proof-content">
-                <p class="proof-number">46%</p>
-                <p class="proof-caption">
-                  Drop in member churn within 90 days of enabling live phone support
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 6 -->
-        <div class="swiper-slide">
-          <div class="proof-item" style="background-image: url('/assets/images/proof-100.webp')">
-            <div class="proof-overlay">
-              <div class="proof-content">
-                <p class="proof-number">100%</p>
-                <p class="proof-caption">
-                  End-to-end platform coverage — from pricing and analytics to marketing and support
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> <!-- end .swiper-wrapper -->
-
-      <!-- Custom SVG Navigation Arrows -->
-      <div class="proof-mobile-navigation">
-        <div class="swiper-button-prev custom-arrow">
-          <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
-              fill="#141C52" />
-          </svg>
-        </div>
-        <div class="swiper-button-next custom-arrow">
-          <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
-              fill="#141C52" />
-          </svg>
-        </div>
-      </div>
-
-    </div> <!-- end .swiper -->
-
-      <!-- ✅ Pagination Dots go here (outside swiper container) -->
-      <div class="proof-mobile-pagination"></div>
-    </div>
-    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-      <a href="/case-study/" class="btn__secondary">
-        <span>Read Our Case Studies and White Papers</span>
-        <img src="/assets/images/right-arrow.svg" alt="">
-      </a>
-      <a href="/contact/" class="btn__primary" style="background: var(--color-primary); border: 2px solid white;">
-        <span>Book a Call</span>
-        <img src="/assets/images/telephone-white.svg" alt="">
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Testimonial Section -->
-<section class="testimonials">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="heading mb-5">
-          <h2 class="section-title">You Focus on <br> Washing Cars. <span style="color: var(--color-cyan);"><br>We'll
-              Handle
-              the Rest.</span></h2>
-          <p class="section-description">
-            From member acquisition to retention and everything in between, we provide the expertise, technology, and
-            support to make your membership program successful.
-          </p>
-          <div class="d-flex gap-3 flex-wrap mt-5">
-            <a href="/testimonials/" class="testimonial-btn btn__primary">
-              <span>See What Our Partners Are Saying</span>
-              <img src="/assets/images/right-arrow-white.svg" alt="">
-            </a>
-            <a href="/contact/" class="btn__secondary">
-              <span>Book a Call</span>
-              <img src="/assets/images/telephone-black.svg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="testimonial-carousel">
-          <div class="swiper testimonial-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide testimonial-item">
-                <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
-                <p class="testimonial-quote">"EverWash helped me grow my memberships by 60% in just 12 months. Their support with marketing, technology integration, and member management has been invaluable."</p>
-                <div class="testimonial-author">
-                  <img src="/assets/images/avatar-1.png" alt="">
-                  <p>Sudz Car Wash</p>
-                </div>
-              </div>
-              <div class="swiper-slide testimonial-item">
-                <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
-                <p class="testimonial-quote">"Ultimately, partnering with EverWash came down to their ingrained focus on membership and customer engagement. EverWash brought us proven tools, technology, and best practices to actually grow a successful membership base, not just manage it. We are thrilled to be an EverWash partner!"</p>
-                <div class="testimonial-author">
-                  <img src="/assets/images/avatar-2.webp" alt="">
-                  <p>Swell Wash</p>
-                </div>
-              </div>
-              <div class="swiper-slide testimonial-item">
-                <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
-                <p class="testimonial-quote">"EverWash made our transition as new owners seamless. With their help, we easily communicated updates to our customers, putting everyone at ease. The transition team was incredibly helpful, communicative, and cooperative—it truly felt like a team effort."</p>
-                <div class="testimonial-author">
-                  <img src="/assets/images/avatar-3.webp" alt="">
-                  <p>Whittier Express Car Wash</p>
-                </div>
-              </div>
-              <div class="swiper-slide testimonial-item">
-                <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
-                <p class="testimonial-quote">"EverWash helped us stabilize revenue by growing a membership program that's not weather-dependent. Starting with zero members, we've grown exponentially every year."</p>
-                <div class="testimonial-author">
-                  <img src="/assets/images/avatar-4.webp" alt="">
-                  <p>Exclusive Car Wash</p>
-                </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="video-testimonial">
+                <iframe src="https://www.youtube.com/embed/o2KaFiMM4Rc?enablejsapi=1&rel=0" title="Video Testimonial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
             </div>
           </div>
 
           <!-- Custom SVG Navigation Arrows -->
-          <div class="testimonial-carousel-navigation">
+          <div class="testimonial-video-navigation">
             <div class="swiper-button-prev custom-arrow">
               <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
                   fill="white" />
               </svg>
+
             </div>
             <div class="swiper-button-next custom-arrow">
               <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -688,344 +306,1053 @@ title: Grow Your Car Wash Business
             </div>
           </div>
 
-          <!-- ✅ Pagination Dots go here (outside swiper container) -->
-          <div class="testimonial-slider-pagination"></div>
+        </div>
+
+        <div class="testimonial-video-pagination"></div>
+
+        <!-- CTA Buttons -->
+        <div class="text-center mt-5">
+          <div class="cta-buttons">
+            <a href="#contact" class="btn__primary">
+              <span>Book a Call</span>
+              <img src="/assets/images/telephone-white.svg" alt="">
+            </a>
+            <a href="/testimonials/" class="btn__secondary">
+              <span>View All Testimonials</span>
+              <img src="/assets/images/right-arrow.svg" alt="">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Grow Revenue Section -->
-<section class="grow-revenue">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <img src="/assets/images/ready-to-grow.webp" alt="EverWash team helping car wash operator" class="img-fluid rounded-3">
-      </div>
-      <div class="col-lg-6">
-        <div class="content">
-          <p class="subtitle">LET'S BUILD SOMETHING BETTER, TOGETHER.</p>
-          <h2 class="title">Ready to Grow Revenue Through <span>Membership</span>?</h2>
-          <p class="description mt-20">
-            Whether you're starting from scratch or trying to turn things around, EverWash delivers the tools, support,
-            and strategy to help you grow—without the guesswork.
-          </p>
-          <a href="/contact/" class="btn__primary mt-5">
-            <span>Book a Call</span>
-            <img src="/assets/images/telephone-white.svg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="contact-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="contact-card">
-          <div class="row g-0">
-            <div class="col-md-5 contact-info-sidebar">
-              <h1 class="sidebar-title">GET IN TOUCH<br>WITH SALES</h1>
-              <p>Fill out the form or contact us directly and our team will get back to you within 24 hours.</p>
-
-              <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span><a href="mailto:sales@everwash.com" class="text-white">sales@everwash.com</a></span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-phone-alt"></i>
-                <span><a href="tel:+18554927477" class="text-white">(855) 492-7477</a></span>
+    <!-- Features Style-One Section -->
+    <section class="features style-one">
+      <div class="features-wrapper">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="heading mb-5 mt-5">
+              <h2 class="section-title">
+                Not Just a Provider. <br> <span style="color: var(--color-cyan);">A True Partner.</span>
+              </h2>
+              <p class="my-4">Other platforms give you tools.<br> We give you a plan—and a team.</p>
+              <p class="section-description">
+                EverWash works with you to launch, grow, and
+                fine-tune your membership program. From pricing to promotions to real-time support, we handle the
+                details so
+                you can focus on what you do best.
+              </p>
+              <div class="features-btn-group">
+                <a href="#contact" class="btn__primary">
+                  <span>Book a Call</span>
+                  <img src="/assets/images/telephone-white.svg" alt="">
+                </a>
+                <a href="/the-everwash-difference/" class="btn__secondary">
+                  <span>Explore What Makes Us Different</span>
+                  <img src="/assets/images/right-arrow.svg" alt="">
+                </a>
               </div>
             </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="features-carousel position-relative">
+              <div class="swiper features-one-slider">
+                <div class="swiper-wrapper">
 
-            <div class="col-md-7">
-              <div class="contact-form">
-                <div class="text-center mb-4">
-                  <img src="/assets/images/everwash-logo-horizontal.png" alt="EverWash" class="form-logo mb-3">
-                  <p class="form-subtext">Talk to a membership professional about how the EverWash platform can increase
-                    the overall profitability of your wash</p>
+                  <div class="swiper-slide feature-item">
+                    <a href="/strategic-guidance/" class="image-card">
+                      <img src="/assets/images/strategic-launch.webp" alt="Strategic Launch Planning"
+                        class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Strategic Launch Planning</h3>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide feature-item">
+                    <a href="/dedicated-account-manager/" class="image-card">
+                      <img src="/assets/images/account-manager.webp" alt="Dedicated Account Manager" class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Dedicated Account Manager</h3>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide feature-item">
+                    <a href="/247-human-support-and-problem-solving" class="image-card">
+                      <img src="/assets/images/member-support.webp" alt="24/7 Member Support" class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">24/7 Member Support</h3>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide feature-item">
+                    <a href="/comprehensive-membership-sales-training/" class="image-card">
+                      <img src="/assets/images/sales-training.webp" alt="Sales Training & Incentives"
+                        class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Sales Training & Incentives</h3>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide feature-item">
+                    <a href="/data-driven-retention-strategies/" class="image-card">
+                      <img src="/assets/images/member-retention.png" alt="Member Retention and Promotions"
+                        class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Member Retention and Promotions</h3>
+                      </div>
+                    </a>
+                  </div>
+
+
+                  <div class="swiper-slide feature-item">
+                    <a href="/customized-enhanced-analytics-and-data/" class="image-card">
+                      <img src="/assets/images/analytics-insights.webp" alt="Real-Time Analytics & Insights"
+                        class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Real-Time Analytics & Insights</h3>
+                      </div>
+                    </a>
+                  </div>
+
                 </div>
-                <form 
-                  id="everWashForm" 
-                  name="Meta Ads" 
-                  method="POST"
-                  action="/thank-you/" 
-                  data-netlify="true" 
-                  data-netlify-honeypot="bot-field"
-                  netlify
-                >
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label class="form-label">First Name</label>
-                      <input type="text" class="form-control" name="firstName" required>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Last Name</label>
-                      <input type="text" class="form-control" name="lastName" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Email Address</label>
-                      <input type="email" class="form-control" name="email" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" name="phone" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Car Wash Name</label>
-                      <input type="text" class="form-control" name="carWashName" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Wash Type</label>
-                      <select class="form-select" name="washType" required>
-                        <option value="" selected disabled>Choose Wash Type</option>
-                        <option value="tunnel">Tunnel</option>
-                        <option value="iba">IBA</option>
-                        <option value="self-serve">Self Serve</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div class="col-md-8">
-                      <label class="form-label">State</label>
-                      <select class="form-select" name="state" required>
-                        <option value="" selected disabled>Choose State</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Alaska">Alaska</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Connecticut">Connecticut</option>
-                        <option value="Delaware">Delaware</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Indiana">Indiana</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Maine">Maine</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Massachusetts">Massachusetts</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Mississippi">Mississippi</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="Montana">Montana</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New Hampshire">New Hampshire</option>
-                        <option value="New Jersey">New Jersey</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="New York">New York</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="North Dakota">North Dakota</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Rhode Island">Rhode Island</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="South Dakota">South Dakota</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
-                        <option value="Vermont">Vermont</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Washington">Washington</option>
-                        <option value="West Virginia">West Virginia</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                        <option value="Wyoming">Wyoming</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label">Zip Code</label>
-                      <input type="text" class="form-control" name="zipCode" required>
-                    </div>
-                    <div class="col-12 mt-4">
-                      <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
-                      <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is specifically
-                        for Car Wash Owners who wish to contact EverWash about setting up a membership program at their
-                        location. If you are a current EverWash member looking for customer support, please contact our
-                        Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or call <a
-                          href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
+              </div>
+
+              <!-- Custom SVG Navigation Arrows - Moved outside swiper container -->
+              <div class="features-navigation features-one-navigation">
+                <div class="swiper-button-prev custom-arrow">
+                  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="swiper-button-next custom-arrow">
+                  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
+                      fill="white" />
+                  </svg>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Features Style-Two Section -->
+    <section class="features style-two">
+      <div class="features-wrapper">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="heading mb-5 mt-5">
+              <h2 class="section-title">
+                Everything You <br>Need to Succeed <br>with Membership <br>
+                <span style="color: var(--color-cyan);">All in One Place</span>
+              </h2>
+              <p class="my-4">This isn’t just software—it’s a system for growth.</p>
+              <p class="section-description">
+                EverWash gives you everything you need to grow
+                membership: smart tools, real people, and a proven playbook that actually works.
+              </p>
+              <div class="d-flex gap-3 flex-wrap mt-4">
+                <a href="/explore-the-platform/" class="features-btn btn__primary">
+                  <span>Explore our Platform</span>
+                  <img src="/assets/images/right-arrow-white.svg" alt="">
+                </a>
+                <a href="#contact" class="btn__secondary">
+                  <span>Book a Call</span>
+                  <img src="/assets/images/telephone-black.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="features-carousel position-relative">
+              <div class="swiper features-two-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide feature-item">
+                    <div class="image-card">
+                      <img src="/assets/images/all-in-one-app.webp" alt="All-in-One App for Members" class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">All-in-One App for Members</h3>
+                        <div class="card-content">
+                          <p class="card-description">Let customers manage everything from their phone—activating
+                            washes,
+                            updating vehicles, pausing memberships, referring friends, redeeming offers, and more.</p>
+                          <a href="/members-app/" class="btn__secondary">
+                            <span>Learn More</span>
+                            <img src="/assets/images/right-arrow.svg" alt="">
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </form>
+
+                  <div class="swiper-slide feature-item">
+                    <div class="image-card">
+                      <img src="/assets/images/attendant-app.webp" alt="Attendant App" class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Attendant App</h3>
+                        <div class="card-content">
+                          <p class="card-description">Empower your team with tools to sell and manage memberships in
+                            real
+                            time. Track performance and reward results directly through the app.</p>
+                          <a href="/attendant-app/" class="btn__secondary">
+                            <span>Learn More</span>
+                            <img src="/assets/images/right-arrow.svg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide feature-item">
+                    <div class="image-card">
+                      <img src="/assets/images/call-center-support.webp" alt="24/7 Call Center Support"
+                        class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">24/7 Call Center Support</h3>
+                        <div class="card-content">
+                          <p class="card-description">We handle all member questions, cancellations, and billing
+                            issues—so your staff doesn’t have to. Our live call center agents resolve issues fast and
+                            protect your revenue.</p>
+                          <a href="/call-center/" class="btn__secondary">
+                            <span>Learn More</span>
+                            <img src="/assets/images/right-arrow.svg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide feature-item">
+                    <div class="image-card">
+                      <img src="/assets/images/fleet-membership.png" alt="Fleet vehicle at car wash" class="card-image">
+                      <div class="card-overlay">
+                        <h3 class="card-title">Fleet Membership Management</h3>
+                        <div class="card-content">
+                          <p class="card-description">Offer discounted plans to businesses, first responders, and other
+                            high-volume groups. We make signup and billing easy.</p>
+                          <a href="/fleet-membership/" class="btn__secondary">
+                            <span>Learn More</span>
+                            <img src="/assets/images/right-arrow.svg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Custom SVG Navigation Arrows - Moved outside swiper container -->
+              <div class="features-navigation features-two-navigation">
+                <div class="swiper-button-prev custom-arrow">
+                  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="swiper-button-next custom-arrow">
+                  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
+                      fill="white" />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
+    </section>
+
+    <!-- Proof Section (Desktop) -->
+    <section class="proof-section proof-desktop">
+      <div class="container">
+        <div class="row text-center">
+          <div class="section-heading">
+            <h2 class="title">
+              We Don't Just Promise Growth <span style="color: #F2D422;">We Prove It.</span>
+            </h2>
+            <p class="description">
+              Car washes that partner with EverWash don't just see growth—they see measurable, sustained revenue
+              increases
+              powered by our end-to-end membership platform and real-time human support.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="proof-item proof-one">
+            <div class="proof-text">
+              <p class="proof-number">3×</p>
+              <p class="proof-caption">
+                Membership growth that outpaces self-managed programs threefold
+              </p>
+            </div>
+            <div class="proof-image">
+              <img src="/assets/images/proof-3x.png" alt="Busy car wash line" class="img-fluid rounded-3">
+            </div>
+          </div>
+
+          <div class="proof-item proof-two">
+            <div class="proof-image">
+              <img src="/assets/images/proof-6x.webp" alt="Happy car wash customer" class="img-fluid rounded-3">
+            </div>
+            <div class="proof-text">
+              <p class="proof-number">6×</p>
+              <p class="proof-caption">
+                Member lifetime value that multiplies with EverWash retention strategies
+              </p>
+            </div>
+          </div>
+
+          <div class="proof-item proof-three">
+            <div class="proof-text">
+              <p class="proof-number">30%</p>
+              <p class="proof-caption">
+                Stronger retention with automated lifecycle communications and win-back campaigns
+              </p>
+            </div>
+            <div class="proof-image">
+              <img src="/assets/images/proof-30.webp" alt="Phone showing EverWash promo" class="img-fluid rounded-3">
+            </div>
+          </div>
+
+          <div class="proof-item proof-four">
+            <div class="proof-image">
+              <img src="/assets/images/proof-38.webp" alt="Greeter with customer at car wash"
+                class="img-fluid rounded-3">
+            </div>
+            <div class="proof-text">
+              <p class="proof-number">38%</p>
+              <p class="proof-caption">
+                Higher sales conversions through EverWash training and attendant enablement
+              </p>
+            </div>
+          </div>
+
+          <div class="proof-item proof-five">
+            <div class="proof-text">
+              <p class="proof-number">46%</p>
+              <p class="proof-caption">
+                Drop in member churn within 90 days of enabling live phone support
+              </p>
+            </div>
+            <div class="proof-image">
+              <img src="/assets/images/proof-46.jpg" alt="Happy customer with phone" class="img-fluid rounded-3">
+            </div>
+          </div>
+
+          <div class="proof-item proof-six">
+            <div class="proof-image">
+              <img src="/assets/images/proof-100.webp" alt="Happy car wash owner team" class="img-fluid rounded-3">
+            </div>
+            <div class="proof-text">
+              <p class="proof-number">100%</p>
+              <p class="proof-caption">
+                End-to-end platform coverage — from pricing and analytics to marketing and support
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+            <a href="/case-study/" class="btn__secondary">
+              <span>Read Our Case Studies and White Papers</span>
+              <img src="/assets/images/right-arrow.svg" alt="">
+            </a>
+            <a href="#contact" class="btn__primary" style="background: var(--color-primary); border: 2px solid white;">
+              <span>Book a Call</span>
+              <img src="/assets/images/telephone-white.svg" alt="">
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-</section>
+    </section>
 
-<style>
-  .contact-hero {
-    position: relative;
-    background:  url('/assets/images/contact-hero-bg.png');
-    background-size: cover;
-    background-position: center;
-    color: var(--color-white);
-    padding: 12rem 0 6rem;
-    text-align: center;
-  }
+    <!-- Proof Section (Mobile) -->
+    <section class="proof-section proof-mobile">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2 class="title">
+            We Don't Just Promise Growth <span style="color: #F2D422;">We Prove It.</span>
+          </h2>
+          <p class="description">
+            Car washes that partner with EverWash don't just see growth—they see measurable, sustained revenue increases
+            powered by our end-to-end membership platform and real-time human support.
+          </p>
+        </div>
 
-  .contact-hero .hero-title {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
+        <!-- Swiper -->
+        <div class="swiper proofSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="proof-item" style="background-image: url('/assets/images/proof-3x.png')">
+                <div class="proof-overlay">
+                  <div class="proof-content">
+                    <p class="proof-number">3×</p>
+                    <p class="proof-caption">
+                      Membership growth that outpaces self-managed programs threefold
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .contact-hero .hero-text {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
-    margin: 0 auto;
-  }
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="proof-item" style="background-image: url('/assets/images/proof-6x.webp')">
+                <div class="proof-overlay">
+                  <div class="proof-content">
+                    <p class="proof-number">6×</p>
+                    <p class="proof-caption">
+                      Member lifetime value that multiplies with EverWash retention strategies
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .contact-hero .curve {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    line-height: 0;
-  }
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="proof-item" style="background-image: url('/assets/images/proof-30.webp')">
+                <div class="proof-overlay">
+                  <div class="proof-content">
+                    <p class="proof-number">30%</p>
+                    <p class="proof-caption">
+                      Stronger retention with automated lifecycle communications and win-back campaigns
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .contact-hero .curve svg {
-    display: block;
-    width: 100%;
-    height: 60px;
-  }
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="proof-item" style="background-image: url('/assets/images/proof-38.webp')">
+                <div class="proof-overlay">
+                  <div class="proof-content">
+                    <p class="proof-number">38%</p>
+                    <p class="proof-caption">
+                      Higher sales conversions through EverWash training and attendant enablement
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .contact-section {
-    padding: 60px 0 100px;
-    background: #f8f8ff;
-  }
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="proof-item" style="background-image: url('/assets/images/proof-46.jpg')">
+                <div class="proof-overlay">
+                  <div class="proof-content">
+                    <p class="proof-number">46%</p>
+                    <p class="proof-caption">
+                      Drop in member churn within 90 days of enabling live phone support
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .contact-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  }
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+              <div class="proof-item" style="background-image: url('/assets/images/proof-100.webp')">
+                <div class="proof-overlay">
+                  <div class="proof-content">
+                    <p class="proof-number">100%</p>
+                    <p class="proof-caption">
+                      End-to-end platform coverage — from pricing and analytics to marketing and support
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .contact-info-sidebar {
-    background: var(--color-primary);
-    color: white;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+          </div> <!-- end .swiper-wrapper -->
 
-  .contact-info-sidebar h3 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
+          <!-- Custom SVG Navigation Arrows -->
+          <div class="proof-mobile-navigation">
+            <div class="swiper-button-prev custom-arrow">
+              <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
+                  fill="#141C52" />
+              </svg>
+            </div>
+            <div class="swiper-button-next custom-arrow">
+              <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
+                  fill="#141C52" />
+              </svg>
+            </div>
+          </div>
 
-  .sidebar-title {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.1;
-    color: white;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-  }
+        </div> <!-- end .swiper -->
 
-  .form-logo {
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+        <!-- ✅ Pagination Dots go here (outside swiper container) -->
+        <div class="proof-mobile-pagination"></div>
+      </div>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+        <a href="/case-study/" class="btn__secondary">
+          <span>Read Our Case Studies and White Papers</span>
+          <img src="/assets/images/right-arrow.svg" alt="">
+        </a>
+        <a href="#contact" class="btn__primary" style="background: var(--color-primary); border: 2px solid white;">
+          <span>Book a Call</span>
+          <img src="/assets/images/telephone-white.svg" alt="">
+        </a>
+      </div>
+      </div>
+    </section>
 
-  .form-subtext {
-    font-size: 16px;
-    color: var(--color-primary);
-    max-width: 450px;
-    margin: 0 auto;
-  }
 
-  .contact-form {
-    padding: 40px 50px;
-  }
+    <!-- Testimonial Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="heading mb-5">
+              <h2 class="section-title">You Focus on <br> Washing Cars. <span
+                  style="color: var(--color-cyan);"><br>We'll
+                  Handle
+                  the Rest.</span></h2>
+              <p class="section-description">
+                From member acquisition to retention and everything in between, we provide the expertise, technology,
+                and
+                support to make your membership program successful.
+              </p>
+              <div class="d-flex gap-3 flex-wrap mt-5">
+                <a href="/testimonials/" class="testimonial-btn btn__primary">
+                  <span>See What Our Partners Are Saying</span>
+                  <img src="/assets/images/right-arrow-white.svg" alt="">
+                </a>
+                <a href="#contact" class="btn__secondary">
+                  <span>Book a Call</span>
+                  <img src="/assets/images/telephone-black.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="testimonial-carousel">
+              <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide testimonial-item">
+                    <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
+                    <p class="testimonial-quote">"EverWash helped me grow my memberships by 60% in just 12 months. Their
+                      support with marketing, technology integration, and member management has been invaluable."</p>
+                    <div class="testimonial-author">
+                      <img src="/assets/images/avatar-1.png" alt="">
+                      <p>Sudz Car Wash</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide testimonial-item">
+                    <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
+                    <p class="testimonial-quote">"Ultimately, partnering with EverWash came down to their ingrained
+                      focus on membership and customer engagement. EverWash brought us proven tools, technology, and
+                      best practices to actually grow a successful membership base, not just manage it. We are thrilled
+                      to be an EverWash partner!"</p>
+                    <div class="testimonial-author">
+                      <img src="/assets/images/avatar-2.webp" alt="">
+                      <p>Swell Wash</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide testimonial-item">
+                    <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
+                    <p class="testimonial-quote">"EverWash made our transition as new owners seamless. With their help,
+                      we easily communicated updates to our customers, putting everyone at ease. The transition team was
+                      incredibly helpful, communicative, and cooperative—it truly felt like a team effort."</p>
+                    <div class="testimonial-author">
+                      <img src="/assets/images/avatar-3.webp" alt="">
+                      <p>Whittier Express Car Wash</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide testimonial-item">
+                    <img class="quotation-icon" src="/assets/images/quotation-2.svg" alt="">
+                    <p class="testimonial-quote">"EverWash helped us stabilize revenue by growing a membership program
+                      that's not weather-dependent. Starting with zero members, we've grown exponentially every year."
+                    </p>
+                    <div class="testimonial-author">
+                      <img src="/assets/images/avatar-4.webp" alt="">
+                      <p>Exclusive Car Wash</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  .form-label {
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 8px;
-  }
+              <!-- Custom SVG Navigation Arrows -->
+              <div class="testimonial-carousel-navigation">
+                <div class="swiper-button-prev custom-arrow">
+                  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792893 7.29289L7.15686 0.928931C7.54738 0.538407 8.18054 0.538407 8.57107 0.928931C8.96159 1.31946 8.96159 1.95262 8.57107 2.34314L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107 15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM20.5 8L20.5 9L1.5 9L1.5 8L1.5 7L20.5 7L20.5 8Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="swiper-button-next custom-arrow">
+                  <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.2071 8.70711C20.5976 8.31658 20.5976 7.68342 20.2071 7.29289L13.8431 0.928931C13.4526 0.538407 12.8195 0.538407 12.4289 0.928931C12.0384 1.31946 12.0384 1.95262 12.4289 2.34314L18.0858 8L12.4289 13.6569C12.0384 14.0474 12.0384 14.6805 12.4289 15.0711C12.8195 15.4616 13.4526 15.4616 13.8431 15.0711L20.2071 8.70711ZM0.5 8L0.5 9L19.5 9L19.5 8L19.5 7L0.5 7L0.5 8Z"
+                      fill="white" />
+                  </svg>
+                </div>
+              </div>
 
-  .form-control,
-  .form-select {
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-  }
+              <!-- ✅ Pagination Dots go here (outside swiper container) -->
+              <div class="testimonial-slider-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  .form-control:focus,
-  .form-select:focus {
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 0 0.2rem rgba(253, 196, 45, 0.25);
-  }
+    <!-- Grow Revenue Section -->
+    <section class="grow-revenue">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/assets/images/ready-to-grow.webp" alt="EverWash team helping car wash operator"
+              class="img-fluid rounded-3">
+          </div>
+          <div class="col-lg-6">
+            <div class="content">
+              <p class="subtitle">LET'S BUILD SOMETHING BETTER, TOGETHER.</p>
+              <h2 class="title">Ready to Grow Revenue Through <span>Membership</span>?</h2>
+              <p class="description mt-20">
+                Whether you're starting from scratch or trying to turn things around, EverWash delivers the tools,
+                support,
+                and strategy to help you grow—without the guesswork.
+              </p>
+              <a href="#contact" class="btn__primary mt-5">
+                <span>Book a Call</span>
+                <img src="/assets/images/telephone-white.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  @media (max-width: 768px) {
-    .contact-hero {
-      padding: 10rem 0 4rem;
-    }
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="contact-card">
+              <div class="row g-0">
+                <div class="col-md-5 contact-info-sidebar">
+                  <h1 class="sidebar-title">GET IN TOUCH<br>WITH SALES</h1>
+                  <p>Fill out the form or contact us directly and our team will get back to you within 24 hours.</p>
 
-    .contact-hero .hero-title {
-      font-size: 36px;
-    }
+                  <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:sales@everwash.com" class="text-white">sales@everwash.com</a></span>
+                  </div>
+                  <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><a href="tel:+18554927477" class="text-white">(855) 492-7477</a></span>
+                  </div>
+                </div>
 
-    .contact-info-sidebar,
-    .contact-form {
-      padding: 30px;
-    }
-  }
-</style>
+                <div class="col-md-7">
+                  <div class="contact-form">
+                    <div class="text-center mb-4">
+                      <img src="/assets/images/everwash-logo-horizontal.png" alt="EverWash" class="form-logo mb-3">
+                      <p class="form-subtext">Talk to a membership professional about how the EverWash platform can
+                        increase
+                        the overall profitability of your wash</p>
+                    </div>
+                    <form id="everWashForm" name="Meta Ads" method="POST" action="/thank-you/" data-netlify="true"
+                      data-netlify-honeypot="bot-field" netlify>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label class="form-label">First Name</label>
+                          <input type="text" class="form-control" name="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Last Name</label>
+                          <input type="text" class="form-control" name="lastName" required>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label">Email Address</label>
+                          <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label">Phone Number</label>
+                          <input type="tel" class="form-control" name="phone" required>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label">Car Wash Name</label>
+                          <input type="text" class="form-control" name="carWashName" required>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label">Wash Type</label>
+                          <select class="form-select" name="washType" required>
+                            <option value="" selected disabled>Choose Wash Type</option>
+                            <option value="tunnel">Tunnel</option>
+                            <option value="iba">IBA</option>
+                            <option value="self-serve">Self Serve</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                        <div class="col-md-8">
+                          <label class="form-label">State</label>
+                          <select class="form-select" name="state" required>
+                            <option value="" selected disabled>Choose State</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="form-label">Zip Code</label>
+                          <input type="text" class="form-control" name="zipCode" required>
+                        </div>
+                        <div class="col-12 mt-4">
+                          <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                          <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is
+                            specifically
+                            for Car Wash Owners who wish to contact EverWash about setting up a membership program at
+                            their
+                            location. If you are a current EverWash member looking for customer support, please contact
+                            our
+                            Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or
+                            call <a href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
 
-<script>
-// Add form submission tracking without breaking Netlify functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('everWashForm');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
+    <style>
+      .contact-hero {
+        position: relative;
+        background: url('/assets/images/contact-hero-bg.png');
+        background-size: cover;
+        background-position: center;
+        color: var(--color-white);
+        padding: 12rem 0 6rem;
+        text-align: center;
+      }
+
+      .contact-hero .hero-title {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .contact-hero .hero-text {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-hero .curve {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+      }
+
+      .contact-hero .curve svg {
+        display: block;
+        width: 100%;
+        height: 60px;
+      }
+
+      .contact-section {
+        padding: 60px 0 100px;
+        background: #f8f8ff;
+      }
+
+      .contact-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-info-sidebar {
+        background: var(--color-primary);
+        color: white;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-info-sidebar h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .sidebar-title {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.1;
+        color: white;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+
+      .form-logo {
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .form-subtext {
+        font-size: 16px;
+        color: var(--color-primary);
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      .contact-form {
+        padding: 40px 50px;
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: 8px;
+      }
+
+      .form-control,
+      .form-select {
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--color-secondary);
+        box-shadow: 0 0 0 0.2rem rgba(253, 196, 45, 0.25);
+      }
+
+      @media (max-width: 768px) {
+        .contact-hero {
+          padding: 10rem 0 4rem;
+        }
+
+        .contact-hero .hero-title {
+          font-size: 36px;
+        }
+
+        .contact-info-sidebar,
+        .contact-form {
+          padding: 30px;
+        }
+      }
+    </style>
+
+    <script>
+      // Add form submission tracking without breaking Netlify functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('everWashForm');
+
+        if (form) {
+          form.addEventListener('submit', function (e) {
             // Don't prevent default - let Netlify handle the form submission
-            
+
             // Track with Google Analytics
             if (typeof gtag === 'function') {
-                gtag('event', 'conversion_event_submit_lead_form', {
-                    'event_category': 'Contact Form',
-                    'event_label': 'Contact Page Submission'
-                });
-                console.log('Google Analytics form submission tracked');
+              gtag('event', 'conversion_event_submit_lead_form', {
+                'event_category': 'Contact Form',
+                'event_label': 'Contact Page Submission'
+              });
+              console.log('Google Analytics form submission tracked');
             }
-            
+
             // Track with Facebook Pixel
             if (typeof fbq === 'function') {
-                fbq('track', 'Lead', {
-                    content_category: 'Contact Form',
-                    source: 'Contact Page'
-                });
-                console.log('Facebook Pixel form submission tracked');
+              fbq('track', 'Lead', {
+                content_category: 'Contact Form',
+                source: 'Contact Page'
+              });
+              console.log('Facebook Pixel form submission tracked');
             }
-            
+
             // Track with Hotjar (if available)
             if (typeof hj === 'function') {
-                hj('event', 'contact_form_submit');
-                console.log('Hotjar form submission tracked');
+              hj('event', 'contact_form_submit');
+              console.log('Hotjar form submission tracked');
             }
-        });
-    }
-});
-</script>
+          });
+        }
+      });
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand ">
+          <img src="/assets/images/logo-white.png" alt="EverWash" class="footer-logo pt-20" width="180" height="40">
+          <p class="footer-description">
+            The complete car wash membership growth platform with the tools and people to help you succeed.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/everwashforbusiness" class="social-link" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCv3ZMElXRnResR_Dv9dd1GA" class="social-link" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/everwash4biz/" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/everwash/" class="social-link" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-menu">
+          <div class="row">
+            <!-- Solutions Column -->
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+              <h4 class="footer-title">Solutions</h4>
+              <ul class="footer-links">
+                <li><a href="/the-everwash-difference/">For Car Wash Operators</a></li>
+                <li><a href="/fleet-membership/">For Fleets</a></li>
+                <li><a href="/distributors/" target="_blank">For Distributors</a></li>
+                <li><a href="/member-validation/" target="_blank">For Member Validation</a></li>
+              </ul>
+            </div>
+
+            <!-- Resources Column -->
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+              <h4 class="footer-title">Resources</h4>
+              <ul class="footer-links">
+                <li><a href="https://sub.everwashpartners.com/blog" target="_blank">Blog</a></li>
+                <li><a href="/case-study/">Case Studies</a></li>
+                <li><a href="/revenue-calculator/" target="_blank">Revenue Calculator</a></li>
+                <li><a href="/distributors/cryptopay/" target="_blank">CryptoPay</a></li>
+                <li><a href="/wash-partners-support/" target="_blank">Support Center</a></li>
+              </ul>
+            </div>
+
+            <!-- Company Column -->
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+              <h4 class="footer-title">Company</h4>
+              <ul class="footer-links">
+                <li><a href="https://sub.everwashpartners.com/about">About Us</a></li>
+                <li><a href="https://sub.everwashpartners.com/careers/" target="_blank">Careers</a></li>
+                <li><a href="/contact/" target="_blank">Contact</a></li>
+                <li><a href="https://sub.everwashpartners.com/newsroom/" target="_blank">Press</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 EverWash, Inc. All rights reserved.</span>
+          <a href="https://sub.everwashpartners.com/privacy-policy" target="_blank">Privacy Policy</a>
+          <a href="https://sub.everwashpartners.com/terms-and-conditions" target="_blank">Terms of Service</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery 3.7.1 CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap 5.3.2 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- Swiper.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="/assets/js/main.js"></script>
+
+  <!-- Page-specific JavaScript based on pageStyle variable -->
+  {% if pageStyle %}
+  <script src="/assets/js/{{ pageStyle }}.js"></script>
+  {% endif %}
+
+  <!-- WebSights Tracking -->
+  <noscript>
+    <img src="https://ws.zoominfo.com/pixel/62277ad0063474001ab2a78d" width="1" height="1" style="display: none" />
+  </noscript>
+
+  <!-- Meta Pixel Noscript -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1510661690217821&ev=PageView&noscript=1" />
+  </noscript>
+</body>
+
+</html>
