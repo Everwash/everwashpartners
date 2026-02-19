@@ -296,13 +296,11 @@ title: Contact Sales - EverWash
 // Add form submission tracking without breaking Netlify functionality
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('everWashForm');
-    let isTracked = false; // Flag to prevent double tracking for both Google and Meta
-    if (isTracked) return;
 
     if (form) {
         form.addEventListener('submit', function(e) {
             // Don't prevent default - let Netlify handle the form submission
-            
+            if (isTracked) return;
             // Track with Google Analytics
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion_event_submit_lead_form', {
@@ -318,7 +316,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Hotjar form submission tracked');
             }
 
-            isTracked = true; // Mark as tracked so it doesn't fire again
 
         });
     }
