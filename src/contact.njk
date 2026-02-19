@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form) {
         form.addEventListener('submit', function(e) {
             // Don't prevent default - let Netlify handle the form submission
-            if (isTracked) return;
+
             // Track with Google Analytics
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion_event_submit_lead_form', {
