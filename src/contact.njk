@@ -310,15 +310,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Google Analytics form submission tracked');
             }
             
-            // Track with Facebook Pixel
-            if (typeof fbq === 'function') {
-                fbq('track', 'Lead', {
-                    content_category: 'Contact Form',
-                    source: 'Contact Page'
-                });
-                console.log('Facebook Pixel form submission tracked');
-            }
-            
             // Track with Hotjar (if available)
             if (typeof hj === 'function') {
                 hj('event', 'contact_form_submit');
