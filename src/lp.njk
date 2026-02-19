@@ -1197,14 +1197,6 @@
           form.addEventListener('submit', function (e) {
             // Don't prevent default - let Netlify handle the form submission
 
-            // Track with Google Analytics
-            if (typeof gtag === 'function') {
-              gtag('event', 'conversion_event_submit_lead_form', {
-                'event_category': 'Contact Form',
-                'event_label': 'Contact Page Submission'
-              });
-              console.log('Google Analytics form submission tracked');
-            }
 
             // Track with Facebook Pixel
             if (typeof fbq === 'function') {
