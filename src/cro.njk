@@ -8,7 +8,7 @@ pageStyle: cro
 <section class="hero">
   <div class="container">
     <div class="row justify-content-center text-center">
-      <div class="col-lg-6">
+      <div class="col-lg-6 hero-text">
         <h2>Grow <span style="color: var(--color-secondary);">Membership</span></h2>
         <h2>Grow <span style="color: var(--color-cyan);">Revenue</span></h2>
         <h2>We'll Handle the Rest</h2>
@@ -24,7 +24,7 @@ pageStyle: cro
           <a href="/the-everwash-difference/" class="btn__secondary outline">The EverWash Difference</a>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-5">
         <div class="contact-form contact-card">
           <div class="text-center mb-4">
             <p class="form-subtext mt-0">Talk to a membership professional about how the EverWash platform can increase
@@ -772,11 +772,16 @@ pageStyle: cro
 
 <style>
   .hero {
-    padding: 13rem 0 12rem;
+    padding: 11rem 0 12rem;
+  }
+
+  .hero-text {
+    margin-right: 55px;
+    margin-top: 55px;
   }
 
   .contact-form {
-    padding: 40px 50px;
+    padding: 16px 20px;
     text-align: left;
   }
 
@@ -790,7 +795,7 @@ pageStyle: cro
   .form-label {
     font-weight: 600;
     color: var(--color-primary);
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
 
   .form-control,
@@ -812,10 +817,17 @@ pageStyle: cro
     max-width: 450px;
     margin: 0 auto;
   }
+
   @media screen and (max-width: 667px) {
     .contact-form.contact-card {
       margin-top: 50px;
     }
+
+    .hero-text {
+      margin-right: 0;
+      margin-top: 0;
+    }
+
   }
 </style>
 
