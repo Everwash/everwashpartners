@@ -8,52 +8,58 @@ pageStyle: cro
 <section class="hero">
   <div class="container">
     <div class="row justify-content-center text-center">
-      <div class="col-lg-10">
-        <div class="contact-card">
-          <div class="row g-5">
-            <div class="col-md-5 contact-info-sidebar">
-              <h1 class="sidebar-title">GET IN TOUCH<br>WITH SALES</h1>
-              <p>Fill out the form or contact us directly and our team will get back to you within 24 hours.</p>
-
-              <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span><a href="mailto:sales@everwash.com" class="text-white">sales@everwash.com</a></span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-phone-alt"></i>
-                <span><a href="tel:+18554927477" class="text-white">(855) 492-7477</a></span>
-              </div>
-            </div>
-
-            <div class="col-md-7">
-              <div class="contact-form">
-                <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true"
-                  data-netlify-honeypot="bot-field" netlify>
-                  <div class="row g-3">
-                    <div class="col-lg-12 mb-3">
-                      <input type="text" class="form-control" name="name" placeholder="Name" required>
-                    </div>
-                    <div class="col-lg-12 mb-3">
-                      <input type="email" class="form-control" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="col-lg-12 mb-3">
-                      <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
-                    </div>
-                    <div class="col-lg-12 mb-3">
-                      <input type="text" class="form-control" id="carWashNameInput" name="carWashName"
-                        placeholder="Car Wash Name" required>
-
-                      <input type="hidden" name="fullAddress" id="hiddenFullAddress">
-                    </div>
-                    <div class="col-12 mb-3">
-                      <button type="submit" class="btn__secondary w-100"
-                        style="justify-content: center;">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+      <div class="col-lg-6">
+        <h2>Grow <span style="color: var(--color-secondary);">Membership</span></h2>
+        <h2>Grow <span style="color: var(--color-cyan);">Revenue</span></h2>
+        <h2>We'll Handle the Rest</h2>
+        <p class="text">You built a great car wash. EverWash will help you turn it into a recurring, revenue engine
+          with
+          powerful tools, real people, and 24/7 support — so you can focus on washing cars, not managing members.
+        </p>
+        <div class="btn-group">
+          <a href="/contact/" class="btn__secondary">
+            <span>Book a Call</span>
+            <img src="assets/images/telephone-black.svg" alt="">
+          </a>
+          <a href="/the-everwash-difference/" class="btn__secondary outline">The EverWash Difference</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-form contact-card">
+          <div class="text-center mb-4">
+            <img src="/assets/images/everwash-logo-horizontal.png" alt="EverWash" class="form-logo mb-3">
+            <p class="form-subtext">Talk to a membership professional about how the EverWash platform can increase
+              the overall profitability of your wash</p>
           </div>
+          <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true"
+            data-netlify-honeypot="bot-field" netlify>
+            <div class="row g-3">
+              <div class="col-md-12">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="col-md-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="col-md-12">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" name="phone" required>
+              </div>
+              <div class="col-md-12">
+                <label class="form-label">Car Wash Name</label>
+                <input type="text" class="form-control" id="carWashNameInput" name="carWashName" required>
+                <input type="hidden" name="fullAddress" id="hiddenFullAddress">
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                  <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is specifically
+                    for Car Wash Owners who wish to contact EverWash about setting up a membership program at their
+                    location. If you are a current EverWash member looking for customer support, please contact our
+                    Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or call <a
+                      href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
+                </div>
+              </div>
+          </form>
         </div>
       </div>
     </div>
@@ -766,21 +772,46 @@ pageStyle: cro
 
 
 <style>
-  .contact-info-sidebar {
-    margin-top: 80px;
+  .hero {
+    padding: 13rem 0 12rem;
   }
 
-  .sidebar-title {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.1;
-    color: white;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+  .contact-form {
+    padding: 40px 50px;
+    text-align: left;
   }
 
-  #croForm .form-control {
+  .contact-card {
+    background: white;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(253, 196, 45, 0.25);
+  }
+
+  .form-subtext {
+    font-size: 16px;
+    color: var(--color-primary);
+    max-width: 450px;
+    margin: 0 auto;
   }
 </style>
 
@@ -832,4 +863,5 @@ pageStyle: cro
 
   // API লোড করার পর ফাংশন কল করা
   window.onload = initEverWashAutocomplete;
+
 </script>
