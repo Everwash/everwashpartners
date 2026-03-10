@@ -29,7 +29,7 @@ pageStyle: cro
         <div class="text-center mb-4">
           <p class="form-subtext mt-0">Talk to a membership professional about how the EverWash platform can increase the overall profitability of your wash</p>
         </div>
-        <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+        <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true" netlify>
           <div class="row g-3">
             <div class="col-md-12">
               <label class="form-label">Name</label>
@@ -46,27 +46,29 @@ pageStyle: cro
       
             <div class="col-md-12">
               <label class="form-label">Car Wash Name</label>
-              <input type="text" class="form-control" id="carWashSearch" name="car_wash_name_search" placeholder="" required>
+              <input type="text" class="form-control" id="carWashSearch" name="car_wash_search" placeholder="Search your car wash..." required>
             </div>
       
-            <div class="col-md-12">
-              <label class="form-label">Street Address</label>
-              <input type="text" class="form-control" id="street_address" name="street_address" required>
-            </div>
-            
-            <div class="col-md-6">
-              <label class="form-label">City</label>
-              <input type="text" class="form-control" id="locality" name="city" required>
-            </div>
-      
-            <div class="col-md-3">
-              <label class="form-label">State</label>
-              <input type="text" class="form-control" id="administrative_area_level_1" name="state" required>
-            </div>
-      
-            <div class="col-md-3">
-              <label class="form-label">Zip</label>
-              <input type="text" class="form-control" id="postal_code" name="zip" required>
+            <div id="manualAddressFields" style="display: none;" class="row g-3 m-0 p-0">
+              <div class="col-md-12 mt-3">
+                <p class="text-info" style="font-size: 14px;">We couldn't find your location. Please enter it manually:</p>
+              </div>
+              <div class="col-md-12">
+                <label class="form-label">Street Address</label>
+                <input type="text" class="form-control" id="street_address" name="street_address">
+              </div>
+              <div class="col-md-6">
+                <label class="form-name">City</label>
+                <input type="text" class="form-control" id="locality" name="city">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">State</label>
+                <input type="text" class="form-control" id="administrative_area_level_1" name="state">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Zip</label>
+                <input type="text" class="form-control" id="postal_code" name="zip">
+              </div>
             </div>
       
             <div class="col-12 mt-4">
@@ -854,6 +856,8 @@ pageStyle: cro
   // Google Maps Autocomplete script
   function initEverWashAutocomplete() {
   const searchInput = document.getElementById('carWashSearch');
+  const manualFields = document.getElementById('manualAddressFields');
+  
   if (!searchInput) return;
 
   const options = {
@@ -864,54 +868,59 @@ pageStyle: cro
 
   const autocomplete = new google.maps.places.Autocomplete(searchInput, options);
 
-  // যখন গুগল থেকে কোনো প্লেস সিলেক্ট হবে
+  // ১. যখন ইউজার গুগল সাজেশন থেকে কিছু সিলেক্ট করবে
   autocomplete.addListener('place_changed', function () {
     const place = autocomplete.getPlace();
     
-    // যদি ডিটেইলস না থাকে (ইউজার সাজেশন সিলেক্ট না করে এন্টার দিলে)
-    if (!place.address_components) return;
+    if (place.address_components) {
+      // সাজেশন পাওয়া গেছে: ফিল্ডগুলো হাইড রাখুন এবং ডেটা ব্যাকগ্রাউন্ডে ইনপুট করুন
+      manualFields.style.display = 'none';
+      fillAddressData(place.address_components);
+      searchInput.value = place.name;
+    } else {
+      // সাজেশন পাওয়া যায়নি: ম্যানুয়াল ফিল্ড শো করুন
+      showManualFields();
+    }
+  });
 
+  // ২. ইউজার যদি সাজেশন ছাড়া অন্য কিছু টাইপ করে এন্টার দেয় বা বাইরে ক্লিক করে
+  searchInput.addEventListener('blur', function() {
+    setTimeout(() => {
+        // যদি ব্লার হওয়ার পর অ্যাড্রেস ফিল্ডগুলো খালি থাকে, তার মানে ইউজার সাজেশন নেয়নি
+        if (document.getElementById('street_address').value === "") {
+            showManualFields();
+        }
+    }, 200);
+  });
+
+  function fillAddressData(components) {
     let streetNumber = "";
     let route = "";
 
-    // কম্পোনেন্টগুলো লুপ করে ইনপুটে বসানো
-    place.address_components.forEach(component => {
+    components.forEach(component => {
       const type = component.types[0];
-
       if (type === "street_number") streetNumber = component.long_name;
       if (type === "route") route = component.long_name;
-      
-      if (type === "locality") {
-        document.getElementById('locality').value = component.long_name;
-      }
-      if (type === "administrative_area_level_1") {
-        document.getElementById('administrative_area_level_1').value = component.short_name;
-      }
-      if (type === "postal_code") {
-        document.getElementById('postal_code').value = component.long_name;
-      }
+      if (type === "locality") document.getElementById('locality').value = component.long_name;
+      if (type === "administrative_area_level_1") document.getElementById('administrative_area_level_1').value = component.short_name;
+      if (type === "postal_code") document.getElementById('postal_code').value = component.long_name;
     });
-
-    // Street Address ফিল্ডে Number + Street জোড়া দেওয়া
     document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
-    
-    // সার্চ ইনপুটে শুধু ব্যবসার নাম রাখা
-    searchInput.value = place.name;
-  });
+  }
 
-  // সাজেশন আসার সময় এন্টার চাপলে যেন ফর্ম সাবমিট না হয়
+  function showManualFields() {
+    manualFields.style.display = 'flex'; // 'flex' ব্যবহার করা হয়েছে কারণ বুটস্ট্র্যাপ row flex ব্যবহার করে
+    // ম্যানুয়াল ফিল্ডগুলোকে required করে দিন যাতে ইউজার ফিল না করে সাবমিট না করতে পারে
+    document.getElementById('street_address').required = true;
+    document.getElementById('locality').required = true;
+    document.getElementById('administrative_area_level_1').required = true;
+    document.getElementById('postal_code').required = true;
+  }
+
   searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-    }
+    if (e.key === 'Enter') e.preventDefault();
   });
 }
 
-// স্ক্রিপ্ট লোড হওয়া নিশ্চিত করা
-if (window.google && google.maps) {
-    initEverWashAutocomplete();
-} else {
-    window.addEventListener('load', initEverWashAutocomplete);
-}
-
+window.onload = initEverWashAutocomplete;
 </script>
