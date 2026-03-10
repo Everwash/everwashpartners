@@ -25,41 +25,63 @@ pageStyle: cro
         </div>
       </div>
       <div class="col-lg-5">
-        <div class="contact-form contact-card">
-          <div class="text-center mb-4">
-            <p class="form-subtext mt-0">Talk to a membership professional about how the EverWash platform can increase
-              the overall profitability of your wash</p>
-          </div>
-          <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true"
-            data-netlify-honeypot="bot-field" netlify>
-            <div class="row g-3">
-              <div class="col-md-12">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control" name="name" required>
-              </div>
-              <div class="col-md-12">
-                <label class="form-label">Email Address</label>
-                <input type="email" class="form-control" name="email" required>
-              </div>
-              <div class="col-md-12">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" name="phone" required>
-              </div>
-              <div class="col-md-12">
-                <label class="form-label">Car Wash Name</label>
-                <input type="text" class="form-control" id="carWashNameInput" name="carWashName" required>
-                <input type="hidden" name="fullAddress" id="hiddenFullAddress">
-                <div class="col-12 mt-4">
-                  <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
-                  <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is specifically
-                    for Car Wash Owners who wish to contact EverWash about setting up a membership program at their
-                    location. If you are a current EverWash member looking for customer support, please contact our
-                    Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or call <a
-                      href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
-                </div>
-              </div>
-          </form>
+       <div class="contact-form contact-card">
+        <div class="text-center mb-4">
+          <p class="form-subtext mt-0">Talk to a membership professional about how the EverWash platform can increase the overall profitability of your wash</p>
         </div>
+        
+        <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" name="phone" required>
+            </div>
+      
+            <div class="col-md-12" id="autocomplete-wrapper">
+              <label class="form-label">Car Wash Name (Search)</label>
+              <input type="text" class="form-control" id="carWashSearch" placeholder="Start typing your wash name...">
+              <p class="mt-2" style="font-size: 13px;">
+                Can't find your wash? <a href="javascript:void(0)" id="toggleManual" style="color: var(--color-cyan); text-decoration: underline;">Enter address manually</a>
+              </p>
+            </div>
+      
+            <div class="col-md-12">
+              <label class="form-label">Street Address</label>
+              <input type="text" class="form-control" id="street_address" name="street_address" required>
+            </div>
+            
+            <div class="col-md-6">
+              <label class="form-label">City</label>
+              <input type="text" class="form-control" id="locality" name="city" required>
+            </div>
+      
+            <div class="col-md-3">
+              <label class="form-label">State</label>
+              <input type="text" class="form-control" id="administrative_area_level_1" name="state" required>
+            </div>
+      
+            <div class="col-md-3">
+              <label class="form-label">Zip</label>
+              <input type="text" class="form-control" id="postal_code" name="zip" required>
+            </div>
+      
+            <input type="hidden" name="business_name" id="hiddenBusinessName">
+            <input type="hidden" name="full_address_backup" id="hiddenFullAddress">
+      
+            <div class="col-12 mt-4">
+              <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
       </div>
     </div>
   </div>
@@ -832,53 +854,84 @@ pageStyle: cro
   }
 </style>
 
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIijKhr5AtlbQyxzAoH3MRZJWBw8fHF4g&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIijKhr5AtlbQyxzAoH3MRZJWBw8fHF4g&libraries=places"></script>
 
 
 <script>
   // Google Maps Autocomplete script
   function initEverWashAutocomplete() {
-    const input = document.getElementById('carWashNameInput');
-    const hiddenAddressField = document.getElementById('hiddenFullAddress');
+  const searchInput = document.getElementById('carWashSearch');
+  
+  if (!searchInput) return;
 
-    if (!input) return;
+  const options = {
+    types: ['establishment'],
+    componentRestrictions: { country: 'us' },
+    fields: ['address_components', 'name', 'formatted_address']
+  };
 
-    // Google Autocomplete Options
-    const options = {
-      types: ['establishment'], // শুধুমাত্র ব্যবসার নাম দেখাবে
-      componentRestrictions: { country: 'us' }, // শুধুমাত্র USA (প্রয়োজন হলে)
-      fields: ['name', 'formatted_address'] // শুধুমাত্র প্রয়োজনীয় ডাটা আনবে (কস্ট কমাতে)
-    };
+  const autocomplete = new google.maps.places.Autocomplete(searchInput, options);
 
-    const autocomplete = new google.maps.places.Autocomplete(input, options);
+  autocomplete.addListener('place_changed', function () {
+    const place = autocomplete.getPlace();
+    if (!place.address_components) return;
 
-    // যখন ইউজার সাজেস্ট করা নাম থেকে একটিতে ক্লিক করবে
-    autocomplete.addListener('place_changed', function () {
-      const place = autocomplete.getPlace();
+    // ক্লিনিং: আগে ফিল্ডগুলো খালি করা
+    document.getElementById('street_address').value = "";
+    document.getElementById('locality').value = "";
+    document.getElementById('administrative_area_level_1').value = "";
+    document.getElementById('postal_code').value = "";
 
-      if (!place.formatted_address) {
-        console.log("No address found for this selection.");
-        return;
+    let streetNumber = "";
+    let route = "";
+
+    // গুগল ডাটা লুপ করে ফিল্ডে বসানো
+    for (const component of place.address_components) {
+      const type = component.types[0];
+
+      switch (type) {
+        case "street_number":
+          streetNumber = component.long_name;
+          break;
+        case "route":
+          route = component.long_name;
+          break;
+        case "locality":
+          document.getElementById('locality').value = component.long_name;
+          break;
+        case "administrative_area_level_1":
+          document.getElementById('administrative_area_level_1').value = component.short_name;
+          break;
+        case "postal_code":
+          document.getElementById('postal_code').value = component.long_name;
+          break;
       }
+    }
 
-      // ১. ইউজার যে নামটি সিলেক্ট করেছে সেটি ইনপুট ফিল্ডে থাকবে
-      input.value = place.name;
+    // Street Address ফিল্ডে Number + Road বসানো
+    document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
+    
+    // ব্যাকআপ ডাটা সেভ করা
+    document.getElementById('hiddenBusinessName').value = place.name;
+    document.getElementById('hiddenFullAddress').value = place.formatted_address;
+    
+    // সার্চ বক্সে শুধু নাম রাখা
+    searchInput.value = place.name;
+  });
 
-      // ২. পূর্ণ ঠিকানাটি হিডেন ফিল্ডে সেভ হবে (যা নেটিলিফাই ফর্মে যাবে)
-      hiddenAddressField.value = place.formatted_address;
+  // "Enter manually" অপশন: সার্চ বক্স হাইড করে ফিল্ডগুলো ফোকাস করা
+  document.getElementById('toggleManual').addEventListener('click', function() {
+    document.getElementById('autocomplete-wrapper').style.display = 'none';
+    document.getElementById('street_address').focus();
+  });
 
-      console.log("Business Name:", place.name);
-      console.log("Hidden Address Captured:", place.formatted_address);
-    });
+  // এন্টার চাপলে যেন ফর্ম সাবমিট না হয় (গুগল সাজেশন সিলেক্ট করার জন্য)
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') e.preventDefault();
+  });
+}
 
-    // ইউজার যদি এন্টার চাপে যাতে ফর্ম সাবমিট না হয়ে এড্রেস সিলেক্ট হয়
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') e.preventDefault();
-    });
-  }
-
-  // API লোড করার পর ফাংশন কল করা
-  window.onload = initEverWashAutocomplete;
+// উইন্ডো লোড হলে রান করবে
+window.addEventListener('load', initEverWashAutocomplete);
 
 </script>
