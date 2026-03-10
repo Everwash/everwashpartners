@@ -29,7 +29,6 @@ pageStyle: cro
         <div class="text-center mb-4">
           <p class="form-subtext mt-0">Talk to a membership professional about how the EverWash platform can increase the overall profitability of your wash</p>
         </div>
-        
         <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
           <div class="row g-3">
             <div class="col-md-12">
@@ -45,12 +44,9 @@ pageStyle: cro
               <input type="tel" class="form-control" name="phone" required>
             </div>
       
-            <div class="col-md-12" id="autocomplete-wrapper">
-              <label class="form-label">Car Wash Name (Search)</label>
-              <input type="text" class="form-control" id="carWashSearch" placeholder="Start typing your wash name...">
-              <p class="mt-2" style="font-size: 13px;">
-                Can't find your wash? <a href="javascript:void(0)" id="toggleManual" style="color: var(--color-cyan); text-decoration: underline;">Enter address manually</a>
-              </p>
+            <div class="col-md-12">
+              <label class="form-label">Car Wash Name (Search or Type)</label>
+              <input type="text" class="form-control" id="carWashSearch" name="car_wash_name_search" placeholder="Search for your wash or type name..." required>
             </div>
       
             <div class="col-md-12">
@@ -72,9 +68,6 @@ pageStyle: cro
               <label class="form-label">Zip</label>
               <input type="text" class="form-control" id="postal_code" name="zip" required>
             </div>
-      
-            <input type="hidden" name="business_name" id="hiddenBusinessName">
-            <input type="hidden" name="full_address_backup" id="hiddenFullAddress">
       
             <div class="col-12 mt-4">
               <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
@@ -861,77 +854,64 @@ pageStyle: cro
   // Google Maps Autocomplete script
   function initEverWashAutocomplete() {
   const searchInput = document.getElementById('carWashSearch');
-  
   if (!searchInput) return;
 
   const options = {
     types: ['establishment'],
     componentRestrictions: { country: 'us' },
-    fields: ['address_components', 'name', 'formatted_address']
+    fields: ['address_components', 'name']
   };
 
   const autocomplete = new google.maps.places.Autocomplete(searchInput, options);
 
+  // যখন গুগল থেকে কোনো প্লেস সিলেক্ট হবে
   autocomplete.addListener('place_changed', function () {
     const place = autocomplete.getPlace();
+    
+    // যদি ডিটেইলস না থাকে (ইউজার সাজেশন সিলেক্ট না করে এন্টার দিলে)
     if (!place.address_components) return;
-
-    // ক্লিনিং: আগে ফিল্ডগুলো খালি করা
-    document.getElementById('street_address').value = "";
-    document.getElementById('locality').value = "";
-    document.getElementById('administrative_area_level_1').value = "";
-    document.getElementById('postal_code').value = "";
 
     let streetNumber = "";
     let route = "";
 
-    // গুগল ডাটা লুপ করে ফিল্ডে বসানো
-    for (const component of place.address_components) {
+    // কম্পোনেন্টগুলো লুপ করে ইনপুটে বসানো
+    place.address_components.forEach(component => {
       const type = component.types[0];
 
-      switch (type) {
-        case "street_number":
-          streetNumber = component.long_name;
-          break;
-        case "route":
-          route = component.long_name;
-          break;
-        case "locality":
-          document.getElementById('locality').value = component.long_name;
-          break;
-        case "administrative_area_level_1":
-          document.getElementById('administrative_area_level_1').value = component.short_name;
-          break;
-        case "postal_code":
-          document.getElementById('postal_code').value = component.long_name;
-          break;
+      if (type === "street_number") streetNumber = component.long_name;
+      if (type === "route") route = component.long_name;
+      
+      if (type === "locality") {
+        document.getElementById('locality').value = component.long_name;
       }
-    }
+      if (type === "administrative_area_level_1") {
+        document.getElementById('administrative_area_level_1').value = component.short_name;
+      }
+      if (type === "postal_code") {
+        document.getElementById('postal_code').value = component.long_name;
+      }
+    });
 
-    // Street Address ফিল্ডে Number + Road বসানো
+    // Street Address ফিল্ডে Number + Street জোড়া দেওয়া
     document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
     
-    // ব্যাকআপ ডাটা সেভ করা
-    document.getElementById('hiddenBusinessName').value = place.name;
-    document.getElementById('hiddenFullAddress').value = place.formatted_address;
-    
-    // সার্চ বক্সে শুধু নাম রাখা
+    // সার্চ ইনপুটে শুধু ব্যবসার নাম রাখা
     searchInput.value = place.name;
   });
 
-  // "Enter manually" অপশন: সার্চ বক্স হাইড করে ফিল্ডগুলো ফোকাস করা
-  document.getElementById('toggleManual').addEventListener('click', function() {
-    document.getElementById('autocomplete-wrapper').style.display = 'none';
-    document.getElementById('street_address').focus();
-  });
-
-  // এন্টার চাপলে যেন ফর্ম সাবমিট না হয় (গুগল সাজেশন সিলেক্ট করার জন্য)
+  // সাজেশন আসার সময় এন্টার চাপলে যেন ফর্ম সাবমিট না হয়
   searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') e.preventDefault();
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
   });
 }
 
-// উইন্ডো লোড হলে রান করবে
-window.addEventListener('load', initEverWashAutocomplete);
+// স্ক্রিপ্ট লোড হওয়া নিশ্চিত করা
+if (window.google && google.maps) {
+    initEverWashAutocomplete();
+} else {
+    window.addEventListener('load', initEverWashAutocomplete);
+}
 
 </script>
