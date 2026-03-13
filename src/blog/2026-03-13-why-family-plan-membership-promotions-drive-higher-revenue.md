@@ -21,7 +21,7 @@ One of the biggest advantages of family plan discounts is that they generate add
 
 Members who already trust your wash are simply adding another vehicle to their account.
 
-As EverWash data analyst Jane Lee recently explained on the Members Only: The EverWash Podcast:
+As EverWash data analyst Jane Lee recently explained on the [Members Only: The EverWash Podcast](https://youtube.com/playlist?list=PLb_t4jhLuCPg1A7TUGDKeWfHdLWUSkmVj&si=0z6OJEfMf693joeL):
 
 “One of the biggest benefits of the family plan discount is that it generates another income stream with no additional administrative efforts or acquisition cost.”
 
