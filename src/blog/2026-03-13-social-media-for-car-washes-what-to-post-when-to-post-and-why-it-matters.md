@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/social-media.png
 ---
 Platforms like Facebook and Instagram allow car wash operators to showcase their wash, promote membership programs, highlight promotions, and engage with their local community — all without the cost of traditional advertising.
 
