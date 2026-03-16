@@ -7,6 +7,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/ewp-may.png
 ---
 For many car wash operators, May is the unofficial start of the busy season. Warmer temperatures, increased travel, and seasonal factors like pollen and rain create perfect conditions for wash demand.
 
