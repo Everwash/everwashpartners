@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/famly-plan-ewp-26.png
 ---
 One of the simplest ways car wash operators can grow their membership revenue isn’t necessarily finding new customers — it’s enrolling additional vehicles from the customers they already have.
 
