@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/reviews-ewp-26.png
 ---
 Customer feedback is one of the most powerful — and often underutilized — tools available to car wash operators.
 
