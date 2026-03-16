@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/fundraiser-ewp-26.png
 ---
 Summer is one of the best times to strengthen relationships with your members. One of the simplest ways to do that is by hosting small events or promotions that make members feel valued.
 
