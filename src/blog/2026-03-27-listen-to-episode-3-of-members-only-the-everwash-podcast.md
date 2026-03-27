@@ -27,6 +27,6 @@ Finally, we sit down with Kendra Johnson, Chief Experience Officer at the [Inter
 
 If you’re looking for practical insights to grow your membership program and stay ahead this season, *Members Only* is built for you.
 
-👉 Listen to Episode 3 of *Members Only: The EverWash Podcast* and follow the show to stay up to date on future episodes.
+👉 [Listen to Episode 3](https://youtu.be/q59xbjMZLEI) of *Members Only: The EverWash Podcast* and follow the show to stay up to date on future episodes.
 
-And if you’re looking for tools, insights, and support to help grow your membership program, EverWash can help. Learn more here.
+And if you’re looking for tools, insights, and support to help grow your membership program, EverWash can help. [Learn more here](https://everwashpartners.com/contact/).
