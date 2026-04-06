@@ -855,25 +855,6 @@ pageStyle: cro
 
 
 <script>
-const fullNameInput = document.getElementById('fullName');
-const firstNameHidden = document.getElementById('first_name');
-const lastNameHidden = document.getElementById('last_name');
-
-fullNameInput.addEventListener('input', function() {
-    const fullValue = this.value.trim();
-    
-    if (fullValue.includes(' ')) {
-        // স্পেস থাকলে নামটিকে দুই ভাগে ভাগ করবে
-        const parts = fullValue.split(' ');
-        firstNameHidden.value = parts[0]; // প্রথম অংশ
-        lastNameHidden.value = parts.slice(1).join(' '); // বাকি সব অংশ লাস্ট নেম হিসেবে যাবে
-    } else {
-        // যদি ইউজার শুধু একটি শব্দ লেখে
-        firstNameHidden.value = fullValue;
-        lastNameHidden.value = '';
-    }
-});
-
 // Google Maps Autocomplete script
 function initEverWashAutocomplete() {
   const stateNameMap = {
