@@ -855,6 +855,19 @@ pageStyle: cro
 <script>
   // Google Maps Autocomplete script
   function initEverWashAutocomplete() {
+  const stateNames = {
+    'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California',
+    'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'FL': 'Florida', 'GA': 'Georgia',
+    'HI': 'Hawaii', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa',
+    'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland',
+    'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi', 'MO': 'Missouri',
+    'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire', 'NJ': 'New Jersey',
+    'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina', 'ND': 'North Dakota', 'OH': 'Ohio',
+    'OK': 'Oklahoma', 'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island', 'SC': 'South Carolina',
+    'SD': 'South Dakota', 'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah', 'VT': 'Vermont',
+    'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'
+  };
+
   const searchInput = document.getElementById('carWashSearch');
   const manualFields = document.getElementById('manualAddressFields');
   const service = new google.maps.places.AutocompleteService();
@@ -903,16 +916,26 @@ pageStyle: cro
   function fillAddressData(components) {
     let streetNumber = "";
     let route = "";
+  
     components.forEach(c => {
       const type = c.types[0];
+      
       if (type === "street_number") streetNumber = c.long_name;
       if (type === "route") route = c.long_name;
       if (type === "locality") document.getElementById('locality').value = c.long_name;
-      if (type === "administrative_area_level_1") document.getElementById('administrative_area_level_1').value = c.short_name;
+      
+      // স্টেট হ্যান্ডলিং লজিক (Abbreviation to Full Name)
+      if (type === "administrative_area_level_1") {
+        const abbr = c.short_name.toUpperCase();
+        // যদি ম্যাপিংয়ে নাম খুঁজে পায় তবে ফুল নেম দেবে, না হলে শর্ট নেমই থাকবে
+        document.getElementById('administrative_area_level_1').value = stateNames[abbr] || c.long_name;
+      }
+      
       if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
     });
-    document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
-  }
+  
+  document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
+}
 
   function showManualFields() {
     manualFields.style.display = 'flex';
