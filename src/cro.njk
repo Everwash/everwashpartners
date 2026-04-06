@@ -876,6 +876,20 @@ fullNameInput.addEventListener('input', function() {
 
 // Google Maps Autocomplete script
 function initEverWashAutocomplete() {
+  const stateNameMap = {
+      'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California',
+      'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'FL': 'Florida', 'GA': 'Georgia',
+      'HI': 'Hawaii', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa',
+      'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland',
+      'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi',
+      'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire',
+      'NJ': 'New Jersey', 'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina',
+      'ND': 'North Dakota', 'OH': 'Ohio', 'OK': 'Oklahoma', 'OR': 'Oregon', 'PA': 'Pennsylvania',
+      'RI': 'Rhode Island', 'SC': 'South Carolina', 'SD': 'South Dakota', 'TN': 'Tennessee',
+      'TX': 'Texas', 'UT': 'Utah', 'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington',
+      'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'
+  };
+
   const searchInput = document.getElementById('carWashSearch');
   const manualFields = document.getElementById('manualAddressFields');
   const service = new google.maps.places.AutocompleteService();
@@ -931,23 +945,30 @@ function initEverWashAutocomplete() {
   function fillAddressData(components) {
     let streetNumber = "";
     let route = "";
+    const stateField = document.getElementById('administrative_area_level_1');
     
-    // ফিল্ডগুলো আগে ক্লিয়ার করে নেওয়া ভালো
-    document.getElementById('locality').value = "";
-    document.getElementById('administrative_area_level_1').value = "";
-    document.getElementById('postal_code').value = "";
-    document.getElementById('street_address').value = "";
+    // Reset fields
+    ['locality', 'administrative_area_level_1', 'postal_code', 'street_address'].forEach(id => {
+        document.getElementById(id).value = "";
+    });
 
     components.forEach(c => {
-      const type = c.types[0];
-      if (type === "street_number") streetNumber = c.long_name;
-      if (type === "route") route = c.long_name;
-      if (type === "locality") document.getElementById('locality').value = c.long_name;
-      if (type === "administrative_area_level_1") document.getElementById('administrative_area_level_1').value = c.short_name;
-      if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
+        const type = c.types[0];
+        if (type === "street_number") streetNumber = c.long_name;
+        if (type === "route") route = c.long_name;
+        if (type === "locality") document.getElementById('locality').value = c.long_name;
+        
+        if (type === "administrative_area_level_1") {
+            const stateAbbr = c.short_name.toUpperCase();
+            // যদি ম্যাপে স্টেট কোডটি থাকে তবে ফুল নেম বসাবে, নয়তো অরিজিনালটাই রাখবে
+            stateField.value = stateNameMap[stateAbbr] ? stateNameMap[stateAbbr] : c.long_name;
+        }
+        
+        if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
     });
+    
     document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
-  }
+}
 
   function showManualFields() {
     manualFields.style.setProperty('display', 'flex', 'important');
