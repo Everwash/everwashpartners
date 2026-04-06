@@ -33,9 +33,7 @@ pageStyle: cro
           <div class="row g-3">
             <div class="col-md-12">
               <label class="form-label">Name</label>
-              <input type="text" class="form-control" id="fullNameDisplay" placeholder="e.g. John Doe" required>
-              <input type="hidden" id="first_name" name="first_name">
-              <input type="hidden" id="last_name" name="last_name">
+              <input type="text" class="form-control" name="name" required>
             </div>
             <div class="col-md-12">
               <label class="form-label">Email Address</label>
@@ -855,22 +853,8 @@ pageStyle: cro
 
 
 <script>
-// Google Maps Autocomplete script
-function initEverWashAutocomplete() {
-  const stateNameMap = {
-      'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California',
-      'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'FL': 'Florida', 'GA': 'Georgia',
-      'HI': 'Hawaii', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa',
-      'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland',
-      'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi',
-      'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire',
-      'NJ': 'New Jersey', 'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina',
-      'ND': 'North Dakota', 'OH': 'Ohio', 'OK': 'Oklahoma', 'OR': 'Oregon', 'PA': 'Pennsylvania',
-      'RI': 'Rhode Island', 'SC': 'South Carolina', 'SD': 'South Dakota', 'TN': 'Tennessee',
-      'TX': 'Texas', 'UT': 'Utah', 'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington',
-      'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'
-  };
-
+  // Google Maps Autocomplete script
+  function initEverWashAutocomplete() {
   const searchInput = document.getElementById('carWashSearch');
   const manualFields = document.getElementById('manualAddressFields');
   const service = new google.maps.places.AutocompleteService();
@@ -883,90 +867,57 @@ function initEverWashAutocomplete() {
     fields: ['address_components', 'name']
   });
 
-  // ১. ইনপুটে টাইপ করার সময় রিয়েল-টাইম চেক
+  // ১. ইনপুটে টাইপ করার সময় রিয়েল-টাইম চেক
   searchInput.addEventListener('input', function() {
     const value = this.value;
 
-    if (value.length > 2) {
+    if (value.length > 2) { // ৩টি অক্ষরের পর চেক শুরু হবে
       service.getPredictions({ 
         input: value, 
         types: ['establishment'],
         componentRestrictions: { country: 'us' }
       }, (predictions, status) => {
-        // যদি কোনো সাজেশন না পাওয়া যায়
+        // যদি গুগল কোনো সাজেশন না পায় (ZERO_RESULTS)
         if (status !== google.maps.places.PlacesServiceStatus.OK || !predictions || predictions.length === 0) {
           showManualFields();
         } else {
-          // সাজেশন পাওয়া গেলে ম্যানুয়াল ফিল্ড হাইড হবে
-          hideManualFields();
+          // সাজেশন পাওয়া গেলে ম্যানুয়াল ফিল্ড হাইড থাকবে (যদি আগে ওপেন হয়ে থাকে)
+          // manualFields.style.display = 'none'; 
         }
       });
     } else {
-      hideManualFields(); 
+      manualFields.style.display = 'none'; // ইনপুট ছোট হলে হাইড থাকবে
     }
   });
 
   // ২. যখন ইউজার সাজেশন থেকে সিলেক্ট করবে
   autocomplete.addListener('place_changed', function () {
     const place = autocomplete.getPlace();
-    
-    if (!place.geometry) {
-        showManualFields();
-        return;
-    }
-
     if (place.address_components) {
-        hideManualFields();
-        fillAddressData(place.address_components);
-        
-        // এটিই সমাধান: প্লেস অবজেক্ট থেকে শুধু নামটিকে ইনপুট বক্সে সেট করা
-        // এবং গুগলের ডিফল্ট অটো-ফিল বন্ধ করতে setTimeout ব্যবহার করা
-        setTimeout(() => {
-            searchInput.value = place.name;
-        }, 1);
+      manualFields.style.display = 'none'; // সাজেশন পেলে হাইড
+      fillAddressData(place.address_components);
+      searchInput.value = place.name;
     }
-});
+  });
 
   function fillAddressData(components) {
     let streetNumber = "";
     let route = "";
-    const stateField = document.getElementById('administrative_area_level_1');
-    
-    // Reset fields
-    ['locality', 'administrative_area_level_1', 'postal_code', 'street_address'].forEach(id => {
-        document.getElementById(id).value = "";
-    });
-
     components.forEach(c => {
-        const type = c.types[0];
-        if (type === "street_number") streetNumber = c.long_name;
-        if (type === "route") route = c.long_name;
-        if (type === "locality") document.getElementById('locality').value = c.long_name;
-        
-        if (type === "administrative_area_level_1") {
-            const stateAbbr = c.short_name.toUpperCase();
-            // যদি ম্যাপে স্টেট কোডটি থাকে তবে ফুল নেম বসাবে, নয়তো অরিজিনালটাই রাখবে
-            stateField.value = stateNameMap[stateAbbr] ? stateNameMap[stateAbbr] : c.long_name;
-        }
-        
-        if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
+      const type = c.types[0];
+      if (type === "street_number") streetNumber = c.long_name;
+      if (type === "route") route = c.long_name;
+      if (type === "locality") document.getElementById('locality').value = c.long_name;
+      if (type === "administrative_area_level_1") document.getElementById('administrative_area_level_1').value = c.short_name;
+      if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
     });
-    
     document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
-}
-
-  function showManualFields() {
-    manualFields.style.setProperty('display', 'flex', 'important');
-    document.querySelectorAll('#manualAddressFields input').forEach(input => {
-        input.required = true;
-    });
   }
 
-  function hideManualFields() {
-    manualFields.style.setProperty('display', 'none', 'important');
-    document.querySelectorAll('#manualAddressFields input').forEach(input => {
-        input.required = false;
-    });
+  function showManualFields() {
+    manualFields.style.display = 'flex';
+    // রিকোয়ার্ড ফিল্ড সেট করা
+    document.querySelectorAll('#manualAddressFields input').forEach(input => input.required = true);
   }
 
   searchInput.addEventListener('keydown', (e) => {
@@ -975,29 +926,4 @@ function initEverWashAutocomplete() {
 }
 
 window.onload = initEverWashAutocomplete;
-
-// এই কোডটি আপনার স্ক্রিপ্টের শেষে যোগ করুন
-const form = document.getElementById('croForm');
-const fullNameDisplay = document.getElementById('fullNameDisplay');
-const firstNameHidden = document.getElementById('first_name');
-const lastNameHidden = document.getElementById('last_name');
-
-form.addEventListener('submit', function(e) {
-    const fullValue = fullNameDisplay.value.trim();
-    
-    if (fullValue.includes(' ')) {
-        // প্রথম স্পেস অনুযায়ী নাম ভাগ করা
-        const parts = fullValue.split(/\s+/); 
-        firstNameHidden.value = parts[0]; // First Name
-        lastNameHidden.value = parts.slice(1).join(' '); // বাকি সব Last Name
-    } else {
-        firstNameHidden.value = fullValue;
-        lastNameHidden.value = ''; // লাস্ট নেম নেই
-    }
-    
-    // কনসোলে চেক করার জন্য (অপশনাল)
-    console.log("Submitting:", firstNameHidden.value, "|", lastNameHidden.value);
-    
-    return true; 
-});
 </script>
