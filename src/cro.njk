@@ -865,8 +865,15 @@ pageStyle: cro
 
 
 <script>
-  // Google Maps Autocomplete script
-  function initEverWashAutocomplete() {
+function initEverWashAutocomplete() {
+  const searchInput = document.getElementById('carWashSearch');
+  const manualFields = document.getElementById('manualAddressFields');
+  const manualTriggerBtn = document.getElementById('manualTriggerBtn');
+  const manualTriggerWrapper = document.getElementById('manualTriggerWrapper');
+  
+  if (!searchInput) return;
+
+  // ১. স্টেট ম্যাপিং অবজেক্ট (Abbreviation to Full Name)
   const stateNames = {
     'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California',
     'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'FL': 'Florida', 'GA': 'Georgia',
@@ -880,62 +887,61 @@ pageStyle: cro
     'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'
   };
 
-  const searchInput = document.getElementById('carWashSearch');
-  const manualFields = document.getElementById('manualAddressFields');
-  const manualTriggerBtn = document.getElementById('manualTriggerBtn');
-  const manualTriggerWrapper = document.getElementById('manualTriggerWrapper');
-  
-  if (!searchInput) return;
-
   const autocomplete = new google.maps.places.Autocomplete(searchInput, {
     types: ['establishment'],
     componentRestrictions: { country: 'us' },
     fields: ['address_components', 'name']
   });
 
-  // ১. ম্যানুয়াল লিঙ্ক-এ ক্লিক করলে যা হবে
-  manualTriggerBtn.addEventListener('click', function() {
-    showManualFields();
-  });
+  // ২. ম্যানুয়াল লিঙ্ক-এ ক্লিক করলে ফিল্ড ওপেন হবে
+  if (manualTriggerBtn) {
+    manualTriggerBtn.addEventListener('click', function() {
+      showManualFields();
+    });
+  }
 
-  // ২. যখন ইউজার সাজেশন থেকে সিলেক্ট করবে
+  // ৩. গুগল সাজেশান থেকে সিলেক্ট করলে যা হবে
   autocomplete.addListener('place_changed', function () {
     const place = autocomplete.getPlace();
     if (place.address_components) {
-      // সাজেশন থেকে ডেটা পেলে ম্যানুয়াল ফিল্ড এবং লিঙ্ক দুটোই হাইড করে দেব
+      // সাজেশান পেলে ম্যানুয়াল লিঙ্ক হাইড করে দেব
+      if (manualTriggerWrapper) manualTriggerWrapper.style.display = 'none';
       manualFields.style.display = 'none'; 
-      manualTriggerWrapper.style.display = 'none';
+      
       fillAddressData(place.address_components);
       searchInput.value = place.name;
     }
   });
 
-  // ৩. অ্যাড্রেস ফিল করার ফাংশন (আগের মতোই)
   function fillAddressData(components) {
     let streetNumber = "";
     let route = "";
-    const stateNames = { /* আপনার আগের স্টেট লিস্টটি এখানে থাকবে */ };
-
+    
     components.forEach(c => {
       const type = c.types[0];
+      
       if (type === "street_number") streetNumber = c.long_name;
       if (type === "route") route = c.long_name;
       if (type === "locality") document.getElementById('locality').value = c.long_name;
+      
+      // স্টেট কনভার্সন লজিক
       if (type === "administrative_area_level_1") {
         const abbr = c.short_name.toUpperCase();
+        // FL থাকলে Florida বসাবে, না থাকলে গুগলের ডিফল্ট long_name বসাবে
         document.getElementById('administrative_area_level_1').value = stateNames[abbr] || c.long_name;
       }
+      
       if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
     });
+    
     document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
   }
 
-  // ৪. ম্যানুয়াল ফিল্ড দেখানোর ফাংশন
   function showManualFields() {
-    manualFields.style.display = 'flex'; // ফ্লেক্স লেআউট অনুযায়ী দেখাবে
-    manualTriggerWrapper.style.display = 'none'; // লিঙ্কটি আর দেখানোর দরকার নেই
+    manualFields.style.display = 'flex';
+    if (manualTriggerWrapper) manualTriggerWrapper.style.display = 'none';
     
-    // ম্যানুয়াল ফিল্ডগুলোকে required করে দেওয়া যাতে ডেটা মিস না হয়
+    // ম্যানুয়াল ইনপুটগুলোকে required করে দেওয়া
     document.querySelectorAll('#manualAddressFields input').forEach(input => {
       input.required = true;
     });
