@@ -33,7 +33,7 @@ pageStyle: cro
           <div class="row g-3">
             <div class="col-md-12">
               <label class="form-label">Name</label>
-              <input type="text" class="form-control" name="name" required>
+              <input type="text" class="form-control" id="fullNameDisplay" placeholder="e.g. John Doe" required>
               <input type="hidden" id="first_name" name="first_name">
               <input type="hidden" id="last_name" name="last_name">
             </div>
@@ -990,4 +990,29 @@ function initEverWashAutocomplete() {
 }
 
 window.onload = initEverWashAutocomplete;
+
+// এই কোডটি আপনার স্ক্রিপ্টের শেষে যোগ করুন
+const form = document.getElementById('croForm');
+const fullNameDisplay = document.getElementById('fullNameDisplay');
+const firstNameHidden = document.getElementById('first_name');
+const lastNameHidden = document.getElementById('last_name');
+
+form.addEventListener('submit', function(e) {
+    const fullValue = fullNameDisplay.value.trim();
+    
+    if (fullValue.includes(' ')) {
+        // প্রথম স্পেস অনুযায়ী নাম ভাগ করা
+        const parts = fullValue.split(/\s+/); 
+        firstNameHidden.value = parts[0]; // First Name
+        lastNameHidden.value = parts.slice(1).join(' '); // বাকি সব Last Name
+    } else {
+        firstNameHidden.value = fullValue;
+        lastNameHidden.value = ''; // লাস্ট নেম নেই
+    }
+    
+    // কনসোলে চেক করার জন্য (অপশনাল)
+    console.log("Submitting:", firstNameHidden.value, "|", lastNameHidden.value);
+    
+    return true; 
+});
 </script>
