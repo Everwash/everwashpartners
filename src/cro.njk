@@ -911,17 +911,21 @@ function initEverWashAutocomplete() {
     const place = autocomplete.getPlace();
     
     if (!place.geometry) {
-        // যদি ইউজার সাজেশন লিস্ট থেকে সিলেক্ট না করে শুধু এন্টার দেয়
         showManualFields();
         return;
     }
 
     if (place.address_components) {
-      hideManualFields(); // সাজেশন সিলেক্ট করলে ফিল্ড হাইড হবে
-      fillAddressData(place.address_components);
-      searchInput.value = place.name;
+        hideManualFields();
+        fillAddressData(place.address_components);
+        
+        // এটিই সমাধান: প্লেস অবজেক্ট থেকে শুধু নামটিকে ইনপুট বক্সে সেট করা
+        // এবং গুগলের ডিফল্ট অটো-ফিল বন্ধ করতে setTimeout ব্যবহার করা
+        setTimeout(() => {
+            searchInput.value = place.name;
+        }, 1);
     }
-  });
+});
 
   function fillAddressData(components) {
     let streetNumber = "";
