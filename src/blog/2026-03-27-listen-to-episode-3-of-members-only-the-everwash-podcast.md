@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/ew-podcast-members-only-thumbnail-e003.png
 ---
 Episode 3 of *Members Only: The EverWash Podcast* is officially live — and this one is packed with insights for car wash operators preparing for a busy season and looking to grow their membership programs.
 
