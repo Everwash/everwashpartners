@@ -533,3 +533,28 @@ function initEverWashAutocomplete() {
 
 window.onload = initEverWashAutocomplete;
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const v1 = document.getElementById('form-v1-container');
+    const v2 = document.getElementById('form-v2-container');
+    
+    // চেক করা হচ্ছে ইউজারের জন্য আগে থেকেই কোনো ভার্সন অ্যাসাইন করা আছে কি না
+    let assignedForm = localStorage.getItem('everwash_ab_test');
+
+    if (!assignedForm) {
+        // ৫০/৫০ চান্সে র‍্যান্ডমলি একটি ফর্ম সিলেক্ট করা হচ্ছে
+        assignedForm = Math.random() < 0.5 ? 'v1' : 'v2';
+        localStorage.setItem('everwash_ab_test', assignedForm);
+    }
+
+    // সিলেক্টেড ফর্মটি দেখানো হচ্ছে
+    if (assignedForm === 'v1') {
+        v1.style.display = 'block';
+        console.log("A/B Test: Form 1 (CRO Form) is visible");
+    } else {
+        v2.style.display = 'block';
+        console.log("A/B Test: Form 2 (EverWash Form) is visible");
+    }
+});
+</script>
