@@ -47,7 +47,8 @@ title: Contact Sales - EverWash
                   <p class="form-subtext">Talk to a membership professional about how the EverWash platform can increase
                     the overall profitability of your wash</p>
                 </div>
-                <form 
+                <div id="form-v1-container" style="display: none;">
+                  <form 
                   id="everWashForm" 
                   name="EverWash Form" 
                   method="POST"
@@ -157,6 +158,68 @@ title: Contact Sales - EverWash
                     </div>
                   </div>
                 </form>
+                </div>
+                <div>
+                  <form id="croForm" name="CRO Form" method="POST" action="/thank-you/" data-netlify="true" netlify>
+                    <div class="row g-3">
+                      <div class="col-md-12">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="first_name" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" name="email" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" name="phone" required>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label class="form-label">Car Wash Name</label>
+                        <input type="text" class="form-control" id="carWashSearch" name="car_wash_name" placeholder="" required autocomplete="off">
+                        <div id="manualTriggerWrapper" class="mt-2">
+                          <small>
+                            Can't find your car wash? 
+                            <a href="javascript:void(0);" id="manualTriggerBtn" style="color: var(--color-cyan); text-decoration: underline; cursor: pointer;">
+                              Enter address manually
+                            </a>
+                          </small>
+                        </div>
+                      </div>
+                
+                      <div id="manualAddressFields" style="display: none;" class="row g-3 m-0 p-0">
+                        <div class="col-md-12 mt-2">
+                          <small class="text-muted">Can't find it? Please enter the address manually:</small>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                          <label class="form-label">Street Address</label>
+                          <input type="text" class="form-control" id="street_address" name="street_address">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">City</label>
+                          <input type="text" class="form-control" id="locality" name="city">
+                        </div>
+                        <div class="col-md-3">
+                          <label class="form-label">State</label>
+                          <input type="text" class="form-control" id="administrative_area_level_1" name="state">
+                        </div>
+                        <div class="col-md-3">
+                          <label class="form-label">Zip</label>
+                          <input type="text" class="form-control" id="postal_code" name="zip">
+                        </div>
+                      </div>
+                
+                      <div class="col-12 mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -292,6 +355,63 @@ title: Contact Sales - EverWash
   }
 </style>
 
+<style>
+
+.contact-form {
+    padding: 16px 20px;
+    text-align: left;
+  }
+
+  .contact-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 8px 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(253, 196, 45, 0.25);
+  }
+
+  .form-subtext {
+    font-size: 16px;
+    color: var(--color-primary);
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 667px) {
+    .contact-form.contact-card {
+      margin-top: 50px;
+    }
+
+    .hero-text {
+      margin-right: 0;
+      margin-top: 0;
+    }
+
+  }
+</style>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIijKhr5AtlbQyxzAoH3MRZJWBw8fHF4g&libraries=places"></script>
+
+
 <script>
 // Add form submission tracking without breaking Netlify functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -320,4 +440,96 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+</script>
+
+
+<script>
+function initEverWashAutocomplete() {
+  const searchInput = document.getElementById('carWashSearch');
+  const manualFields = document.getElementById('manualAddressFields');
+  const manualTriggerBtn = document.getElementById('manualTriggerBtn');
+  const manualTriggerWrapper = document.getElementById('manualTriggerWrapper');
+  
+  if (!searchInput) return;
+
+  // ১. স্টেট ম্যাপিং অবজেক্ট (Abbreviation to Full Name)
+  const stateNames = {
+    'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California',
+    'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'FL': 'Florida', 'GA': 'Georgia',
+    'HI': 'Hawaii', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa',
+    'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland',
+    'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi', 'MO': 'Missouri',
+    'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire', 'NJ': 'New Jersey',
+    'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina', 'ND': 'North Dakota', 'OH': 'Ohio',
+    'OK': 'Oklahoma', 'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island', 'SC': 'South Carolina',
+    'SD': 'South Dakota', 'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah', 'VT': 'Vermont',
+    'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'
+  };
+
+  const autocomplete = new google.maps.places.Autocomplete(searchInput, {
+    types: ['establishment'],
+    componentRestrictions: { country: 'us' },
+    fields: ['address_components', 'name']
+  });
+
+  // ২. ম্যানুয়াল লিঙ্ক-এ ক্লিক করলে ফিল্ড ওপেন হবে
+  if (manualTriggerBtn) {
+    manualTriggerBtn.addEventListener('click', function() {
+      showManualFields();
+    });
+  }
+
+  // ৩. গুগল সাজেশান থেকে সিলেক্ট করলে যা হবে
+  autocomplete.addListener('place_changed', function () {
+    const place = autocomplete.getPlace();
+    if (place.address_components) {
+      // সাজেশান পেলে ম্যানুয়াল লিঙ্ক হাইড করে দেব
+      if (manualTriggerWrapper) manualTriggerWrapper.style.display = 'none';
+      manualFields.style.display = 'none'; 
+      
+      fillAddressData(place.address_components);
+      searchInput.value = place.name;
+    }
+  });
+
+  function fillAddressData(components) {
+    let streetNumber = "";
+    let route = "";
+    
+    components.forEach(c => {
+      const type = c.types[0];
+      
+      if (type === "street_number") streetNumber = c.long_name;
+      if (type === "route") route = c.long_name;
+      if (type === "locality") document.getElementById('locality').value = c.long_name;
+      
+      // স্টেট কনভার্সন লজিক
+      if (type === "administrative_area_level_1") {
+        const abbr = c.short_name.toUpperCase();
+        // FL থাকলে Florida বসাবে, না থাকলে গুগলের ডিফল্ট long_name বসাবে
+        document.getElementById('administrative_area_level_1').value = stateNames[abbr] || c.long_name;
+      }
+      
+      if (type === "postal_code") document.getElementById('postal_code').value = c.long_name;
+    });
+    
+    document.getElementById('street_address').value = `${streetNumber} ${route}`.trim();
+  }
+
+  function showManualFields() {
+    manualFields.style.display = 'flex';
+    if (manualTriggerWrapper) manualTriggerWrapper.style.display = 'none';
+    
+    // ম্যানুয়াল ইনপুটগুলোকে required করে দেওয়া
+    document.querySelectorAll('#manualAddressFields input').forEach(input => {
+      input.required = true;
+    });
+  }
+
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') e.preventDefault();
+  });
+}
+
+window.onload = initEverWashAutocomplete;
 </script>
