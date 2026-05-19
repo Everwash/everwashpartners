@@ -8,6 +8,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/adobestock_1452178795_edit.png
 ---
 EverWash has released a major update to its Attendant App, introducing a suite of enhancements designed to improve sign-up accuracy, reduce on-site friction, and unlock new membership growth opportunities for car wash operators nationwide.
 
