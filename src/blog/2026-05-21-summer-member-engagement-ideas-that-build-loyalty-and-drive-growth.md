@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/summerengage.png
 ---
 Acquiring a member is only half the battle. Keeping them engaged, excited, and talking about your wash to friends and neighbors is what separates a good membership program from a great one. Summer — with its longer days, community events, and relaxed energy — is the perfect season to deepen the relationship between your wash and the people who support it.
 
