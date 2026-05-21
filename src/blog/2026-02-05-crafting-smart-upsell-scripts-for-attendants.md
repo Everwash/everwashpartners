@@ -2,7 +2,7 @@
 title: Crafting Smart Upsell Scripts for Attendants
 description: (That Sell Memberships Without Slowing the Line)
 author: Max Pulcini
-date: 2026-02-05T19:19:47.338Z
+date: 2026-05-21T17:35:00.512Z
 tags:
   - post
   - blog
