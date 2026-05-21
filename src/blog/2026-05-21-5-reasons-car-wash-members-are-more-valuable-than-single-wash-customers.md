@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/members-value.png
 ---
 Single-wash customers are fine. Members are transformative. If you're still running your car wash primarily as a transactional business — wash by wash, car by car — the numbers below should change your perspective. Here's why members aren't just better customers. They're a different category entirely.
 
