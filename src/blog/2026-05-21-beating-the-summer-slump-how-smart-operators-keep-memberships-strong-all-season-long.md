@@ -8,7 +8,7 @@ tags:
   - blog
   - b2b
 ---
-Every car wash operator knows the feeling. Spring momentum starts to fade, summer heat keeps customers home, and the membership numbers that looked so strong in April start softening by July. It's a predictable pattern — but it doesn't have to be an accepted one.
+Every car wash operator knows the feeling. Spring momentum starts to fade, summer heat keeps customers away, and the membership numbers that looked so strong in April start softening by July. It's a predictable pattern — but it doesn't have to be an accepted one.
 
 Here's how to stay ahead of the slump.
 
@@ -30,6 +30,6 @@ Don't wait for fall to start growing again. New members acquired in July and Aug
 
 **The Takeaway**
 
-The summer slump is real, but it's manageable. A well-timed win-back campaign, a communicated freeze option, and a smart acquisition push during slower months can turn a traditionally soft stretch into a foundation for your strongest fall yet. The operators who grow year-round are the ones who never stop working the membership angle — even when it's 90 degrees and nobody wants to think about car washes.
+The summer slump is real, but it's manageable. A well-timed win-back campaign, a communicated freeze option, and a smart acquisition push during slower months can turn a traditionally soft stretch into a foundation for your strongest fall yet. The operators who grow year-round are the ones who never stop working the membership angle — even when it's 90+ degrees and nobody wants to think about car washes.
 
 EverWash gives operators the tools to run targeted campaigns, manage member communications, and keep memberships strong through every season. [Learn more at everwashpartners.com/sales.](https://everwashpartners.com/sales)
