@@ -1,6 +1,6 @@
 ---
-title: "Beating the Summer Slump: How Smart Operators Keep Memberships Strong
-  All Season Long"
+title: "Beating the Summer Slump: How Operators Keep Memberships Strong All
+  Season Long"
 author: Max Pulcini
 date: 2026-05-21T14:29:38.083Z
 tags:
