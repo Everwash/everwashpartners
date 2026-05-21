@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/fourthofjuly26.png
 ---
 The 4th of July isn't just a holiday — it's one of the highest-traffic weeks of the summer for car washes. Families are road-tripping, vehicles are getting cleaned up before backyard gatherings, and customers are in a spending mindset. For car wash operators, it's also one of the best windows of the year to convert one-time visitors into long-term members.
 
