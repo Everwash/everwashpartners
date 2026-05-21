@@ -15,7 +15,7 @@ Smart operators treat upsell scripts as conversation frameworks, not rigid lines
 
 ### Why Scripts Matter More Than Ever
 
-Attendants are often the only human interaction customers have. When those interactions are confident and consistent, conversion rises. When they’re hesitant or awkward, opportunities disappear.
+Attendants are often the only human interaction customers have at a car wash. When those interactions are confident and consistent, conversion rises. When they’re hesitant or awkward, opportunities disappear.
 
 Well-designed scripts:
 
