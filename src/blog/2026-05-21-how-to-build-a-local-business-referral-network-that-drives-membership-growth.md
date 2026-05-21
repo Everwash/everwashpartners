@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/business-network.png
 ---
 The best car wash marketing doesn't always happen at the car wash. Sometimes it happens in a takeout bag, on a gym bulletin board, or in a conversation between a real estate agent and a new homeowner. Operators who think beyond their own four walls — and build genuine relationships with other local businesses — unlock a referral engine that pays dividends long after the handshake.
 
