@@ -7,6 +7,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/sumemrslump.png
 ---
 Every car wash operator knows the feeling. Spring momentum starts to fade, summer heat keeps customers away, and the membership numbers that looked so strong in April start softening by July. It's a predictable pattern — but it doesn't have to be an accepted one.
 
