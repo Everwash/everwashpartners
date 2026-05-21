@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/back2school2026.png
 ---
 The back-to-school season is one of the most underrated windows in the car wash calendar. Families are back in motion — school runs, sports practices, carpools, and fast food dinners eaten on the go. Teachers and administrators are returning to daily commutes after a summer off. And everyone, in one way or another, is in a "fresh start" mindset that makes a new membership feel like a natural decision.
 
