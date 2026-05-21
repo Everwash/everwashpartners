@@ -6,6 +6,7 @@ tags:
   - post
   - blog
   - b2b
+image: /img/blog/frequency.png
 ---
 A car wash membership is a recurring revenue engine — but only if members actually use it. An inactive member is a cancellation or refund waiting to happen. An engaged one is a loyal customer who renews month after month, refers friends, and becomes a cornerstone of your business.
 
