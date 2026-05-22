@@ -6,7 +6,7 @@ tags:
   - post
   - blog
   - b2b
-image: /img/blog/das-grads-ewp.png
+image: /img/blog/b2c-june-2026-promo-c-1600x1200.png
 ---
 June marks the start of the summer driving season: Families are traveling more, vehicles are on the road longer, and customers are more likely to prioritize keeping their cars clean.
 
