@@ -16,10 +16,10 @@ Pashley has spent his career at EverWash helping car wash operators build and sc
 \
 Known throughout the industry for his hands-on approach and commitment to operator success, Pashley also contributes articles to several car wash industry trade publications, as well as "At The Car Wash with Sean Pashley," a recurring segment on EverWash's podcast, ["Members Only,"](https://youtube.com/playlist?list=PLb_t4jhLuCPg1A7TUGDKeWfHdLWUSkmVj&si=csoVp8L_aOMZENvV) where he shares insights and best practices with car wash owners and operators nationwide.\
 \
-"\[Placeholder for quote from Sean Pashley]," said Pashley.\
+"I'm honored to join the LWF Board and incredibly grateful to EverWash for their support and belief in me. I'm excited for the opportunity to give back, help develop future leaders, and continue serving the industry that has given me so much," said Pashley.\
 \
 LWF was founded to help car wash operators grow themselves, their teams, and their businesses through mentorship, real-world insight, and practical tools. The organization's board is composed of respected industry professionals committed to advancing leadership standards across the car wash industry.\
 \
-"\[Placeholder for quote from Chris Villella]," said Chris Villella, \[TITLE], EverWash.\
+"\[Placeholder for quote from Chris Villella]," said Chris Villella, Chief Commerical Officer, EverWash.\
 \
 Pashley's election to the LWF board reflects EverWash's broader commitment to industry leadership and community engagement, reinforcing the company's role not just as a technology provider, but as a true partner to the car wash operators it serves.
