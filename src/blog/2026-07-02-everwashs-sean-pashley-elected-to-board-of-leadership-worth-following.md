@@ -20,6 +20,6 @@ Known throughout the industry for his hands-on approach and commitment to operat
 \
 LWF was founded to help car wash operators grow themselves, their teams, and their businesses through mentorship, real-world insight, and practical tools. The organization's board is composed of respected industry professionals committed to advancing leadership standards across the car wash industry.\
 \
-"\[Placeholder for quote from Chris Villella]," said Chris Villella, Chief Commerical Officer, EverWash.\
+"Sean’s appointment to the Leadership Worth Following Board is a reflection of the respect he has earned throughout our industry and his unwavering commitment to helping car wash operators succeed," said Chris Villella, Chief Commercial Officer, EverWash. "We are incredibly proud to see him recognized for his leadership and know he will make a meaningful contribution to an organization dedicated to developing the next generation of industry leaders"\
 \
 Pashley's election to the LWF board reflects EverWash's broader commitment to industry leadership and community engagement, reinforcing the company's role not just as a technology provider, but as a true partner to the car wash operators it serves.
