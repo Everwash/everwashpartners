@@ -18,6 +18,7 @@ $(document).ready(function () {
   // Custom play button logic - load video on click
   document.querySelectorAll('.video-wrapper').forEach(wrapper => {
     const playBtn = wrapper.querySelector('.video-play-btn');
+    if (!playBtn) return;
     const thumbnail = wrapper.querySelector('.video-thumbnail');
     const videoSrc = wrapper.getAttribute('data-video-src');
 
