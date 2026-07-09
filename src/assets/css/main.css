@@ -384,7 +384,8 @@ table {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 12rem 0 12rem;
+    padding: 8rem 0 6rem;
+    min-height: auto;
   }
 
   .hero h2 {
@@ -445,7 +446,7 @@ table {
 /* Proof Strip — compact stats + testimonial below hero */
 .proof-strip {
   background: var(--color-gray);
-  padding: 100px 0 32px;
+  padding: 48px 0 32px;
   text-align: center;
 }
 
@@ -515,7 +516,7 @@ table {
 
 @media (max-width: 576px) {
   .proof-strip {
-    padding: 80px 0 24px;
+    padding: 32px 0 24px;
   }
 
   .proof-strip-stats {

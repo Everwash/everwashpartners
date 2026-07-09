@@ -4,3 +4,15 @@
     to = "/contact"
     status = 301
     force = true
+
+  [[redirects]]
+    from = "/lp"
+    to = "/meta-landing"
+    status = 301
+    force = true
+
+  [[redirects]]
+    from = "/lp/"
+    to = "/meta-landing/"
+    status = 301
+    force = true
