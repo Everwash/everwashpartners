@@ -520,7 +520,7 @@ table {
 
 @media (max-width: 576px) {
   .proof-strip {
-    padding: 32px 0 24px;
+    padding: 40px 0 24px;
   }
 
   .proof-strip-stats {
