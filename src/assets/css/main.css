@@ -427,11 +427,14 @@ table {
     align-items: center;
     gap: 16px;
   }
+  .curve {
+  top: 89%;
+  }
 }
 
 .curve {
   position: absolute;
-  top: 89%;
+  top: 93%;
   left: 0;
   width: 100%;
   line-height: 0;
