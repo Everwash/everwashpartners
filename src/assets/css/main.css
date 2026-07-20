@@ -428,7 +428,7 @@ table {
     gap: 16px;
   }
   .curve {
-  top: 89%;
+  top: 89% !important;
   }
 }
 
