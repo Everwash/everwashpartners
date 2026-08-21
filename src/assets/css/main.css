@@ -382,6 +382,13 @@ table {
   font-size: 24px;
 }
 
+@media (min-width: 769px) {
+  .hero.home-hero {
+    padding: 10rem 0 6rem;
+    min-height: 78vh;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 8rem 0 6rem;
