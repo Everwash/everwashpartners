@@ -535,8 +535,9 @@ table {
   }
 
   .proof-strip-number {
-    line-height: 1.25;
-    padding-top: 0;
+    display: block;
+    line-height: 1.35;
+    padding-top: 0.02em;
   }
 
   .proof-strip-label {
