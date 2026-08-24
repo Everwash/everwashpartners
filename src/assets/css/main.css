@@ -532,6 +532,8 @@ table {
 
   .proof-strip-stats {
     margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
   }
 
   .proof-strip-number {
