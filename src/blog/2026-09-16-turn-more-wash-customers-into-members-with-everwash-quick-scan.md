@@ -1,7 +1,7 @@
 ---
 title: Turn More Wash Customers Into Members with EverWash Quick Scan
 author: EverWash Newsroom
-date: 2026-09-16T17:18:51.735Z
+date: 2026-09-16T13:00:51.735Z
 tags:
   - post
   - blog
