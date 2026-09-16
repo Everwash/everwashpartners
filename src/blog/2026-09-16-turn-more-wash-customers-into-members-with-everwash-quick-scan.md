@@ -7,6 +7,7 @@ tags:
   - blog
   - b2b
   - newsroom
+image: /img/blog/ew-quick-scan-hero-image-1600x1200.png
 ---
 At an unattended car wash, there isn’t always an employee onsite to explain the benefits of membership, answer questions, or help turn a retail customer into a recurring member.
 
@@ -50,9 +51,7 @@ By incorporating Quick Scan throughout the customer journey, operators can give 
 
 That means an operator can create more opportunities to convert existing retail traffic into recurring membership revenue, without adding staff or changing the experience for current members.
 
-And for the customer, the experience is remarkably simple:
-
-No app store. No download before joining. No searching for the right wash.
+And for the customer, the experience is remarkably simple: No app store. No download before joining. No searching for the right wash.
 
 Just a direct path from interest to membership in less than 60 seconds.
 
@@ -86,4 +85,4 @@ That’s EverWash Quick Scan.
 
 Ready to turn more retail customers into recurring members?
 
-Talk to your EverWash representative to learn more about bringing Quick Scan to your wash.
+**Talk to your EverWash representative to learn more about bringing Quick Scan to your wash.**
