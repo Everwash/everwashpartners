@@ -16,3 +16,15 @@
     to = "/meta-landing/"
     status = 301
     force = true
+
+  [[redirects]]
+    from = "/cro"
+    to = "/contact"
+    status = 301
+    force = true
+
+  [[redirects]]
+    from = "/cro/"
+    to = "/contact/"
+    status = 301
+    force = true
