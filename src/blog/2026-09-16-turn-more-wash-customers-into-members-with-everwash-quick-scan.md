@@ -21,7 +21,7 @@ EverWash Quick Scan changes that.
 
 Quick Scan gives unattended car washes a new way to create membership opportunities throughout the onsite customer journey.
 
-Using a single, location-specific QR code, Quick Scan recognizes who is scanning and automatically directs them to the right experience.
+Using a location-specific QR code, Quick Scan recognizes who is scanning and automatically directs them to the right experience.
 
 For a retail customer, scanning Quick Scan with their phone’s camera takes them directly to the EverWash signup experience for that specific wash. There’s no need to search for the location or download an app before joining.
 
@@ -31,17 +31,15 @@ See it. Scan it. Join. Wash.
 
 And because Quick Scan can be incorporated into promotional signage leading up to the wash, customers don’t have to wait until sitting at the pay station to make that decision. They can join earlier in their onsite journey and arrive at the pay station ready to activate their membership and wash.
 
-## One Code. Two Experiences.
+## A Simplified Process.  For All Customers
 
 Making it easier for new customers to join shouldn’t make washing more complicated for existing members.
 
 With Quick Scan, it doesn’t.
 
-For retail customers, the QR code creates a direct path to the signup experience for that specific wash. Once signup is complete, their membership is immediately available to activate their first wash.
+For retail customers, the QR code creates a direct path to the signup experience for your specific wash. Once signup is complete, their membership is immediately available to activate their first wash.
 
-For existing EverWash members, nothing changes. They scan the same Quick Scan code from inside the EverWash app and activate their wash just as they do today.
-
-One code recognizes both customers and delivers the appropriate experience.
+For existing EverWash members, nothing changes. They scan the QR Code at the paystation from inside their EverWash app and activate the wash just as they do today.
 
 ## Less Friction. More Opportunities to Grow Membership.
 
@@ -51,7 +49,9 @@ By incorporating Quick Scan throughout the customer journey, operators can give 
 
 That means an operator can create more opportunities to convert existing retail traffic into recurring membership revenue, without adding staff or changing the experience for current members.
 
-And for the customer, the experience is remarkably simple: No app store. No download before joining. No searching for the right wash.
+And for the customer, the experience is remarkably simple:
+
+No app store. No download before joining. No searching for the right wash.
 
 Just a direct path from interest to membership in less than 60 seconds.
 
@@ -67,11 +67,9 @@ The result is a low-friction first conversion followed by an ongoing digital rel
 
 One of the most important advantages of Quick Scan is that the membership opportunity doesn’t have to begin at the pay station.
 
-Quick Scan can be incorporated into promotional signage throughout the onsite customer journey, giving customers an opportunity to learn about membership, scan, and join before they reach the point of activation.
+Quick Scan can be incorporated into promotional signage throughout the onsite customer journey, giving customers a hassle-free experience to learn about membership, scan, and join before they reach the point of activation.
 
 By the time they arrive at the pay station, they can already be a member and be ready to wash.
-
-For existing EverWash locations, Quick Scan also replaces the current EverWash QR code at the pay station. Each Quick Scan code is created specifically for its assigned wash location, ensuring customers are directed to the correct membership experience.
 
 ## A New Membership Opportunity for Unattended Car Washes
 
@@ -85,4 +83,4 @@ That’s EverWash Quick Scan.
 
 Ready to turn more retail customers into recurring members?
 
-**Talk to your EverWash representative to learn more about bringing Quick Scan to your wash.**
+Talk to your EverWash representative to learn more about bringing Quick Scan to your wash.
