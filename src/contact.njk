@@ -48,6 +48,7 @@ title: Contact Sales - EverWash
                     the overall profitability of your wash</p>
                 </div>
                 <div id="form-v1-container">
+                  <p id="contact-progress" class="small text-muted" aria-live="polite" hidden>Step 1 of 2</p>
                   <form 
                   id="everWashForm" 
                   name="EverWash Form" 
@@ -55,109 +56,122 @@ title: Contact Sales - EverWash
                   action="/thank-you/" 
                   data-netlify="true" 
                   data-netlify-honeypot="bot-field"
+                  aria-describedby="contact-progress"
                   netlify
                 >
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label class="form-label">First Name</label>
-                      <input type="text" class="form-control" name="firstName" required>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Last Name</label>
-                      <input type="text" class="form-control" name="lastName" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Email Address</label>
-                      <input type="email" class="form-control" name="email" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" name="phone" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Car Wash Name</label>
-                      <input type="text" class="form-control" name="carWashName" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label">Wash Type</label>
-                      <select class="form-select" name="washType" required>
-                        <option value="" selected disabled>Choose Wash Type</option>
-                        <option value="tunnel">Tunnel</option>
-                        <option value="iba">IBA</option>
-                        <option value="self-serve">Self Serve</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div class="col-md-8">
-                      <label class="form-label">State</label>
-                      <select class="form-select" name="state" required>
-                        <option value="" selected disabled>Choose State</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Alaska">Alaska</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Connecticut">Connecticut</option>
-                        <option value="Delaware">Delaware</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Indiana">Indiana</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Maine">Maine</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Massachusetts">Massachusetts</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Mississippi">Mississippi</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="Montana">Montana</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New Hampshire">New Hampshire</option>
-                        <option value="New Jersey">New Jersey</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="New York">New York</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="North Dakota">North Dakota</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Rhode Island">Rhode Island</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="South Dakota">South Dakota</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
-                        <option value="Vermont">Vermont</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Washington">Washington</option>
-                        <option value="West Virginia">West Virginia</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                        <option value="Wyoming">Wyoming</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label">Zip Code</label>
-                      <input type="text" class="form-control" name="zipCode" required>
-                    </div>
-                    <div class="col-12 mt-4">
-                      <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                    <fieldset id="contact-step-1">
+                      <legend class="visually-hidden">Contact details</legend>
+                      <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="contact-firstName">First Name</label>
+                        <input type="text" class="form-control" id="contact-firstName" name="firstName" autocomplete="given-name" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="contact-lastName">Last Name</label>
+                        <input type="text" class="form-control" id="contact-lastName" name="lastName" autocomplete="family-name" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label" for="contact-phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="contact-phone" name="phone" autocomplete="tel" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label" for="contact-email">Email Address</label>
+                        <input type="email" class="form-control" id="contact-email" name="email" autocomplete="email" required>
+                      </div>
+                        <div class="col-12 mt-4" id="contact-next-container" hidden>
+                          <button type="button" id="contact-next" class="btn btn-primary btn-lg w-100">Next</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset id="contact-step-2">
+                      <legend class="visually-hidden">Car wash details</legend>
+                      <div class="row g-3">
+                      <div class="col-md-12">
+                        <label class="form-label" for="contact-carWashName">Car Wash Name</label>
+                        <input type="text" class="form-control" id="contact-carWashName" name="carWashName" autocomplete="organization" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label" for="contact-washType">Wash Type</label>
+                        <select class="form-select" id="contact-washType" name="washType" required>
+                          <option value="" selected disabled>Choose Wash Type</option>
+                          <option value="tunnel">Tunnel</option>
+                          <option value="iba">IBA</option>
+                          <option value="self-serve">Self Serve</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="col-md-8">
+                        <label class="form-label" for="contact-state">State</label>
+                        <select class="form-select" id="contact-state" name="state" autocomplete="address-level1" required>
+                          <option value="" selected disabled>Choose State</option>
+                          <option value="Alabama">Alabama</option>
+                          <option value="Alaska">Alaska</option>
+                          <option value="Arizona">Arizona</option>
+                          <option value="Arkansas">Arkansas</option>
+                          <option value="California">California</option>
+                          <option value="Colorado">Colorado</option>
+                          <option value="Connecticut">Connecticut</option>
+                          <option value="Delaware">Delaware</option>
+                          <option value="Florida">Florida</option>
+                          <option value="Georgia">Georgia</option>
+                          <option value="Hawaii">Hawaii</option>
+                          <option value="Idaho">Idaho</option>
+                          <option value="Illinois">Illinois</option>
+                          <option value="Indiana">Indiana</option>
+                          <option value="Iowa">Iowa</option>
+                          <option value="Kansas">Kansas</option>
+                          <option value="Kentucky">Kentucky</option>
+                          <option value="Louisiana">Louisiana</option>
+                          <option value="Maine">Maine</option>
+                          <option value="Maryland">Maryland</option>
+                          <option value="Massachusetts">Massachusetts</option>
+                          <option value="Michigan">Michigan</option>
+                          <option value="Minnesota">Minnesota</option>
+                          <option value="Mississippi">Mississippi</option>
+                          <option value="Missouri">Missouri</option>
+                          <option value="Montana">Montana</option>
+                          <option value="Nebraska">Nebraska</option>
+                          <option value="Nevada">Nevada</option>
+                          <option value="New Hampshire">New Hampshire</option>
+                          <option value="New Jersey">New Jersey</option>
+                          <option value="New Mexico">New Mexico</option>
+                          <option value="New York">New York</option>
+                          <option value="North Carolina">North Carolina</option>
+                          <option value="North Dakota">North Dakota</option>
+                          <option value="Ohio">Ohio</option>
+                          <option value="Oklahoma">Oklahoma</option>
+                          <option value="Oregon">Oregon</option>
+                          <option value="Pennsylvania">Pennsylvania</option>
+                          <option value="Rhode Island">Rhode Island</option>
+                          <option value="South Carolina">South Carolina</option>
+                          <option value="South Dakota">South Dakota</option>
+                          <option value="Tennessee">Tennessee</option>
+                          <option value="Texas">Texas</option>
+                          <option value="Utah">Utah</option>
+                          <option value="Vermont">Vermont</option>
+                          <option value="Virginia">Virginia</option>
+                          <option value="Washington">Washington</option>
+                          <option value="West Virginia">West Virginia</option>
+                          <option value="Wisconsin">Wisconsin</option>
+                          <option value="Wyoming">Wyoming</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="contact-zipCode">Zip Code</label>
+                        <input type="text" class="form-control" id="contact-zipCode" name="zipCode" autocomplete="postal-code" required>
+                      </div>
+                        <div class="col-12 mt-4 d-flex gap-3">
+                          <button type="button" id="contact-back" hidden class="btn btn-outline-secondary btn-lg">Back</button>
+                          <button type="submit" class="btn btn-primary btn-lg flex-grow-1">Submit</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                </form>
                       <p class="mt-4 text-muted" style="font-size: 14px; line-height: 1.5;">* This form is specifically
                         for Car Wash Owners who wish to contact EverWash about setting up a membership program at their
                         location. If you are a current EverWash member looking for customer support, please contact our
                         Member Support Team at <a href="mailto:support@everwash.com">support@everwash.com</a> or call <a
                           href="tel:+12156188808">215-618-8808</a> to speak with an agent.</p>
-                    </div>
-                  </div>
-                </form>
                 </div>
               </div>
             </div>
@@ -242,7 +256,8 @@ title: Contact Sales - EverWash
   }
 
   .form-logo {
-    max-width: 300px;
+    width: 300px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -291,6 +306,13 @@ title: Contact Sales - EverWash
     .contact-form {
       padding: 30px;
     }
+  }
+  #everWashForm fieldset {
+    min-width: 0;
+  }
+
+  #form-v1-container [hidden] {
+    display: none !important;
   }
 </style>
 
@@ -355,8 +377,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('everWashForm');
 
     if (form) {
+        const stepOne = document.getElementById('contact-step-1');
+        const stepTwo = document.getElementById('contact-step-2');
+        const progress = document.getElementById('contact-progress');
+        const next = document.getElementById('contact-next');
+
+        function showStepTwo(visible) {
+            stepOne.hidden = stepOne.disabled = visible;
+            stepTwo.hidden = stepTwo.disabled = !visible;
+            progress.textContent = visible ? 'Step 2 of 2' : 'Step 1 of 2';
+            (visible ? stepTwo : stepOne).querySelector('input').focus();
+        }
+
+        next.addEventListener('click', function() {
+            if (form.reportValidity()) showStepTwo(true);
+        });
+
+        document.getElementById('contact-back').addEventListener('click', function() {
+            showStepTwo(false);
+        });
+
+        stepOne.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' && event.target.matches('input') && !event.isComposing) {
+                event.preventDefault();
+                next.click();
+            }
+        });
+
+        form.noValidate = true;
+        stepTwo.hidden = stepTwo.disabled = true;
+        progress.hidden = false;
+        document.getElementById('contact-next-container').hidden = false;
+        document.getElementById('contact-back').hidden = false;
+
         form.addEventListener('submit', function(e) {
-            // Don't prevent default - let Netlify handle the form submission
+            if (!form.reportValidity()) {
+                e.preventDefault();
+                return;
+            }
+            if (!stepOne.hidden) {
+                e.preventDefault();
+                showStepTwo(true);
+                return;
+            }
+
+            stepOne.disabled = false;
+            if (!Array.from(stepOne.querySelectorAll('input')).every(input => input.checkValidity())) {
+                e.preventDefault();
+                showStepTwo(false);
+                form.reportValidity();
+                return;
+            }
 
             // Track with Google Analytics
             if (typeof gtag === 'function') {
