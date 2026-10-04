@@ -50,7 +50,7 @@ title: Contact Sales - EverWash
                 <div id="form-v1-container">
                   <p id="contact-progress" class="small text-muted" aria-live="polite" hidden>Step 1 of 2</p>
                   <form 
-                  id="everWashForm" 
+                  id="everWashForm"
                   name="EverWash Form" 
                   method="POST"
                   action="/thank-you/" 
@@ -59,6 +59,7 @@ title: Contact Sales - EverWash
                   aria-describedby="contact-progress"
                   netlify
                 >
+                    <input type="hidden" name="lead_id" id="contact-lead-id">
                     <fieldset id="contact-step-1">
                       <legend class="visually-hidden">Contact details</legend>
                       <div class="row g-3">
@@ -451,3 +452,29 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+
+  <form name="EverWash Partial Lead" method="POST" data-netlify="true" data-netlify-honeypot="partial-bot-field" id="partial-lead-registration" hidden>
+    <input type="hidden" name="form-name" value="EverWash Partial Lead">
+    <input type="text" name="partial-bot-field" tabindex="-1" autocomplete="off">
+    <input type="hidden" name="lead_id">
+    <input type="hidden" name="revision">
+    <input type="hidden" name="status">
+    <input type="hidden" name="captured_at">
+    <input type="hidden" name="firstName">
+    <input type="hidden" name="lastName">
+    <input type="hidden" name="email">
+    <input type="hidden" name="phone">
+    <input type="hidden" name="carWashName">
+    <input type="hidden" name="washType">
+    <input type="hidden" name="state">
+    <input type="hidden" name="zipCode">
+    <input type="hidden" name="source">
+    <input type="hidden" name="utm_source">
+    <input type="hidden" name="utm_medium">
+    <input type="hidden" name="utm_campaign">
+    <input type="hidden" name="utm_content">
+    <input type="hidden" name="utm_term">
+    <input type="hidden" name="landing_page">
+    <input type="hidden" name="referrer">
+  </form>
+<script src="/assets/js/partial-lead.js" defer></script>
